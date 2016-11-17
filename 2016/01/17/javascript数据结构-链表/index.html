@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>javascript数据结构--链表 | 高乐高</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="链表就要来的随性的多，简单的理解可以是这样：在内存中，栈和队列（数组）的存在就是一个整体，如果想要对她内部某一个元素进行移除或是添加一个新元素就要动她内部所有的元素，所谓牵一发而动全身；而链表则不一样，每一个元素都是由元素本身数据和指向下一个元素的指针构成，所以添加或是移除某一个元素不需要对链表整体进行操作，只需要改变相关元素的指针指向就可以了
+
+链表在实际生活中的例子也有很多，比如自行车的链条，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript数据结构--链表">
+<meta property="og:url" content="http://yoursite.com/2016/01/17/javascript数据结构-链表/index.html">
+<meta property="og:site_name" content="高乐高">
+<meta property="og:description" content="链表就要来的随性的多，简单的理解可以是这样：在内存中，栈和队列（数组）的存在就是一个整体，如果想要对她内部某一个元素进行移除或是添加一个新元素就要动她内部所有的元素，所谓牵一发而动全身；而链表则不一样，每一个元素都是由元素本身数据和指向下一个元素的指针构成，所以添加或是移除某一个元素不需要对链表整体进行操作，只需要改变相关元素的指针指向就可以了
+
+链表在实际生活中的例子也有很多，比如自行车的链条，">
+<meta property="og:updated_time" content="2016-11-17T03:13:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript数据结构--链表">
+<meta name="twitter:description" content="链表就要来的随性的多，简单的理解可以是这样：在内存中，栈和队列（数组）的存在就是一个整体，如果想要对她内部某一个元素进行移除或是添加一个新元素就要动她内部所有的元素，所谓牵一发而动全身；而链表则不一样，每一个元素都是由元素本身数据和指向下一个元素的指针构成，所以添加或是移除某一个元素不需要对链表整体进行操作，只需要改变相关元素的指针指向就可以了
+
+链表在实际生活中的例子也有很多，比如自行车的链条，">
+  
+    <link rel="alternative" href="/atom.xml" title="高乐高" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">特仑苏</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">特仑苏</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">特仑苏</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-javascript数据结构-链表" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript数据结构--链表
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>链表就要来的随性的多，简单的理解可以是这样：在内存中，栈和队列（数组）的存在就是一个整体，如果想要对她内部某一个元素进行移除或是添加一个新元素就要动她内部所有的元素，所谓牵一发而动全身；而链表则不一样，每一个元素都是由元素本身数据和指向下一个元素的指针构成，所以添加或是移除某一个元素不需要对链表整体进行操作，只需要改变相关元素的指针指向就可以了
+
+链表在实际生活中的例子也有很多，比如自行车的链条，环环相扣，但添加或是移除某一个环节只需要对症下药，对相关环节进行操作就OK。再比如：火车，火车就是一个链表，每一节车厢就是元素，想要移除或是添加某一节车厢，只需要把连接车厢的链条改变一下就好了。那么，在javascript中又该怎么去实现链表结构呢？
+</code></pre><p>##链表的创建</p>
+<p>首先我们要创建一个链表类：</p>
+<pre><code>function LinkedList(){
+//各种属性和方法的声明
+}
+</code></pre><p>然后我们需要一种数据结构来保存链表里面的数据：</p>
+<pre><code>var Node=function(element){
+this.element=element;
+this.next=null;}
+//Node类表示要添加的元素，他有两个属性，一个是element，表示添加到链表中的具体的值；另一个是next,表示要指向链表中下一个元素的指针。
+</code></pre><p>接下来，我们需要给链表声明一些方法：</p>
+<pre><code>·append(element):向链表尾部添加一个新的元素；
+·insert(position,element):向链表特定位置插入元素；
+·remove(element):从链表移除一项；
+·indexOf(element):返回链表中某元素的索引，如果没有返回-1；
+·removeAt(position):从特定位置移除一项；
+·isEmpty():判断链表是否为空，如果为空返回true,否则返回false;
+·size():返回链表包含的元素个数；
+·toString():重写继承自Object类的toString()方法，因为我们使用了Node类；
+</code></pre><p>链表的完整代码：</p>
+<pre><code>function LinkedList() {
+//Node类声明
+let Node = function(element){
+    this.element = element;
+    this.next = null;
+};
+//初始化链表长度
+let length = 0;
+//初始化第一个元素
+let head = null;
+this.append = function(element){
+    //初始化添加的Node实例
+    let node = new Node(element),
+        current;
+    if (head === null){
+        //第一个Node实例进入链表，之后在这个LinkedList实例中head就不再是null了
+        head = node;
+    } else {
+        current = head;
+        //循环链表知道找到最后一项，循环结束current指向链表最后一项元素
+        while(current.next){
+            current = current.next;
+        }
+        //找到最后一项元素后，将他的next属性指向新元素node,j建立链接
+        current.next = node;
+    }
+    //更新链表长度
+    length++;
+};
+this.insert = function(position, element){
+    //检查是否越界，超过链表长度或是小于0肯定不符合逻辑的
+    if (position &gt;= 0 &amp;&amp; position &lt;= length){
+        let node = new Node(element),
+            current = head,
+            previous,
+            index = 0;
+        if (position === 0){
+            //在第一个位置添加
+            node.next = current;
+            head = node;
+        } else {
+            //循环链表，找到正确位置，循环完毕，previous，current分别是被添加元素的前一个和后一个元素
+            while (index++ &lt; position){
+                previous = current;
+                current = current.next;
+            }
+            node.next = current;
+            previous.next = node;
+        }
+        //更新链表长度
+        length++;
+        return true;
+    } else {
+        return false;
+    }
+};
+this.removeAt = function(position){
+    //检查是否越界，超过链表长度或是小于0肯定不符合逻辑的
+    if (position &gt; -1 &amp;&amp; position &lt; length){
+        let current = head,
+            previous,
+            index = 0;
+        //移除第一个元素
+        if (position === 0){
+            //移除第一项，相当于head=null;
+            head = current.next;
+        } else {
+            //循环链表，找到正确位置，循环完毕，previous，current分别是被添加元素的前一个和后一个元素
+            while (index++ &lt; position){
+                previous = current;
+                current = current.next;
+            }
+            //链接previous和current的下一个元素，也就是把current移除了
+            previous.next = current.next;
+        }
+        length--;
+        return current.element;
+    } else {
+        return null;
+    }
+};
+this.indexOf = function(element){
+    let current = head,
+        index = 0;
+    //循环链表找到元素位置
+    while (current) {
+        if (element === current.element) {
+            return index;
+        }
+        index++;
+        current = current.next;
+    }
+    return -1;
+};
+this.remove = function(element){
+    //调用已经声明过的indexOf和removeAt方法
+    let index = this.indexOf(element);
+    return this.removeAt(index);
+};
+this.isEmpty = function() {
+    return length === 0;
+};
+this.size = function() {
+    return length;
+};
+this.getHead = function(){
+    return head;
+};
+this.toString = function(){
+    let current = head,
+        string = &apos;&apos;;
+    while (current) {
+        string += current.element + (current.next ? &apos;, &apos; : &apos;&apos;);
+        current = current.next;
+    }
+    return string;
+};
+this.print = function(){
+    console.log(this.toString());
+};
+}
+
+//一个实例化后的链表，里面是添加的数个Node类的实例
+</code></pre><p>ES6版本:</p>
+<pre><code>let LinkedList2 = (function () {
+class Node {
+    constructor(element){
+        this.element = element;
+        this.next = null;
+    }
+}
+//这里我们使用WeakMap对象来记录长度状态
+const length = new WeakMap();
+const head = new WeakMap();
+class LinkedList2 {
+    constructor () {
+        length.set(this, 0);
+        head.set(this, null);
+    }
+    append(element) {
+        let node = new Node(element),
+            current;
+        if (this.getHead() === null) {
+            head.set(this, node);
+        } else {
+            current = this.getHead();
+            while (current.next) {
+                current = current.next;
+            }
+            current.next = node;
+        }
+        let l = this.size();
+        l++;
+        length.set(this, l);
+    }
+    insert(position, element) {
+        if (position &gt;= 0 &amp;&amp; position &lt;= this.size()) {
+
+            let node = new Node(element),
+                current = this.getHead(),
+                previous,
+                index = 0;
+            if (position === 0) {
+                node.next = current;
+                head.set(this, node);
+            } else {
+                while (index++ &lt; position) {
+                    previous = current;
+                    current = current.next;
+                }
+                node.next = current;
+                previous.next = node;
+            }
+            let l = this.size();
+            l++;
+            length.set(this, l);
+            return true;
+        } else {
+            return false;
+        }
+    }
+    removeAt(position) {
+        if (position &gt; -1 &amp;&amp; position &lt; this.size()) {
+            let current = this.getHead(),
+                previous,
+                index = 0;
+            if (position === 0) {
+                head.set(this, current.next);
+            } else {
+                while (index++ &lt; position) {
+                    previous = current;
+                    current = current.next;
+                }
+                previous.next = current.next;
+            }
+            let l = this.size();
+            l--;
+            length.set(this, l);
+            return current.element;
+        } else {
+            return null;
+        }
+    }
+    remove(element) {
+        let index = this.indexOf(element);
+        return this.removeAt(index);
+    }
+    indexOf(element) {
+        let current = this.getHead(),
+            index = 0;
+        while (current) {
+            if (element === current.element) {
+                return index;
+            }
+            index++;
+            current = current.next;
+        }
+        return -1;
+    }
+    isEmpty() {
+        return this.size() === 0;
+    }
+    size() {
+        return length.get(this);
+    }
+    getHead() {
+        return head.get(this);
+    }
+    toString() {
+        let current = this.getHead(),
+            string = &apos;&apos;;
+        while (current) {
+            string += current.element + (current.next ? &apos;, &apos; : &apos;&apos;);
+            current = current.next;
+        }
+        return string;
+
+    }
+    print() {
+        console.log(this.toString());
+    }
+}
+return LinkedList2;
+})();
+双向链表
+function DoublyLinkedList() {
+let Node = function(element){
+    this.element = element;
+    this.next = null;
+    this.prev = null; //NEW
+};
+let length = 0;
+let head = null;
+let tail = null; //NEW
+this.append = function(element){
+    let node = new Node(element),
+        current;
+    if (head === null){
+        head = node;
+        tail = node; //NEW
+    } else {
+        //NEW
+        tail.next = node;
+        node.prev = tail;
+        tail = node;
+    }
+    length++;
+};
+this.insert = function(position, element){
+    if (position &gt;= 0 &amp;&amp; position &lt;= length){
+        let node = new Node(element),
+            current = head,
+            previous,
+            index = 0;
+        if (position === 0){
+            if (!head){       //NEW
+                head = node;
+                tail = node;
+            } else {
+                node.next = current;
+                current.prev = node; //NEW
+                head = node;
+            }
+        } else  if (position === length) { ////NEW
+            current = tail;   
+            current.next = node;
+            node.prev = current;
+            tail = node;
+        } else {
+            while (index++ &lt; position){
+                previous = current;
+                current = current.next;
+            }
+            node.next = current;
+            previous.next = node;
+            current.prev = node; //NEW
+            node.prev = previous; //NEW
+        }
+        length++;
+        return true;
+    } else {
+        return false;
+    }
+};
+this.removeAt = function(position){
+    if (position &gt; -1 &amp;&amp; position &lt; length){
+        let current = head,
+            previous,
+            index = 0;
+        if (position === 0){ //NEW
+            if (length === 1){ //
+                tail = null;
+            } else {
+                head.prev = null;
+            }
+        } else if (position === length-1){  //NEW
+            current = tail;
+            tail = current.prev;
+            tail.next = null;
+        } else {
+            while (index++ &lt; position){
+                previous = current;
+                current = current.next;
+            }
+            previous.next = current.next;
+            current.next.prev = previous; //NEW
+        }
+        length--;
+        return current.element;
+    } else {
+        return null;
+    }
+};
+this.remove = function(element){
+    let index = this.indexOf(element);
+    return this.removeAt(index);
+};
+this.indexOf = function(element){
+    let current = head,
+        index = -1;
+    if (element == current.element){
+        return 0;
+    }
+    index++;
+    while(current.next){
+        if (element == current.element){
+            return index;
+        }
+        current = current.next;
+        index++;
+    }
+    //check last item
+    if (element == current.element){
+        return index;
+    }
+    return -1;
+};
+this.isEmpty = function() {
+    return length === 0;
+};
+this. size = function() {
+    return length;
+};
+this.toString = function(){
+    let current = head,
+        s = current ? current.element : &apos;&apos;;
+    while(current &amp;&amp; current.next){
+        current = current.next;
+        s += &apos;, &apos; + current.element;
+    }
+    return s;
+};
+this.inverseToString = function() {
+    let current = tail,
+        s = current ? current.element : &apos;&apos;;
+    while(current &amp;&amp; current.prev){
+        current = current.prev;
+        s += &apos;, &apos; + current.element;
+    }
+    return s;
+};
+this.print = function(){
+    console.log(this.toString());
+};
+this.printInverse = function(){
+    console.log(this.inverseToString());
+};
+this.getHead = function(){
+    return head;
+};
+this.getTail = function(){
+    return tail;
+}
+}    
+</code></pre><p>  双向链表和单项比起来就是Node类多了一个prev属性，也就是每一个node不仅仅有一个指向它后面元素的指针也有一个指向它前面的指针。</p>
+<h2 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h2><pre><code>明白了前面的基础链表和双向链表之后这个肯定不在话下了，循环，其实就是整个链表实例变成了一个圈，在单项链表中最后一个元素的next属性为null,现在让它指向第一个元素也就是head，那么他就成了单向循环链表。在双向链表中最后一个元素的next属性为null,现在让它指向第一个元素也就是head，那么他就成了双向循环链表。就那么回事..
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/01/17/javascript数据结构-链表/" class="archive-article-date">
+  	<time datetime="2016-01-17T03:05:32.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-01-17</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/12/this/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">this</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-javascript数据结构-链表" data-title="javascript数据结构--链表" data-url="http://yoursite.com/2016/01/17/javascript数据结构-链表/"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 特仑苏
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

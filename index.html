@@ -161,8 +161,7 @@
 <pre><code>1、对象 下面例子中所有的Person函数
 2、实例/对象实例 通过new Person() or Person()返回的对象，如var person1 = new Person()中的person1
 3、原型对象Person.prototype
-</code></pre><p>###工厂模式</p>
-<pre><code>function Person() {
+</code></pre><h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><pre><code>function Person() {
 var o = new Object();
 o.name = &apos;hanmeimei&apos;;
 o.say = function() {
@@ -175,8 +174,7 @@ var person1 = Person();
 <p>缺点：</p>
 <pre><code>1、无法通过constructor识别对象，以为都是来自Object，无法得知来自Person
 2、每次通过Person创建对象的时候，所有的say方法都是一样的，但是却存储了多次，浪费资源。
-</code></pre><p>###构造函数模式</p>
-<pre><code>function Person() {
+</code></pre><h3 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h3><pre><code>function Person() {
 this.name = &apos;hanmeimei&apos;;
 this.say = function() {
 alert(this.name)
@@ -191,8 +189,7 @@ var person1 = new Person();
 </code></pre><p>注意：</p>
 <pre><code>1、构造函数模式隐试的在最后返回return this 所以在缺少new的情况下，会将属性和方法添加给全局对象，浏览器端就会添加给window对象。
 2、也可以根据return this 的特性调用call或者apply指定this。这一点在后面的继承有很大帮助。        
-</code></pre><p>###原型模式</p>
-<pre><code>function Person() {}
+</code></pre><h3 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h3><pre><code>function Person() {}
 Person.prototype.name = &apos;hanmeimei&apos;;
 Person.prototype.say = function() {
 alert(this.name);
@@ -234,8 +231,7 @@ setName: function(name){
   person1.setName()   //Uncaught TypeError: person1.set is not a function(…)
 
   这是因为对象实例和对象原型直接是通过一个指针链接的，这个指针是一个内部属性[[Prototype]]，可以通过__proto__访问。我们通过对象字面量修改了Person.prototype指向的地址，然而对象实例的__proto__，并没有跟着一起更新，所以这就导致，实例还访问着原来的Person.prototype，所以建议不要通过这种方式去改变Person.prototype属性
-</code></pre><p>###构造函数和原型组合模式</p>
-<pre><code>function Person(name) {
+</code></pre><h3 id="构造函数和原型组合模式"><a href="#构造函数和原型组合模式" class="headerlink" title="构造函数和原型组合模式"></a>构造函数和原型组合模式</h3><pre><code>function Person(name) {
 this.name = name
 this.friends = [&apos;lilei&apos;]
 }
@@ -250,8 +246,7 @@ person1.say() //hanmeimei
 3、解决了构造函数模式不能共享方法的缺点
 </code></pre><p>缺点：</p>
 <pre><code>1、和原型模式中注意①一样
-</code></pre><p>###动态原型模式    </p>
-<pre><code>function Person(name) {
+</code></pre><h3 id="动态原型模式"><a href="#动态原型模式" class="headerlink" title="动态原型模式"></a>动态原型模式</h3><pre><code>function Person(name) {
 this.name = name
 if(typeof this.say != &apos;function&apos;) {
 Person.prototype.say = function(
@@ -265,8 +260,7 @@ alert(this.name)
 </code></pre><p>注意：</p>
 <pre><code>1、只用检查一个在执行后应该存在的方法或者属性就行了
 2、不能用对象字面量修改原型对象
-</code></pre><p>###寄生构造函数模式    </p>
-<pre><code>function Person(name) {
+</code></pre><h3 id="寄生构造函数模式"><a href="#寄生构造函数模式" class="headerlink" title="寄生构造函数模式"></a>寄生构造函数模式</h3><pre><code>function Person(name) {
 var o = new Object()
 o.name = name
 o.say = function() {
@@ -279,8 +273,7 @@ var peron1 = new Person(&apos;hanmeimei&apos;)
 <pre><code>1、和工厂模式基本一样，除了多了个new操作符
 </code></pre><p>缺点：</p>
 <pre><code>2、和工厂模式一样，不能区分实例的类别
-</code></pre><p>###稳妥构造模式    </p>
-<pre><code>function Person(name) {
+</code></pre><h3 id="稳妥构造模式"><a href="#稳妥构造模式" class="headerlink" title="稳妥构造模式"></a>稳妥构造模式</h3><pre><code>function Person(name) {
 var o = new Object()
 o.say = function() {
 alert(name)
@@ -357,8 +350,7 @@ var duoshuoQuery = {short_name:"wzj1996"};
         <pre><code>链表就要来的随性的多，简单的理解可以是这样：在内存中，栈和队列（数组）的存在就是一个整体，如果想要对她内部某一个元素进行移除或是添加一个新元素就要动她内部所有的元素，所谓牵一发而动全身；而链表则不一样，每一个元素都是由元素本身数据和指向下一个元素的指针构成，所以添加或是移除某一个元素不需要对链表整体进行操作，只需要改变相关元素的指针指向就可以了
 
 链表在实际生活中的例子也有很多，比如自行车的链条，环环相扣，但添加或是移除某一个环节只需要对症下药，对相关环节进行操作就OK。再比如：火车，火车就是一个链表，每一节车厢就是元素，想要移除或是添加某一节车厢，只需要把连接车厢的链条改变一下就好了。那么，在javascript中又该怎么去实现链表结构呢？
-</code></pre><p>##链表的创建</p>
-<p>首先我们要创建一个链表类：</p>
+</code></pre><h2 id="链表的创建"><a href="#链表的创建" class="headerlink" title="链表的创建"></a>链表的创建</h2><p>首先我们要创建一个链表类：</p>
 <pre><code>function LinkedList(){
 //各种属性和方法的声明
 }

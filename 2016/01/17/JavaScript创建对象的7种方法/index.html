@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>JavaScript创建对象的7种方法 | 高乐高</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首先解释几个概念：
+1、对象 下面例子中所有的Person函数
+2、实例/对象实例 通过new Person() or Person()返回的对象，如var person1 = new Person()中的person1
+3、原型对象Person.prototype
+###工厂模式
+function Person() {
+var o = new Object();
+o.name = &amp;apos;h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript创建对象的7种方法">
+<meta property="og:url" content="http://yoursite.com/2016/01/17/JavaScript创建对象的7种方法/index.html">
+<meta property="og:site_name" content="高乐高">
+<meta property="og:description" content="首先解释几个概念：
+1、对象 下面例子中所有的Person函数
+2、实例/对象实例 通过new Person() or Person()返回的对象，如var person1 = new Person()中的person1
+3、原型对象Person.prototype
+###工厂模式
+function Person() {
+var o = new Object();
+o.name = &amp;apos;h">
+<meta property="og:updated_time" content="2016-11-17T03:55:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript创建对象的7种方法">
+<meta name="twitter:description" content="首先解释几个概念：
+1、对象 下面例子中所有的Person函数
+2、实例/对象实例 通过new Person() or Person()返回的对象，如var person1 = new Person()中的person1
+3、原型对象Person.prototype
+###工厂模式
+function Person() {
+var o = new Object();
+o.name = &amp;apos;h">
+  
+    <link rel="alternative" href="/atom.xml" title="高乐高" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">特仑苏</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">特仑苏</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">特仑苏</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-JavaScript创建对象的7种方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript创建对象的7种方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先解释几个概念：</p>
+<pre><code>1、对象 下面例子中所有的Person函数
+2、实例/对象实例 通过new Person() or Person()返回的对象，如var person1 = new Person()中的person1
+3、原型对象Person.prototype
+</code></pre><p>###工厂模式</p>
+<pre><code>function Person() {
+var o = new Object();
+o.name = &apos;hanmeimei&apos;;
+o.say = function() {
+alert(this.name);
+}
+return o;
+}
+var person1 = Person();
+</code></pre><p>优点：完成了返回一个对象的要求。    </p>
+<p>缺点：</p>
+<pre><code>1、无法通过constructor识别对象，以为都是来自Object，无法得知来自Person
+2、每次通过Person创建对象的时候，所有的say方法都是一样的，但是却存储了多次，浪费资源。
+</code></pre><p>###构造函数模式</p>
+<pre><code>function Person() {
+this.name = &apos;hanmeimei&apos;;
+this.say = function() {
+alert(this.name)
+}
+}
+var person1 = new Person();    
+</code></pre><p>优点：</p>
+<pre><code>1、通过constructor或者instanceof可以识别对象实例的类别
+2、可以通过new 关键字来创建对象实例，更像OO语言中创建对象实例
+</code></pre><p>缺点：</p>
+<pre><code>多个实例的say方法都是实现一样的效果，但是却存储了很多次（两个对象实例的say方法是不同的，因为存放的地址不同）
+</code></pre><p>注意：</p>
+<pre><code>1、构造函数模式隐试的在最后返回return this 所以在缺少new的情况下，会将属性和方法添加给全局对象，浏览器端就会添加给window对象。
+2、也可以根据return this 的特性调用call或者apply指定this。这一点在后面的继承有很大帮助。        
+</code></pre><p>###原型模式</p>
+<pre><code>function Person() {}
+Person.prototype.name = &apos;hanmeimei&apos;;
+Person.prototype.say = function() {
+alert(this.name);
+}
+Person.prototype.friends = [&apos;lilei&apos;];
+var person1 = new Person();
+</code></pre><p>优点：</p>
+<pre><code>1、say方法是共享的了，所有的实例的say方法都指向同一个。
+
+2、可以动态的添加原型对象的方法和属性，并直接反映在对象实例上。    
+
+var person1 = new Person()
+Person.prototype.showFriends = function() {
+console.log(this.friends)
+}
+person1.showFriends()  //[&apos;lilei&apos;]    
+</code></pre><p>缺点：</p>
+<pre><code>1、出现引用的情况下会出现问题具体见下面代码：
+
+    var person1 = new Person();
+    var person2 = new Person();
+    person1.friends.push(&apos;xiaoming&apos;);
+    console.log(person2.friends)  //[&apos;lilei&apos;, &apos;xiaoming&apos;]
+
+因为js对引用类型的赋值都是将地址存储在变量中，所以person1和person2的friends属性指向的是同一块存储区域。
+
+2、第一次调用say方法或者name属性的时候会搜索两次，第一次是在实例上寻找say方法，没有找到就去原型对象(Person.prototype)上找say方法，找到后就会在实力上添加这些方法or属性。
+
+3、所有的方法都是共享的，没有办法创建实例自己的属性和方法，也没有办法像构造函数那样传递参数。
+</code></pre><p>注意：</p>
+<pre><code>1、优点②中存在一个问题就是直接通过对象字面量给Person.prototype进行赋值的时候会导致constructor改变，所以需要手动设置，其次就是通过对象字面量给Person.prototype进行赋值，会无法作用在之前创建的对象实例上
+var person1 = new Person()
+Person.prototype = {
+name: &apos;hanmeimei2&apos;,
+setName: function(name){
+  this.name = name
+  }
+  }
+  person1.setName()   //Uncaught TypeError: person1.set is not a function(…)
+
+  这是因为对象实例和对象原型直接是通过一个指针链接的，这个指针是一个内部属性[[Prototype]]，可以通过__proto__访问。我们通过对象字面量修改了Person.prototype指向的地址，然而对象实例的__proto__，并没有跟着一起更新，所以这就导致，实例还访问着原来的Person.prototype，所以建议不要通过这种方式去改变Person.prototype属性
+</code></pre><p>###构造函数和原型组合模式</p>
+<pre><code>function Person(name) {
+this.name = name
+this.friends = [&apos;lilei&apos;]
+}
+Person.prototype.say = function() {
+console.log(this.name)
+}
+var person1 = new Person(&apos;hanmeimei&apos;)
+person1.say() //hanmeimei
+</code></pre><p>优点：</p>
+<pre><code>1、解决了原型模式对于引用对象的缺点
+2、解决了原型模式没有办法传递参数的缺点
+3、解决了构造函数模式不能共享方法的缺点
+</code></pre><p>缺点：</p>
+<pre><code>1、和原型模式中注意①一样
+</code></pre><p>###动态原型模式    </p>
+<pre><code>function Person(name) {
+this.name = name
+if(typeof this.say != &apos;function&apos;) {
+Person.prototype.say = function(
+alert(this.name)
+}
+}
+</code></pre><p>优点：</p>
+<pre><code>1、可以在初次调用构造函数的时候就完成原型对象的修改
+2、修改能体现在所有的实例中
+3、缺点：红宝书都说这个方案完美了。。。。
+</code></pre><p>注意：</p>
+<pre><code>1、只用检查一个在执行后应该存在的方法或者属性就行了
+2、不能用对象字面量修改原型对象
+</code></pre><p>###寄生构造函数模式    </p>
+<pre><code>function Person(name) {
+var o = new Object()
+o.name = name
+o.say = function() {
+alert(this.name)
+}
+return o
+}
+var peron1 = new Person(&apos;hanmeimei&apos;)
+</code></pre><p>优点：</p>
+<pre><code>1、和工厂模式基本一样，除了多了个new操作符
+</code></pre><p>缺点：</p>
+<pre><code>2、和工厂模式一样，不能区分实例的类别
+</code></pre><p>###稳妥构造模式    </p>
+<pre><code>function Person(name) {
+var o = new Object()
+o.say = function() {
+alert(name)
+}
+}
+var person1 = new Person(&apos;hanmeimei&apos;);
+person1.name  // undefined
+person1.say() //hanmeimei
+</code></pre><p>优点：</p>
+<pre><code>1、安全，那么好像成为了私有变量，只能通过say方法去访问
+</code></pre><p>缺点：</p>
+<pre><code>1、不能区分实例的类别
+</code></pre><p>over!!~~~</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/01/17/JavaScript创建对象的7种方法/" class="archive-article-date">
+  	<time datetime="2016-01-17T03:42:32.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-01-17</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/17/javascript数据结构-链表/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript数据结构--链表</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-JavaScript创建对象的7种方法" data-title="JavaScript创建对象的7种方法" data-url="http://yoursite.com/2016/01/17/JavaScript创建对象的7种方法/"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 特仑苏
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

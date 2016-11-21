@@ -157,16 +157,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><p>###1、什么是正则表达式</p>
-<pre><code>正则表达式，又称正规表示式、正规表示法、正规表达式、规则表达式、常规表示法（英语：Regular Expression，在代码中常简写为regex、regexp或RE），计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些匹配某个模式的文本。
-</code></pre><p>###2、利用图形化工具理解正则表达式</p>
-<pre><code>辅助理解正则表达的在线工具 https://regexper.com/ 我们利用这个工具辅助理解，正则表达式。语法没懂表着急，后面会有，这里只是学会用工具帮助我们学习。
+        <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="1、什么是正则表达式"><a href="#1、什么是正则表达式" class="headerlink" title="1、什么是正则表达式"></a>1、什么是正则表达式</h3><pre><code>正则表达式，又称正规表示式、正规表示法、正规表达式、规则表达式、常规表示法（英语：Regular Expression，在代码中常简写为regex、regexp或RE），计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些匹配某个模式的文本。
+</code></pre><h3 id="2、利用图形化工具理解正则表达式"><a href="#2、利用图形化工具理解正则表达式" class="headerlink" title="2、利用图形化工具理解正则表达式"></a>2、利用图形化工具理解正则表达式</h3><pre><code>辅助理解正则表达的在线工具 https://regexper.com/ 我们利用这个工具辅助理解，正则表达式。语法没懂表着急，后面会有，这里只是学会用工具帮助我们学习。
 </code></pre><p>手机号正则</p>
 <p>/^1[34578][0-9]{9}$/</p>
 <p><img src="http://ac-myg6wstv.clouddn.com/1ce345adabe2cc8b2b96.jpg" alt="Mou">    </p>
 <p>注释：以1开头，第二位为3 4 5 7 9 其中一个，以9位（本身1次加重复8次）0-9数字结尾</p>
-<p>#####单词边界</p>
-<p>/\bis\b/</p>
+<h5 id="单词边界"><a href="#单词边界" class="headerlink" title="单词边界"></a>单词边界</h5><p>/\bis\b/</p>
 <p><img src="http://ac-myg6wstv.clouddn.com/3fd0c8d1c0e6614ddffc.jpg" alt="Mou"></p>
 <p>注释： is前后都是单词的边界，比较晦涩难懂？感受下两者的区别，\b 会方道语法部分讲解</p>
 <p><img src="http://ac-myg6wstv.clouddn.com/a774384e61752ce942a0.jpg" alt="Mou"></p>
@@ -183,8 +180,7 @@
 <p>轻松的可以拿到 group#1 #2 #3 的内容，对应 $1 $2 $3</p>
 <p><img src="http://ac-myg6wstv.clouddn.com/1a40fca9e0e3e2f2f50d.jpg" alt="Mou"></p>
 <p>到现在已经能结合图形化工具看懂正则表达式表达式了，如果想自己写，还要在正则语法上下点功夫</p>
-<p>##正则表达式语法</p>
-<p>1 修饰符 （三个 g i m）</p>
+<h2 id="正则表达式语法"><a href="#正则表达式语法" class="headerlink" title="正则表达式语法"></a>正则表达式语法</h2><p>1 修饰符 （三个 g i m）</p>
 <p>修饰符与其他语法特殊，字面量方法声名的时候放到//后，构造函数声明的时候，作为第二个参数传入。整个正则表达式可以理解为正则表达式规则字符串+修饰符</p>
 <pre><code>g：global 执行一个全局匹配
 i：ignore case执行一个不区分大小写的匹配
@@ -205,7 +201,7 @@ m: multiple lines多行匹配
 <p> 这个没什么好解释的，我们一直在举例的 /is/ 匹配字符串’is’</p>
 <p> \将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，n”匹配字符“n”。“\n”匹配一个换行符。序列“\”匹配“\”而“(”则匹配“(”</p>
 <p>字符类取反 [^]</p>
-<p>####表示不属于此类<br><img src="http://ac-myg6wstv.clouddn.com/2388def90c799b216e5f.jpg" alt="Mou"><br>空格也不属于，好多狗🐶</p>
+<h4 id="表示不属于此类"><a href="#表示不属于此类" class="headerlink" title="表示不属于此类"></a>表示不属于此类</h4><p><img src="http://ac-myg6wstv.clouddn.com/2388def90c799b216e5f.jpg" alt="Mou"><br>空格也不属于，好多狗🐶</p>
 <p>范围类[-]</p>
 <p>正则表达式支持一定范围规则比如 [a-z] [A-Z] [0-9] 可以连写[a-z0-9] 如果你只是想匹配-在 范围类最后加-即可。请看实例。</p>
 <p><img src="http://ac-myg6wstv.clouddn.com/546fdd8b997bb4bc88a9.jpg" alt="Mou"></p>
@@ -271,8 +267,7 @@ $        以xx结尾
 <p>如果在反向引用中不想捕获年该如何操作? 加上 ?:即可</p>
 <p>/^(?:\d{4})<a href="\d{2}">/-</a><a href="\d{2}">/-</a>$/</p>
 <p><img src="http://ac-myg6wstv.clouddn.com/23ff76b527b991c29faf.jpg" alt="Mou"></p>
-<p>###over</p>
-
+<h3 id="over"><a href="#over" class="headerlink" title="over"></a>over</h3>
       
     </div>
     <div class="article-info article-info-index">

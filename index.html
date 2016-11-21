@@ -139,6 +139,181 @@
       <div class="body-wrap">
         
   
+    <article id="post-正则" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/21/正则/">正则</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><p>###1、什么是正则表达式</p>
+<pre><code>正则表达式，又称正规表示式、正规表示法、正规表达式、规则表达式、常规表示法（英语：Regular Expression，在代码中常简写为regex、regexp或RE），计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些匹配某个模式的文本。
+</code></pre><p>###2、利用图形化工具理解正则表达式</p>
+<pre><code>辅助理解正则表达的在线工具 https://regexper.com/ 我们利用这个工具辅助理解，正则表达式。语法没懂表着急，后面会有，这里只是学会用工具帮助我们学习。
+</code></pre><p>手机号正则</p>
+<p>/^1[34578][0-9]{9}$/</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/1ce345adabe2cc8b2b96.jpg" alt="Mou">    </p>
+<p>注释：以1开头，第二位为3 4 5 7 9 其中一个，以9位（本身1次加重复8次）0-9数字结尾</p>
+<p>#####单词边界</p>
+<p>/\bis\b/</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/3fd0c8d1c0e6614ddffc.jpg" alt="Mou"></p>
+<p>注释： is前后都是单词的边界，比较晦涩难懂？感受下两者的区别，\b 会方道语法部分讲解</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/a774384e61752ce942a0.jpg" alt="Mou"></p>
+<p>URL分组替换</p>
+<p>/http:(\/\/.+.jpg)/</p>
+<p>看不懂的不要慌语法部分后面会有介绍，这里只是展示利用可视化的图形帮助我们理解正则表达式，可以回来再看木有关系</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/72a64c0f5f5ba4e7eaee.jpg" alt="Mou"></p>
+<p>正则表达式中括号用来分组，这个时候我们可以通过用$1来获取 group#1的内容</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/5c2dbd0ca13e9f444f69.jpg" alt="Mou"></p>
+<p>说下这个正则的意义，如果网站用了https，网站引用静态资源也必须是https，否则报错。如果写成 // 会自动识别 http 或者 https</p>
+<p>日期匹配与分组替换</p>
+<p>/^\d{4}[/-]\d{2}[/-]\d{2}$/</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/eeb1d71e254fde06090e.jpg" alt="Mou"></p>
+<p>轻松的可以拿到 group#1 #2 #3 的内容，对应 $1 $2 $3</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/1a40fca9e0e3e2f2f50d.jpg" alt="Mou"></p>
+<p>到现在已经能结合图形化工具看懂正则表达式表达式了，如果想自己写，还要在正则语法上下点功夫</p>
+<p>##正则表达式语法</p>
+<p>1 修饰符 （三个 g i m）</p>
+<p>修饰符与其他语法特殊，字面量方法声名的时候放到//后，构造函数声明的时候，作为第二个参数传入。整个正则表达式可以理解为正则表达式规则字符串+修饰符</p>
+<pre><code>g：global 执行一个全局匹配
+i：ignore case执行一个不区分大小写的匹配
+m: multiple lines多行匹配
+</code></pre><p>修饰符可以一起用 const reg =/\bis\b/gim<br>来说说他们有什么作用<br>有g和没有g的区别</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/d7f51998f922e51426cb.jpg" alt="Mou"></p>
+<p>没有g只替换了第一个，有g 所有的都换了</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/152cde1cd3cd1c4cb63e.jpg" alt="Mou"></p>
+<p>有i和没有i的区别</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/9048c3bafe0914a065cc.jpg" alt="Mou"></p>
+<p>有i忽略大小写，没有i严格区分大小写<br><img src="http://ac-myg6wstv.clouddn.com/bb10c84bef012f611b82.jpg" alt="Mou"></p>
+<p>元字符</p>
+<p>正则表达式由两种基本字符组成：</p>
+<pre><code>原义字符
+非打印字符
+元字符 (* + ? $ ^ . | \ ( ) { } [ ])
+</code></pre><p> 原义字符</p>
+<p> 这个没什么好解释的，我们一直在举例的 /is/ 匹配字符串’is’</p>
+<p> \将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，n”匹配字符“n”。“\n”匹配一个换行符。序列“\”匹配“\”而“(”则匹配“(”</p>
+<p>字符类取反 [^]</p>
+<p>####表示不属于此类<br><img src="http://ac-myg6wstv.clouddn.com/2388def90c799b216e5f.jpg" alt="Mou"><br>空格也不属于，好多狗🐶</p>
+<p>范围类[-]</p>
+<p>正则表达式支持一定范围规则比如 [a-z] [A-Z] [0-9] 可以连写[a-z0-9] 如果你只是想匹配-在 范围类最后加-即可。请看实例。</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/546fdd8b997bb4bc88a9.jpg" alt="Mou"></p>
+<p> 预定义类</p>
+<p>常用为了方便书写</p>
+<pre><code>字符        等价类                    含义
+.        [^\n\r]                除了回车符和换行符之外的所有字符
+\d        [0-9]                数字字符
+\D        [^0-9]                非数字字符
+\s        [\t\n\x0B\f\r]        空白符
+\S        [^\t\n\x0B\f\r]        非空白符
+\w        [a-zA-Z_0-9]        单词字符（字母、数字、下划线）
+\W        [^a-zA-Z_0-9]        非单词字符
+</code></pre><p>有了这些预定义类，写一些正则就很方便了，比如我们希望匹配一个 ab+数字+任意字符 的字符串，就可以这样写了 /ab\d./<br><img src="http://ac-myg6wstv.clouddn.com/13f9df65830c8ab8777a.jpg" alt="Mou"></p>
+<p>边界</p>
+<pre><code>字符        含义
+
+^        以xx开头
+$        以xx结尾
+\b        单词边界，指[a-zA-Z_0-9]之外的字符
+\B        非单词边界
+</code></pre><p>边界顾名思义即定义匹配的边界条件，上面基本都在前面的例子碰到了，这里演示下\b与\B 的区别</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/4a401fa730bc568015b7.jpg" alt="Mou"></p>
+<p>量词</p>
+<pre><code>字符            含义
+
+?        出现零次或一次
+*        出现零次或多次(任意次)
++        出现一次或多次（至道一次）
+{n}        对应零次或者n次
+{n,m}    至少出现n次但不超过m次
+{n,}    至少出现n次(+的升级版)
+{0,n}    至多出现n次(其实就是{n,m} 方便记忆而已)
+</code></pre><p>如果没有量词，要匹配4位数字这样写就可以/\d\d\d\d/, 如果匹配50位100位呢？那不是要疯掉了？<br>有了量词，就可以这样写/\d{100}/, 量词的使用我们在手机号中使用过，表现在可视化中就是循环多少次。</p>
+<p>凑一个上面都包含的实例/\d?@\d*@\d+@\d{10}@\d{10,20}@\d{10,}@\d{0,10}/</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/92296621793c1e9b289e.jpg" alt="Mou"></p>
+<p>贪婪与懒惰（非贪婪）</p>
+<p>正则表达式默认会匹配贪婪模式，什么是贪婪模式呢？如其名尽可能多的匹配。我们看个例子🌰。</p>
+<p>/\d{3,6}/</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/54f23af7ec7334fdf56b.jpg" alt="Mou"></p>
+<p><img src="http://ac-myg6wstv.clouddn.com/00f41398667e7d54b4c6.jpg" alt="Mou"></p>
+<p>贪婪模式下，匹配的了最多的情况。</p>
+<p>与贪婪对应就是懒惰模式，懒惰对应的就是匹配的尽可能少的情况。如何开启懒惰模式？ 在量词后面加?。继续上面的例子</p>
+<p>/\d{3,6}?/</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/0232a2388ba315d4b197.jpg" alt="Mou"></p>
+<p>如果想知道，正则表达式是如何匹配量词的，请看 进阶正则表达式 文中有介绍，正则是如何回溯的。</p>
+<p>分组与反向引用</p>
+<p>分组，又称为子表达式。把正则表达式拆分成小表达式。概念枯燥，说个例子为嘛用分组：</p>
+<p>不分组 /abc{2}/</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/20a5e736228756898ec0.jpg" alt="Mou"></p>
+<p>量词仅作用到最后的c</p>
+<p>分组 /(abc){2}/</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/903fec7cc8e8f27b81e6.jpg" alt="Mou"></p>
+<p>注意这里 group #1</p>
+<p>分组虽然和运算符() 很像，但是分组在正则表达式中，注意理解组的含义。经常有人滥用分组</p>
+<p>/^(http|https)/ 真的需要这样么？其实 /^https?/就可以了，你正则写的特别长的时候，会出现一堆没用的结果，看着都头疼吧。</p>
+<p>分组往往和反向引用一起使用，别被概念吓到：当一个正则表达式被分组后，每个分组自动被赋予一个组号，一左到右分别是 $1 $2…</p>
+<p>再把之前的例子拿出来</p>
+<p>/^(\d{4})<a href="\d{2}">/-</a><a href="\d{2}">/-</a>$/</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/126a6de5f1367f9f4c5e.jpg" alt="Mou"></p>
+<p>轻松的可以拿到 group#1 #2 #3 的内容，对应 $1 $2 $3</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/1a40fca9e0e3e2f2f50d.jpg" alt="Mou"></p>
+<p>如果在反向引用中不想捕获年该如何操作? 加上 ?:即可</p>
+<p>/^(?:\d{4})<a href="\d{2}">/-</a><a href="\d{2}">/-</a>$/</p>
+<p><img src="http://ac-myg6wstv.clouddn.com/23ff76b527b991c29faf.jpg" alt="Mou"></p>
+<p>###over</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/01/21/正则/" class="archive-article-date">
+  	<time datetime="2016-01-21T11:11:28.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-01-21</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-正则" data-title="正则" data-url="undefined"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+  
     <article id="post-JavaScript创建对象的7种方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     

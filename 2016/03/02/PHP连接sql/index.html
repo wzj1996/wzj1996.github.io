@@ -6,30 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CSS的垂直居中和水平居中总结 | 高乐高</title>
+  <title>PHP连接sql | 高乐高</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言CSS居中一直是一个比较敏感的话题，为了以后开发的方便，楼主觉得确实需要总结一下了，总的来说，居中问题分为垂直居中和水平居中，实际上水平居中是很简单的，但垂直居中的方式和方法就千奇百怪了
-内联元素居中方案水平居中设置：
-1、行内元素 设置 text-align:center；
-2、Flex布局 设置display:flex;justify-content:center;(灵活运用)
-垂直居中设">
+  <meta name="description" content="PHP连接数据库连接数据库有俩种方式
+1、面向过程:
+$link = mysqli_connect(&amp;quot;localhost(本地地址)&amp;quot;,&amp;quot;数据库的账户&amp;quot;,&amp;quot;&amp;quot;,&amp;quot;数据库的名字&amp;quot;);
+if(mysqli_errno($link)){
+echo mysqli_error($link);
+}
+//sql语句
+$sql = &amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS的垂直居中和水平居中总结">
-<meta property="og:url" content="http://yoursite.com/2016/02/26/CSS的垂直居中和水平居中总结/index.html">
+<meta property="og:title" content="PHP连接sql">
+<meta property="og:url" content="http://yoursite.com/2016/03/02/PHP连接sql/index.html">
 <meta property="og:site_name" content="高乐高">
-<meta property="og:description" content="前言CSS居中一直是一个比较敏感的话题，为了以后开发的方便，楼主觉得确实需要总结一下了，总的来说，居中问题分为垂直居中和水平居中，实际上水平居中是很简单的，但垂直居中的方式和方法就千奇百怪了
-内联元素居中方案水平居中设置：
-1、行内元素 设置 text-align:center；
-2、Flex布局 设置display:flex;justify-content:center;(灵活运用)
-垂直居中设">
-<meta property="og:updated_time" content="2016-11-26T03:31:48.000Z">
+<meta property="og:description" content="PHP连接数据库连接数据库有俩种方式
+1、面向过程:
+$link = mysqli_connect(&amp;quot;localhost(本地地址)&amp;quot;,&amp;quot;数据库的账户&amp;quot;,&amp;quot;&amp;quot;,&amp;quot;数据库的名字&amp;quot;);
+if(mysqli_errno($link)){
+echo mysqli_error($link);
+}
+//sql语句
+$sql = &amp;">
+<meta property="og:updated_time" content="2016-12-03T01:47:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS的垂直居中和水平居中总结">
-<meta name="twitter:description" content="前言CSS居中一直是一个比较敏感的话题，为了以后开发的方便，楼主觉得确实需要总结一下了，总的来说，居中问题分为垂直居中和水平居中，实际上水平居中是很简单的，但垂直居中的方式和方法就千奇百怪了
-内联元素居中方案水平居中设置：
-1、行内元素 设置 text-align:center；
-2、Flex布局 设置display:flex;justify-content:center;(灵活运用)
-垂直居中设">
+<meta name="twitter:title" content="PHP连接sql">
+<meta name="twitter:description" content="PHP连接数据库连接数据库有俩种方式
+1、面向过程:
+$link = mysqli_connect(&amp;quot;localhost(本地地址)&amp;quot;,&amp;quot;数据库的账户&amp;quot;,&amp;quot;&amp;quot;,&amp;quot;数据库的名字&amp;quot;);
+if(mysqli_errno($link)){
+echo mysqli_error($link);
+}
+//sql语句
+$sql = &amp;">
   
     <link rel="alternative" href="/atom.xml" title="高乐高" type="application/atom+xml">
   
@@ -153,7 +162,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-CSS的垂直居中和水平居中总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-PHP连接sql" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -163,7 +172,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      CSS的垂直居中和水平居中总结
+      PHP连接sql
     </h1>
   
 
@@ -171,92 +180,117 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><pre><code>CSS居中一直是一个比较敏感的话题，为了以后开发的方便，楼主觉得确实需要总结一下了，总的来说，居中问题分为垂直居中和水平居中，实际上水平居中是很简单的，但垂直居中的方式和方法就千奇百怪了
-</code></pre><h3 id="内联元素居中方案"><a href="#内联元素居中方案" class="headerlink" title="内联元素居中方案"></a>内联元素居中方案</h3><p>水平居中设置：</p>
-<pre><code>1、行内元素 设置 text-align:center；
-2、Flex布局 设置display:flex;justify-content:center;(灵活运用)
-</code></pre><p>垂直居中设置：</p>
-<pre><code>1、父元素高度确定的单行文本（内联元素） 设置 height = line-height；
-2、父元素高度确定的多行文本（内联元素） a:插入 table （插入方法和水平居中一样），然后设置 vertical-align:middle； b:先设置 display:table-cell 再设置 vertical-align:middle；
-</code></pre><p>块级元素居中方案</p>
-<p>水平居中设置：</p>
-<pre><code>1、定宽块状元素 设置 左右 margin 值为 auto；
+        <h3 id="PHP连接数据库"><a href="#PHP连接数据库" class="headerlink" title="PHP连接数据库"></a>PHP连接数据库</h3><p>连接数据库有俩种方式</p>
+<p>1、面向过程:</p>
+<pre><code>$link = mysqli_connect(&quot;localhost(本地地址)&quot;,&quot;数据库的账户&quot;,&quot;&quot;,&quot;数据库的名字&quot;);
+if(mysqli_errno($link)){
+echo mysqli_error($link);
+}
+//sql语句
+$sql = &quot;INSERT INTO users (username,age,pwd) VALUES (&apos;王五&apos;,20,654321)&quot;;
+//设置编码格式
+//方式一：
+//mysqli_query($link,&quot;set names utf8&quot;);
+//方式二
+mysqli_set_charset($link, &quot;utf8&quot;);
+//执行sql
+$res = mysqli_query($link, $sql);
+if($res){
+echo &quot;添加成功&quot;;
+}else{
+echo &quot;添加失败&quot;;
+}
+</code></pre><p>2、面向对象</p>
+<pre><code>$mysqli = new mysqli(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
+if($mysqli-&gt;errno){
+echo $mysqli-&gt;error;
+}else{
+echo &quot;连接数据库成功&quot;;
+}
+$name = &quot;马云&quot;;
+$age  = 38;
+$pwd = 123654;
+$sql = &quot;INSERT INTO users (username,age,pwd) VALUES (&apos;&quot;.$name.&quot;&apos;,$age,$pwd)&quot;;
+//echo $sql;die;
+$reslut = add($sql);
+if($reslut){
+echo &quot;添加成功&quot;;
+}else{
+echo &quot;添加失败&quot;;
+}
+</code></pre><h3 id="数据库的增删改查"><a href="#数据库的增删改查" class="headerlink" title="数据库的增删改查"></a>数据库的增删改查</h3><p>下面都是我封装的函数…</p>
+<p>1、添加<br>sql语句<br>举例:</p>
+<p>users在你数据库表的名字 username,pwd,age,在你数据库的字段,VALEUS 括号里是你要添加的内容;</p>
+<p>$sql = “INSERT INTO users(username,pwd,age) VALUES (‘王林’,123123,45)”;</p>
+<pre><code>function add($sql){
+//连接数据库
+$link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
+//设置编码格式
+mysqli_query($link, &quot;set names utf8&quot;);
+$res = mysqli_query($link, $sql);
 
-2、不定宽块状元素 a:在元素外加入 table 标签（完整的，包括 table、tbody、tr、td），该元素写在 td 内，然后设置 margin 的值为 auto； b:给该元素设置 display:inine 方法； c:父元素设置 position:relative 和 left:50%，子元素设 position:relative 和 left:50%；
-</code></pre><p>垂直居中设置：</p>
-<p>1.使用position:absolute（fixed）,设置left、top、margin-left、margin-top的属性;</p>
-<pre><code>.box{
-position:absolute;/*或fixed*/
-top:50%;
-left:50%;
-margin-top:-100px;
-margin-left:-200px;
+//    $reslut = mysqli_insert_id($link);
+//    echo $reslut;die;
+if($res){
+    return true;    
+}else{
+    return false;
 }
-</code></pre><p>3.利用display:table-cell属性使内容垂直居中;</p>
-<pre><code>.box{
-display:table-cell;
-vertical-align:middle;
-text-align:center;
-width:120px;
-height:120px;
-background:purple;
 }
-</code></pre><p>4.使用css3的新属性transform:translate(x,y)属性;</p>
-<pre><code>.box{
-position: absolute;
-transform: translate(50%,50%);
--webkit-transform:translate(50%,50%);
--moz-transform:translate(50%,50%);
--ms-transform:translate(50%,50%);
+</code></pre><p>2、删除</p>
+<p>WHERE后面是你添加的条件为了更准确的去删除;</p>
+<p>$sql = “DELETE FROM users WHERE id=18”;</p>
+<pre><code>function delete($sql){
+//连接数据库
+$link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
+mysqli_query($link, &quot;set names utf8&quot;);
+$res = mysqli_query($link, $sql);
+if($res){
+    return true;    
+}else{
+    return false;
 }
-</code></pre><p>5.最高大上的一种，使用:before元素;</p>
-<pre><code>.box{
-position:fixed;
-display:block;
-background:rgba(0,0,0,.5);
-}
-.box:before{
-content:&apos;&apos;;
-display:inline-block;
-vertical-align:middle;
-height:100%;
-}
-.box.content{
-width:60px;
-height:60px;
-line-height:60px;
-color:red;
-</code></pre><p>6.Flex布局;</p>
-<pre><code>.box{
-display: -webkit-box;
-display: -webkit-flex;
-display: -moz-box;
-display: -moz-flex;
-display: -ms-flexbox;
-display: flex;
-水平居中
--webkit-box-align: center;
--moz-box-align: center;
--ms-flex-pack:center;
--webkit-justify-content: center;
--moz-justify-content: center;
-justify-content: center;
- 垂直居中
--webkit-box-pack: center;
--moz-box-pack: center;
--ms-flex-align:center;
--webkit-align-items: center;
--moz-align-items: center;
-align-items: center;
 }    
-</code></pre><p>over!    </p>
+</code></pre><p>3、更改<br>    $sql = “UPDATE users SET username=’王’ WHERE id=18”;</p>
+<pre><code>function update($sql){
+//连接数据库
+$link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
+mysqli_query($link, &quot;set names utf8&quot;);
+$res = mysqli_query($link, $sql);
+if($res){
+    return true;    
+}else{
+    return false;
+}
+}
+</code></pre><p>4、查询<br>$sql = “SELECT * FROM users”;</p>
+<pre><code>function getlist($sql){
+//连接数据库
+$link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
+//设置编码格式
+mysqli_query($link, &quot;set names utf8&quot;);
+//执行sql
+$res = mysqli_query($link, $sql);
+//取所有数据
+//    $list = mysqli_fetch_all($res);//常用
+//    $arr = array();
+//    while($list = mysqli_fetch_row($res)){
+//        $arr[] = $list;
+//    }
+//常用
+while($list = mysqli_fetch_assoc($res)){
+    $arr[] = $list;
+}
 
+    return $arr;
+}
+</code></pre>
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/02/26/CSS的垂直居中和水平居中总结/" class="archive-article-date">
-  	<time datetime="2016-02-26T03:25:15.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-02-26</time>
+      <a href="/2016/03/02/PHP连接sql/" class="archive-article-date">
+  	<time datetime="2016-03-02T01:27:22.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-03-02</time>
 </a>
       
       
@@ -269,18 +303,9 @@ align-items: center;
   
 <nav id="article-nav">
   
-    <a href="/2016/03/02/PHP连接sql/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          PHP连接sql
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/02/25/前端面试中常见的算术问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">前端面试中常见的算术问题</div>
+    <a href="/2016/02/26/CSS的垂直居中和水平居中总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS的垂直居中和水平居中总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -314,7 +339,7 @@ align-items: center;
 
 
 <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-CSS的垂直居中和水平居中总结" data-title="CSS的垂直居中和水平居中总结" data-url="http://yoursite.com/2016/02/26/CSS的垂直居中和水平居中总结/"></div>
+  <div class="ds-thread" data-thread-key="post-PHP连接sql" data-title="PHP连接sql" data-url="http://yoursite.com/2016/03/02/PHP连接sql/"></div>
 
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->

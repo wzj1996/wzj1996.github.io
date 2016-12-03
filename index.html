@@ -196,9 +196,8 @@ echo &quot;添加成功&quot;;
 echo &quot;添加失败&quot;;
 }
 </code></pre><h3 id="数据库的增删改查"><a href="#数据库的增删改查" class="headerlink" title="数据库的增删改查"></a>数据库的增删改查</h3><p>下面都是我封装的函数…</p>
-<p>1、添加<br>sql语句<br>举例:</p>
+<p>1、添加<br>sql语句<br>举例:<br>$sql = “INSERT INTO users(username,pwd,age) VALUES (‘王林’,123123,45)”;</p>
 <p>users在你数据库表的名字 username,pwd,age,在你数据库的字段,VALEUS 括号里是你要添加的内容;</p>
-<p>$sql = “INSERT INTO users(username,pwd,age) VALUES (‘王林’,123123,45)”;</p>
 <pre><code>function add($sql){
 //连接数据库
 $link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
@@ -215,8 +214,8 @@ if($res){
 }
 }
 </code></pre><p>2、删除</p>
-<p>WHERE后面是你添加的条件为了更准确的去删除;</p>
 <p>$sql = “DELETE FROM users WHERE id=18”;</p>
+<p>WHERE后面是你添加的条件为了更准确的去删除;</p>
 <pre><code>function delete($sql){
 //连接数据库
 $link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);

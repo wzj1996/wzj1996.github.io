@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>vue.js | 高乐高</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Vue.js双向绑定的实现原理
+ Vue.js最核心的功能有两个，一是响应式的数据绑定系统，二是组件系统。本文仅探究几乎所有Vue的开篇介绍都会提到的hello world双向绑定是怎样实现的。先讲涉及的知识点，再参考源码，用尽可能少的代码实现那个hello world开篇示例
+一、访问器属性
+访问器属性是对象中的一种特殊属性，它不能直接在对象中设置，而必须通过defineProperty()方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue.js">
+<meta property="og:url" content="http://yoursite.com/2016/03/06/vue-js/index.html">
+<meta property="og:site_name" content="高乐高">
+<meta property="og:description" content="Vue.js双向绑定的实现原理
+ Vue.js最核心的功能有两个，一是响应式的数据绑定系统，二是组件系统。本文仅探究几乎所有Vue的开篇介绍都会提到的hello world双向绑定是怎样实现的。先讲涉及的知识点，再参考源码，用尽可能少的代码实现那个hello world开篇示例
+一、访问器属性
+访问器属性是对象中的一种特殊属性，它不能直接在对象中设置，而必须通过defineProperty()方法">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120155820248-500778578.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120155856263-1051312268.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160007029-1444374091.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160124217-527060528.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160134232-1887803443.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160200217-164611845.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160233873-127171744.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160243545-44236467.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160327467-1883154446.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160409513-886321336.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160441326-1073521186.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160501763-1127106704.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160541513-1856723431.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160644154-1888733590.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160659310-1972832043.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160749388-947918217.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160726592-168522955.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160814420-1825354650.png">
+<meta property="og:updated_time" content="2016-12-04T10:14:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue.js">
+<meta name="twitter:description" content="Vue.js双向绑定的实现原理
+ Vue.js最核心的功能有两个，一是响应式的数据绑定系统，二是组件系统。本文仅探究几乎所有Vue的开篇介绍都会提到的hello world双向绑定是怎样实现的。先讲涉及的知识点，再参考源码，用尽可能少的代码实现那个hello world开篇示例
+一、访问器属性
+访问器属性是对象中的一种特殊属性，它不能直接在对象中设置，而必须通过defineProperty()方法">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120155820248-500778578.png">
+  
+    <link rel="alternative" href="/atom.xml" title="高乐高" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">特仑苏</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">特仑苏</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">特仑苏</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-vue-js" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue.js
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Vue-js双向绑定的实现原理"><a href="#Vue-js双向绑定的实现原理" class="headerlink" title="Vue.js双向绑定的实现原理"></a>Vue.js双向绑定的实现原理</h2><hr>
+<p> Vue.js最核心的功能有两个，一是响应式的数据绑定系统，二是组件系统。本文仅探究几乎所有Vue的开篇介绍都会提到的hello world双向绑定是怎样实现的。先讲涉及的知识点，再参考源码，用尽可能少的代码实现那个hello world开篇示例</p>
+<h3 id="一、访问器属性"><a href="#一、访问器属性" class="headerlink" title="一、访问器属性"></a>一、访问器属性</h3><hr>
+<p>访问器属性是对象中的一种特殊属性，它不能直接在对象中设置，而必须通过defineProperty()方法单独定义。</p>
+<pre><code>var obj = { };
+
+   // 为obj定义一个名为hello的访问器属性
+
+   Object.defineProperty(obj, &quot;hello&quot;, {
+
+     get: function () {return sth},
+
+     set: function (val) {/* do sth */}
+
+   })
+
+   obj.hello // 可以像普通属性一样读取访问器属性
+
+   访问器属性的&quot;值&quot;比较特殊，读取或设置访问器属性的值，实际上是调用其内部特性：get和set函数。
+
+   obj.hello // 读取属性，就是调用get函数并返回get函数的返回值
+   obj.hello = &quot;abc&quot; // 为属性赋值，就是调用set函数，赋值其实是传参
+</code></pre><p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120155820248-500778578.png" alt="Mou"> </p>
+<pre><code>get和set方法内部的this都指向obj，这意味着get和set函数可以操作对象内部的值。另外，访问器属性的会&quot;覆盖&quot;同名的普通属性，因为访问器属性会被优先访问，与其同名的普通属性则会被忽略（也就是所谓的被&quot;劫持&quot;了）。
+</code></pre><h3 id="二、极简双向绑定的实现"><a href="#二、极简双向绑定的实现" class="headerlink" title="二、极简双向绑定的实现"></a>二、极简双向绑定的实现</h3><hr>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120155856263-1051312268.png" alt="Mou"></p>
+<p>此例实现的效果是：随文本框输入文字的变化，span中会同步显示相同的文字内容；在js或控制台显式的修改obj.name的值，视图会相应更新。这样就实现了model =&gt;view以及view =&gt; model的双向绑定，并且是响应式的。</p>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160007029-1444374091.png" alt="Mou"></p>
+<pre><code>以上就是Vue实现双向绑定的基本原理。
+</code></pre><h3 id="三、分解任务"><a href="#三、分解任务" class="headerlink" title="三、分解任务"></a>三、分解任务</h3><hr>
+<p>上述示例仅仅是为了说明原理。我们最终要实现的是：</p>
+<p>![Mou](<a href="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160023154-705049955.png" target="_blank" rel="external">http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160023154-705049955.png</a></p>
+<p>首先将该任务分成几个子任务：</p>
+<pre><code>1、输入框以及文本节点与data中的数据绑定
+
+2、输入框内容变化时，data中的数据同步变化。即view =&gt; model的变化。
+
+3、data中的数据变化时，文本节点的内容同步变化。即model =&gt; view的变化。
+
+要实现任务一，需要对DOM进行编译，这里有一个知识点：            DocumentFragment。
+</code></pre><h3 id="四、DocumentFragment"><a href="#四、DocumentFragment" class="headerlink" title="四、DocumentFragment"></a>四、DocumentFragment</h3><hr>
+<p>DocumentFragment（文档片段）可以看作节点容器，它可以包含多个子节点，当我们将它插入到DOM中时，只有它的子节点会插入目标节点，所以把它看作一组节点的容器。使用DocumentFragment处理节点，速度和性能远远优于直接操作DOM。Vue进行编译时，就是将挂载目标的所有子节点劫持（真的是劫持）到DocumentFragment中，经过一番处理后，再将DocumentFragment整体返回插入挂载目标。    </p>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160124217-527060528.png" alt="Mou"><br><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160134232-1887803443.png" alt="Mou"></p>
+<h3 id="五、数据初始化绑定"><a href="#五、数据初始化绑定" class="headerlink" title="五、数据初始化绑定"></a>五、数据初始化绑定</h3><hr>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160200217-164611845.png" alt="Mou"></p>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160233873-127171744.png" alt="Mou"></p>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160243545-44236467.png" alt="Mou"></p>
+<pre><code>以上代码实现了任务一，我们可以看到，hello world已经呈现在输入框和文本节点中。
+</code></pre><p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160327467-1883154446.png" alt="Mou"></p>
+<h3 id="六、响应式的数据绑定"><a href="#六、响应式的数据绑定" class="headerlink" title="六、响应式的数据绑定"></a>六、响应式的数据绑定</h3><hr>
+<p>再来看任务二的实现思路：当我们在输入框输入数据的时候，首先触发input事件（或者keyup、change事件），在相应的事件处理程序中，我们获取输入框的value并赋值给vm实例的text属性。我们会利用defineProperty将data中的text劫持为vm的访问器属性，因此给vm.text赋值，就会触发set方法。在set方法中主要做两件事，第一是更新属性的值，第二留到任务三再说。</p>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160409513-886321336.png" alt="Mou"></p>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160441326-1073521186.png" alt="Mou"></p>
+<pre><code>任务二也就完成了，text属性值会与输入框的内容同步变化：
+</code></pre><p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160501763-1127106704.png" alt="Mou">    </p>
+<h3 id="七、订阅-发布模式（subscribe-amp-publish）"><a href="#七、订阅-发布模式（subscribe-amp-publish）" class="headerlink" title="七、订阅/发布模式（subscribe&amp;publish）"></a>七、订阅/发布模式（subscribe&amp;publish）</h3><hr>
+<p> text属性变化了，set方法触发了，但是文本节点的内容没有变化。如何让同样绑定到text的文本节点也同步变化呢？这里又有一个知识点：订阅发布模式。</p>
+<p> 订阅发布模式（又称观察者模式）定义了一种一对多的关系，让多个观察者同时监听某一个主题对象，这个主题对象的状态发生改变时就会通知所有观察者对象。</p>
+<p> 发布者发出通知 =&gt; 主题对象收到通知并推送给订阅者 =&gt; 订阅者执行相应操作</p>
+<p> <img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160541513-1856723431.png" alt="Mou"></p>
+<pre><code>之前提到的，当set方法触发后做的第二件事就是作为发布者发出通知：“我是属性text，我变了”。文本节点则是作为订阅者，在收到消息后执行相应的更新操作。 
+</code></pre><h3 id="八、双向绑定的实现"><a href="#八、双向绑定的实现" class="headerlink" title="八、双向绑定的实现"></a>八、双向绑定的实现</h3><hr>
+<p>   回顾一下，每当new一个Vue，主要做了两件事：第一个是监听数据：observe(data)，第二个是编译HTML：nodeToFragement(id)。<br>   在监听数据的过程中，会为data中的每一个属性生成一个主题对象dep。<br>    在编译HTML的过程中，会为每个与数据绑定相关的节点生成一个订阅者watcher，watcher会将自己添加到相应属性的dep中。<br>    我们已经实现：修改输入框内容 =&gt; 在事件回调函数中修改属性值 =&gt; 触发属性的set方法。<br>    接下来我们要实现的是：发出通知dep.notify() =&gt; 触发订阅者的update方法 =&gt; 更新视图。<br>    这里的关键逻辑是：如何将watcher添加到关联属性的dep中。</p>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160644154-1888733590.png" alt="Mou"></p>
+<pre><code>在编译HTML过程中，为每个与data关联的节点生成一个Watcher。Watcher函数中发生了什么呢?
+</code></pre><p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160659310-1972832043.png" alt="Mou"></p>
+<p>首先，将自己赋给了一个全局变量Dep.target；</p>
+<p>其次，执行了update方法，进而执行了get方法，get的方法读取了vm的访问器属性，从而触发了访问器属性的get方法，get方法中将该watcher添加到了对应访问器属性的dep中；</p>
+<p>再次，获取属性的值，然后更新视图。</p>
+<p>最后，将Dep.target设为空。因为它是全局变量，也是watcher与dep关联的唯一桥梁，任何时刻都必须保证Dep.target只有一个值。</p>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160749388-947918217.png" alt="Mou"></p>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160726592-168522955.png" alt="Mou"></p>
+<p><img src="http://images2015.cnblogs.com/blog/925891/201611/925891-20161120160814420-1825354650.png" alt="Mou"></p>
+<pre><code>至此，hello world双向绑定就基本实现了。文本内容会随输入框内容同步变化，在控制器中修改vm.text的值，会同步反映到文本内容中。    
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/03/06/vue-js/" class="archive-article-date">
+  	<time datetime="2016-03-06T10:02:25.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-03-06</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/05/Flex布局教程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Flex布局教程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-vue-js" data-title="vue.js" data-url="http://yoursite.com/2016/03/06/vue-js/"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 特仑苏
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

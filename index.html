@@ -139,6 +139,972 @@
       <div class="body-wrap">
         
   
+    <article id="post-mou" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/14/mou/">Mou 书写格式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Mou"><a href="#Mou" class="headerlink" title="Mou"></a>Mou</h1><p><img src="http://25.io/mou/Mou_128.png" alt="Mou icon"></p>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><strong>Mou</strong>, the missing Markdown editor for <em>web developers</em>.</p>
+<h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><h4 id="Strong-and-Emphasize"><a href="#Strong-and-Emphasize" class="headerlink" title="Strong and Emphasize"></a>Strong and Emphasize</h4><p><strong>strong</strong> or <strong>strong</strong> ( Cmd + B )</p>
+<p><em>emphasize</em> or <em>emphasize</em> ( Cmd + I )</p>
+<p><strong>Sometimes I want a lot of text to be bold.<br>Like, seriously, a <em>LOT</em> of text</strong></p>
+<h4 id="Blockquotes"><a href="#Blockquotes" class="headerlink" title="Blockquotes"></a>Blockquotes</h4><blockquote>
+<p>Right angle brackets &gt; are used for block quotes.</p>
+</blockquote>
+<h4 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h4><p>An email <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#46;&#x63;&#111;&#109;">&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#46;&#x63;&#111;&#109;</a> link.</p>
+<p>Simple inline link <a href="http://chenluois.com" target="_blank" rel="external">http://chenluois.com</a>, another inline link <a href="http://25.io/smaller/" target="_blank" rel="external">Smaller</a>, one more inline link with title <a href="http://resizesafari.com" title="a Safari extension" target="_blank" rel="external">Resize</a>.</p>
+<p>A <a href="http://25.io/mou/" title="Markdown editor on Mac OS X" target="_blank" rel="external">reference style</a> link. Input id, then anywhere in the doc, define the link with corresponding id:</p>
+<p>Titles ( or called tool tips ) in the links are optional.</p>
+<h4 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h4><p>An inline image <img src="http://25.io/smaller/favicon.ico" alt="Smaller icon" title="Title here">, title is optional.</p>
+<p>A <img src="http://resizesafari.com/favicon.ico" alt="Resize icon" title="Title"> reference style image.</p>
+<h4 id="Inline-code-and-Block-code"><a href="#Inline-code-and-Block-code" class="headerlink" title="Inline code and Block code"></a>Inline code and Block code</h4><p>Inline code are surround by <code>backtick</code> key. To create a block code:</p>
+<pre><code>Indent each line by at least 1 tab, or 4 spaces.
+var Mou = exactlyTheAppIwant; 
+</code></pre><h4 id="Ordered-Lists"><a href="#Ordered-Lists" class="headerlink" title="Ordered Lists"></a>Ordered Lists</h4><p>Ordered lists are created using “1.” + Space:</p>
+<ol>
+<li>Ordered list item</li>
+<li>Ordered list item</li>
+<li>Ordered list item</li>
+</ol>
+<h4 id="Unordered-Lists"><a href="#Unordered-Lists" class="headerlink" title="Unordered Lists"></a>Unordered Lists</h4><p>Unordered list are created using “*” + Space:</p>
+<ul>
+<li>Unordered list item</li>
+<li>Unordered list item</li>
+<li>Unordered list item </li>
+</ul>
+<p>Or using “-“ + Space:</p>
+<ul>
+<li>Unordered list item</li>
+<li>Unordered list item</li>
+<li>Unordered list item</li>
+</ul>
+<h4 id="Hard-Linebreak"><a href="#Hard-Linebreak" class="headerlink" title="Hard Linebreak"></a>Hard Linebreak</h4><p>End a line with two or more spaces will create a hard linebreak, called <code>&lt;br /&gt;</code> in HTML. ( Control + Return )<br>Above line ended with 2 spaces.</p>
+<h4 id="Horizontal-Rules"><a href="#Horizontal-Rules" class="headerlink" title="Horizontal Rules"></a>Horizontal Rules</h4><p>Three or more asterisks or dashes:</p>
+<hr>
+<hr>
+<hr>
+<h4 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h4><p>Setext-style:</p>
+<h1 id="This-is-H1"><a href="#This-is-H1" class="headerlink" title="This is H1"></a>This is H1</h1><h2 id="This-is-H2"><a href="#This-is-H2" class="headerlink" title="This is H2"></a>This is H2</h2><p>atx-style:</p>
+<h1 id="This-is-H1-1"><a href="#This-is-H1-1" class="headerlink" title="This is H1"></a>This is H1</h1><h2 id="This-is-H2-1"><a href="#This-is-H2-1" class="headerlink" title="This is H2"></a>This is H2</h2><h3 id="This-is-H3"><a href="#This-is-H3" class="headerlink" title="This is H3"></a>This is H3</h3><h4 id="This-is-H4"><a href="#This-is-H4" class="headerlink" title="This is H4"></a>This is H4</h4><h5 id="This-is-H5"><a href="#This-is-H5" class="headerlink" title="This is H5"></a>This is H5</h5><h6 id="This-is-H6"><a href="#This-is-H6" class="headerlink" title="This is H6"></a>This is H6</h6><h3 id="Extra-Syntax"><a href="#Extra-Syntax" class="headerlink" title="Extra Syntax"></a>Extra Syntax</h3><h4 id="Footnotes"><a href="#Footnotes" class="headerlink" title="Footnotes"></a>Footnotes</h4><p>Footnotes work mostly like reference-style links. A footnote is made of two things: a marker in the text that will become a superscript number; a footnote definition that will be placed in a list of footnotes at the end of the document. A footnote looks like this:</p>
+<p>That’s some text with a footnote.[^1]</p>
+<p>[^1]: And that’s the footnote.</p>
+<h4 id="Strikethrough"><a href="#Strikethrough" class="headerlink" title="Strikethrough"></a>Strikethrough</h4><p>Wrap with 2 tilde characters:</p>
+<p><del>Strikethrough</del></p>
+<h4 id="Fenced-Code-Blocks"><a href="#Fenced-Code-Blocks" class="headerlink" title="Fenced Code Blocks"></a>Fenced Code Blocks</h4><p>Start with a line containing 3 or more backticks, and ends with the first line with the same number of backticks:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Fenced code blocks are like Stardard Markdown’s regular code</div><div class="line">blocks, except that they’re not indented and instead rely on</div><div class="line">a start and end fence lines to delimit the code block.</div></pre></td></tr></table></figure>
+<h4 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h4><p>A simple table looks like this:</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+<th>Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<p>If you wish, you can add a leading and tailing pipe to each line of the table:</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+<th>Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<p>Specify alignment for each column by adding colons to separator lines:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">First Header</th>
+<th style="text-align:center">Second Header</th>
+<th style="text-align:right">Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+<tr>
+<td style="text-align:left">Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Shortcuts"><a href="#Shortcuts" class="headerlink" title="Shortcuts"></a>Shortcuts</h3><h4 id="View"><a href="#View" class="headerlink" title="View"></a>View</h4><ul>
+<li>Toggle live preview: Shift + Cmd + I</li>
+<li>Toggle Words Counter: Shift + Cmd + W</li>
+<li>Toggle Transparent: Shift + Cmd + T</li>
+<li>Toggle Floating: Shift + Cmd + F</li>
+<li>Left/Right = 1/1: Cmd + 0</li>
+<li>Left/Right = 3/1: Cmd + +</li>
+<li>Left/Right = 1/3: Cmd + -</li>
+<li>Toggle Writing orientation: Cmd + L</li>
+<li>Toggle fullscreen: Control + Cmd + F</li>
+</ul>
+<h4 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h4><ul>
+<li>Copy HTML: Option + Cmd + C</li>
+<li>Strong: Select text, Cmd + B</li>
+<li>Emphasize: Select text, Cmd + I</li>
+<li>Inline Code: Select text, Cmd + K</li>
+<li>Strikethrough: Select text, Cmd + U</li>
+<li>Link: Select text, Control + Shift + L</li>
+<li>Image: Select text, Control + Shift + I</li>
+<li>Select Word: Control + Option + W</li>
+<li>Select Line: Shift + Cmd + L</li>
+<li>Select All: Cmd + A</li>
+<li>Deselect All: Cmd + D</li>
+<li>Convert to Uppercase: Select text, Control + U</li>
+<li>Convert to Lowercase: Select text, Control + Shift + U</li>
+<li>Convert to Titlecase: Select text, Control + Option + U</li>
+<li>Convert to List: Select lines, Control + L</li>
+<li>Convert to Blockquote: Select lines, Control + Q</li>
+<li>Convert to H1: Cmd + 1</li>
+<li>Convert to H2: Cmd + 2</li>
+<li>Convert to H3: Cmd + 3</li>
+<li>Convert to H4: Cmd + 4</li>
+<li>Convert to H5: Cmd + 5</li>
+<li>Convert to H6: Cmd + 6</li>
+<li>Convert Spaces to Tabs: Control + [</li>
+<li>Convert Tabs to Spaces: Control + ]</li>
+<li>Insert Current Date: Control + Shift + 1</li>
+<li>Insert Current Time: Control + Shift + 2</li>
+<li>Insert entity &lt;: Control + Shift + ,</li>
+<li>Insert entity &gt;: Control + Shift + .</li>
+<li>Insert entity &amp;: Control + Shift + 7</li>
+<li>Insert entity Space: Control + Shift + Space</li>
+<li>Insert Scriptogr.am Header: Control + Shift + G</li>
+<li>Shift Line Left: Select lines, Cmd + [</li>
+<li>Shift Line Right: Select lines, Cmd + ]</li>
+<li>New Line: Cmd + Return</li>
+<li>Comment: Cmd + /</li>
+<li>Hard Linebreak: Control + Return</li>
+</ul>
+<h4 id="Edit"><a href="#Edit" class="headerlink" title="Edit"></a>Edit</h4><ul>
+<li>Auto complete current word: Esc</li>
+<li>Find: Cmd + F</li>
+<li>Close find bar: Esc</li>
+</ul>
+<h4 id="Post"><a href="#Post" class="headerlink" title="Post"></a>Post</h4><ul>
+<li>Post on Scriptogr.am: Control + Shift + S</li>
+<li>Post on Tumblr: Control + Shift + T</li>
+</ul>
+<h4 id="Export"><a href="#Export" class="headerlink" title="Export"></a>Export</h4><ul>
+<li>Export HTML: Option + Cmd + E</li>
+<li>Export PDF:  Option + Cmd + P</li>
+</ul>
+<h3 id="And-more"><a href="#And-more" class="headerlink" title="And more?"></a>And more?</h3><p>Don’t forget to check Preferences, lots of useful options are there.</p>
+<p>Follow <a href="https://twitter.com/mou" target="_blank" rel="external">@Mou</a> on Twitter for the latest news.</p>
+<p>For feedback, use the menu <code>Help</code> - <code>Send Feedback</code></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/06/14/mou/" class="archive-article-date">
+  	<time datetime="2016-06-14T11:52:56.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-06-14</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mou/">mou</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-mou" data-title="Mou 书写格式" data-url="undefined"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-React-this" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/05/React-this/">React开发中关于this的那些事儿</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="React开发中关于this的那些事儿"><a href="#React开发中关于this的那些事儿" class="headerlink" title="React开发中关于this的那些事儿"></a>React开发中关于this的那些事儿</h2><p>在React开发，关于this以及es6中方法的书写及其使用出现一些问题</p>
+<ul>
+<li><p>在es5中, 普通用function声明的函数是定义在window对象上的，显而易见其内部的this肯定是默认指向window对象。而直接用函数名来调用得到的函数内this也是window对象。可以这么理解，那个看不见的调用者就是window</p>
+</li>
+<li><p>在es6中，为了规范function中this的所属问题，在使用‘use strict’模式下，不显示地用window对象调用函数则其内部的this为undefined，也就是强制你使用window对象严格得去调用。</p>
+</li>
+</ul>
+<h4 id="与this相关的-bind-call-apply-三兄弟"><a href="#与this相关的-bind-call-apply-三兄弟" class="headerlink" title="与this相关的 bind call apply 三兄弟"></a>与this相关的 bind call apply 三兄弟</h4><ol>
+<li>bind通常用来重新绑定函数体中的this并返回一个具有指定this的函数。</li>
+<li><p>call 和 apply 则表示重新指定this并调用返回结果，区别在于call采用多个实参的方式传参，apply则是使用一个数组。</p>
+<p> 共同点: 在于第一个参数指定为this(这里用对象描述比较合理些)，作用都是用来重定向this；从第二个参数起都算作是参数传递。</p>
+<p> 不同点: [1] 是用来返回具有特定this的函数，[2] 是用来调用函数的。而对于函数的获得，则通过其声明宿主(指所在对象，并非es6中的class类。在es6中，class和Java的类似，想要调用需要创建对象)</p>
+</li>
+</ol>
+<h4 id="React中的bind"><a href="#React中的bind" class="headerlink" title="React中的bind"></a>React中的bind</h4><p>准确说，应该是es6中bind的使用，但因为在开发中常用到，就暂且以React开发为背景。<br>因为是返回指定this的函数，因此它的应用场景一定是函数的传递，而非函数的普通调用。在开发中，函数的传递赋值主要有以下几个场景(如有遗漏，欢迎补充)：</p>
+<ul>
+<li>组件属性：组件内部函数的回调，通过把一个函数传递给组件的props，本质上和把函数作为实参传递给被调用函数是一致的。(至于是在Jsx中虚拟Dom中传递还是通过<code>createElement</code>、<code>cloneElement</code>等React API就不多说了)</li>
+<li>高阶函数：本质上也是一种回调，就是在调用的地方提前写好即将被调用的函数并传进去，这里的‘即将’既可以是同步也可以是异步。</li>
+</ul>
+<p>在以上两种情况中，组件的属性对this的依赖还是比较大的</p>
+<p>当我们给组件属性所传递的函数中，需要使用到当前类中非静态函数或字段(这两种成员都归属于this)时就不得不使用this来调用。</p>
+<h4 id="使用场景一"><a href="#使用场景一" class="headerlink" title="使用场景一"></a>使用场景一</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class Foo extends Component&#123;</div><div class="line">	render () &#123;</div><div class="line">		return &lt;CustomView onPress=&#123;this.readBook&#125; /&gt;</div><div class="line">	&#125;</div><div class="line">	readBook () &#123;</div><div class="line">		let bookName = this.getBookName()</div><div class="line">		this.props.ooxx</div><div class="line">		this.state.ooxx</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上代码在运行时，由于<code>this.readBook</code>传递了一个纯函数，而该函数在CustomView类中执行时，this会被指向当前类CustomView的实例this,显而易见此时的foo、props、ooxx显然在另外一个类中是找不到的，<code>undefined</code>这个老朋友的如约而至也成为必然。</p>
+<p>此时我们只需要改写传入方式为<code>this.readBook.bind(this)</code>即可将当前this绑定到readBook中，当然也可以绑定其他你所想要的，只要符合你的需求。</p>
+<h4 id="使用场景二"><a href="#使用场景二" class="headerlink" title="使用场景二"></a>使用场景二</h4><p>由于让函数调用bind会返回一个全新的函数，因此在高阶函数的某些场景下就会因为不是同一个函数(准确说是引用) 而导致出错，如监听器的注册与注销:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class PauseMenu extends Component &#123;</div><div class="line">	constructor (props) &#123;</div><div class="line">		super(props);</div><div class="line">		this._onAppPaused = this.onAppPaused.bind(this); </div><div class="line">	&#125; </div><div class="line">	componentWillMount () &#123;</div><div class="line">		AppStateIOS.addEventListener(&apos;change&apos;, this._onAppPaused); </div><div class="line">	&#125;</div><div class="line">	componentDidUnmount () &#123;</div><div class="line">		AppStateIOS.removeEventListener(</div><div class="line">			&apos;change&apos;, this._onAppPaused</div><div class="line">		)</div><div class="line">	&#125;</div><div class="line">	onAppPaused(event)&#123; </div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看到我们在构造函数里为onAppPaused函数单独绑定了this并存到当前this当中，这样在注册和注销的时候都可以保证拿到的是同一个函数对象。(这里需要注意，_onAppPaused是直接定义在this上的，因此在针对一个class new出实例后，_onAppPaused是属于实例的，而onAppPaused是定义在类里的非静态函数，在类的prototype上，实例的<em>proto</em>原型上的。)</p>
+<h4 id="在bind时传参数"><a href="#在bind时传参数" class="headerlink" title="在bind时传参数"></a>在bind时传参数</h4><p>这个需求，就我个人来讲是一个非常不合理的需求。高阶函数本来就是传入一个方法签名，而你非要利用bind的附加参数功能有点‘乱来’的意思了。不过也不是不可以，只需要注意此时如果在高阶函数内(或组件内) 的方法回调中本身带有参数，则在bind时禁止附加参数，否则会覆盖原有的回调参数。</p>
+<h4 id="Lambda表达式与匿名函数"><a href="#Lambda表达式与匿名函数" class="headerlink" title="Lambda表达式与匿名函数"></a>Lambda表达式与匿名函数</h4><p>Lambda表达式是es6中函数的一种新的声明方式，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">() =&gt; &#123;</div><div class="line">	console.log(...)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上是一个简单的Lambda表达式，在多数的Js教程中都被称作”箭头函数”，它的书面写法上等价于匿名函数，如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function () &#123;</div><div class="line">	console.log(...)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>他们都可以被用来在<code>高阶函数</code>以及<code>组件属性</code>上以及<code>普通方法</code>的定义，然而又有一些差异:</p>
+<ul>
+<li>Lambda表达式中的this指向当前作用域的this，因此这种情况下就没有bind的事情了，因为Lambda已经有自己的this了。同bind一样，Lambda同样会返回一个全新的函数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;() =&gt; this.props...&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>此时呢，Lambda表达式是直接作为回调被赋值了。因此所有的回调参数都可以在此获取到，后续与this相关的逻辑代码都可以在Lambda表达式中书写。</p>
+<ul>
+<li>匿名函数会因为es5、6的情况而指向window或者undefined，此时如果方法体内需要用到当前的组件的this，则可以通过bind来完成，如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;function()&#123;</div><div class="line">	this.props...</div><div class="line">&#125;.bind(this)&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>这样的代码等价于使用函数名bind this一样，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;this.readProps.bind(this)&#125; /&gt;</div><div class="line">...</div><div class="line">readProps () &#123;</div><div class="line">	this.props...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果上边的<code>readProps</code>的回调没有传出一些特别的参数，也可以用Lambda表达式改为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;() =&gt; this.readProps()&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>当然，这只是用箭头函数包裹了一下，我们仍然可以通过在箭头函数的参数列表中声明参数的方式来达到相同的目的。</p>
+<h4 id="使用Lambda表达式优化"><a href="#使用Lambda表达式优化" class="headerlink" title="使用Lambda表达式优化"></a>使用Lambda表达式优化</h4><p>之前提到了用bind在this中存留一份，可以在构造函数里用对象的属性来存储唯一的函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class PauseMenu extends Component &#123;</div><div class="line">	componentWillMount () &#123;</div><div class="line">		AppStateIOS.addEventListener(&apos;change&apos;, this._onAppPaused); </div><div class="line">	&#125;</div><div class="line">	componentDidUnmount () &#123;</div><div class="line">		AppStateIOS.removeEventListener(&apos;change&apos;, this._onAppPaused)</div><div class="line">	&#125;</div><div class="line">	_onAppPaused ＝ (event) =&gt; &#123; </div><div class="line">	&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样做可以将_onAppPaused 作为类属性的一部分，就不用担心拿不到方法的唯一引用啦</p>
+<h4 id="Lambda表达式补充："><a href="#Lambda表达式补充：" class="headerlink" title="Lambda表达式补充："></a>Lambda表达式补充：</h4><ol>
+<li>箭头后的部分即为表达式的返回值</li>
+<li>如果出现多条语句操作运算的，需要使用{…} 以函数体的形式书写并以显示的方式<code>return</code>返回值</li>
+<li>如果需要直接返回一个Object的话，语法上会和函数体冲突，此时就必须使用<code>()</code>保护一下，声明此处是一个对象而非函数体</li>
+<li>参数方面，单参数可以不加<code>()</code>括弧, 但是一个以上就必须要加了。同时没有参数时需要使用<code>()</code>来完成语法上的补位</li>
+</ol>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>在日常开发中，this还是一个让人比较头疼的东西。方法(对象中的函数) 内函数会导致this的重定向，其他的一些对象嵌套也会导致重定向问题，因此大家不要慌，不妨尝试手动获取一下外部this。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/06/05/React-this/" class="archive-article-date">
+  	<time datetime="2016-06-05T09:25:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-06-05</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this/">this</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-React-this" data-title="React开发中关于this的那些事儿" data-url="undefined"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-linear-gradient" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/02/linear-gradient/">CSS3 线性渐变（linear-gradient）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CSS3 Gradient 分为 linear-gradient（线性渐变）和 radial-gradient（径向渐变）。而我们今天主要是针对线性渐变来剖析其具体的用法。为了更好的应用 CSS3 Gradient，我们需要先了解一下目前的几种现代浏览器的内核，主要有 Mozilla（Firefox，Flock等）、WebKit（Safari、Chrome等）、Opera（Opera浏览器）、Trident（讨厌的IE浏览器）。</p>
+<p>本文忽略IE不管，我们主要看看在 Mozilla、Webkit、Opera 下的应用，当然在 IE 下也可以实现，他需要通过 IE 特有的滤镜来实现，在后面会列出滤镜的使用语法，但不会具体介绍如何实用，感兴趣的可以搜索相关技术文档。</p>
+<h3 id="一、线性渐变在-Mozilla-下的应用"><a href="#一、线性渐变在-Mozilla-下的应用" class="headerlink" title="一、线性渐变在 Mozilla 下的应用"></a>一、线性渐变在 Mozilla 下的应用</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-moz-linear-gradient( [&lt;point&gt; || &lt;angle&gt;,]? &lt;stop&gt;, &lt;stop&gt; [, &lt;stop&gt;]* )</div></pre></td></tr></table></figure>
+<p><strong>参数</strong>：其共有三个参数，第一个参数表示线性渐变的方向，top 是从上到下、left 是从左到右，如果定义成 left top，那就是从左上角到右下角。第二个和第三个参数分别是起点颜色和终点颜色。你还可以在它们之间插入更多的参数，表示多种颜色的渐变。如图所示：</p>
+<p><img src="http://ww4.sinaimg.cn/mw1024/005WybULgw1fac71elk6yj30dc046aa4.jpg" alt="Mou"></p>
+<p>根据上面的介绍，我们先来看一个简单的例子：</p>
+<p><strong>HTML：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;example example1&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p><strong>CSS：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.example &#123;</div><div class="line">	width: 150px;</div><div class="line">	height: 80px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如无特殊说明，我们后面的示例都是应用这一段 html 和 css 的基本代码。</p>
+<p>现在我们给这个div应用一个简单的渐变样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.example1 &#123;</div><div class="line">	background: -moz-linear-gradient( top,#ccc,#000);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://ww4.sinaimg.cn/mw1024/005WybULgw1fac71fcasaj304c02eq2q.jpg" alt="Mou"></p>
+<h3 id="二、线性渐变在-Webkit-下的应用"><a href="#二、线性渐变在-Webkit-下的应用" class="headerlink" title="二、线性渐变在 Webkit 下的应用"></a>二、线性渐变在 Webkit 下的应用</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-webkit-linear-gradient( [&lt;point&gt; || &lt;angle&gt;,]? &lt;stop&gt;, &lt;stop&gt; [, &lt;stop&gt;]* )//最新发布书写语法</div><div class="line">-webkit-gradient(&lt;type&gt;, &lt;point&gt; [, &lt;radius&gt;]?, &lt;point&gt; [, &lt;radius&gt;]? [, &lt;stop&gt;]*) //老式语法书写规则</div></pre></td></tr></table></figure>
+<p><strong>参数</strong>：-webkit-gradient 是 webkit 引擎对渐变的实现参数，一共有五个。第一个参数表示渐变类型（type），可以是linear（线性渐变）或者radial（径向渐变）。第二个参数和第三个参数，都是一对值，分别表示渐变起点和终点。这对值可以用坐标形式表示，也可以用关键值表示，比如 left top（左上角）和left bottom（左下角）。第四个和第五个参数，分别是两个color-stop函数。color-stop 函数接受两个参数，第一个表示渐变的位置，0为起点，0.5为中点，1为结束点；第二个表示该点的颜色。如图所示：</p>
+<p><img src="http://ww3.sinaimg.cn/mw1024/005WybULgw1fac71g9kdej30dc046wen.jpg" alt="Mou"></p>
+<p><img src="http://ww3.sinaimg.cn/mw1024/005WybULgw1fac71gy5xej30aa03uq30.jpg" alt="Mou"></p>
+<p>我们先来看一个老式的写法示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background: -webkit-gradient(linear,center top,center bottom,from(#ccc), to(#000));</div></pre></td></tr></table></figure>
+<p>接着我们在来看一下新式的写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-webkit-linear-gradient(top,#ccc,#000);</div></pre></td></tr></table></figure>
+<p>这个效果我就不在贴出来了，大家在浏览器中一看就明白了，他们是否一致的效果。仔细对比，在 Mozilla 和 Webkit 下两者的学法都基本上一致了，只是其前缀的区别，当然哪一天他们能统一成一样，对我们来说当然是更好了，那就不用去处理了。将大大节省我们的开发时间哟。</p>
+<h3 id="三、线性渐变在-Opera-下的应用"><a href="#三、线性渐变在-Opera-下的应用" class="headerlink" title="三、线性渐变在 Opera 下的应用"></a>三、线性渐变在 Opera 下的应用</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-o-linear-gradient([&lt;point&gt; || &lt;angle&gt;,]? &lt;stop&gt;, &lt;stop&gt; [, &lt;stop&gt;]); /* Opera 11.10+ */</div></pre></td></tr></table></figure>
+<p><strong>参数</strong>：-o-linear-gradient 有三个参数。第一个参数表示线性渐变的方向，top 是从上到下、left 是从左到右，如果定义成 left top，那就是从左上角到右下角。第二个和第三个参数分别是起点颜色和终点颜色。你还可以在它们之间插入更多的参数，表示多种颜色的渐变。（注：Opera 支持的版本有限，本例测试都是在 Opera11.1 版本下，后面不在提示），如图所示：</p>
+<p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fac71hm68ej30aa03u3yk.jpg" alt="Mou"></p>
+<p>示例代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background: -o-linear-gradient(top,#ccc, #000);</div></pre></td></tr></table></figure>
+<h3 id="四、线性渐变在-Trident-IE-下的应用"><a href="#四、线性渐变在-Trident-IE-下的应用" class="headerlink" title="四、线性渐变在 Trident (IE) 下的应用"></a>四、线性渐变在 Trident (IE) 下的应用</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#1471da, endColorstr=#1C85FB);/*IE&lt;9&gt;*/</div><div class="line">-ms-filter: &quot;progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#1471da, endColorstr=#1C85FB)&quot;;/*IE8+*/</div></pre></td></tr></table></figure>
+<p>IE依靠滤镜实现渐变。startColorstr表示起点的颜色，endColorstr 表示终点颜色。GradientType 表示渐变类型，0 为缺省值，表示垂直渐变，1 表示水平渐变。如图所示：</p>
+<p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fac71hm68ej30aa03u3yk.jpg" alt="Mou"></p>
+<p>上面我们主要介绍了线性渐变在上述四大核心模块下的实现方法，接着我们主要针对线性渐变在 Mozilla、Webkit、Opera 三大模块下实现各种不同线性渐变实例：</p>
+<p>从上面的语法中我们可以很清楚的知道，要创建一个线性渐变，我们需要创建一个起点和一个渐变方向（或角度），定义一个起始色：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-moz-linear-gradient( [&lt;point&gt; || &lt;angle&gt;,]? &lt;stop&gt;, &lt;stop&gt; [, &lt;stop&gt;]* )</div><div class="line">-webkit-linear-gradient( [&lt;point&gt; || &lt;angle&gt;,]? &lt;stop&gt;, &lt;stop&gt; [, &lt;stop&gt;]* )</div><div class="line">-o-linear-gradient( [&lt;point&gt; || &lt;angle&gt;,]? &lt;stop&gt;, &lt;stop&gt; [, &lt;stop&gt;]* )</div></pre></td></tr></table></figure>
+<p>具体应用如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">background:-moz-linear-gradient(left,#ace,#f96);/*Mozilla*/</div><div class="line">background:-webkit-gradient(linear,0 50%,100% 50%,from(#ace),to(#f96));/*Old gradient for webkit*/</div><div class="line">background:-webkit-linear-gradient(left,#ace,#f96);/*new gradient for Webkit*/</div><div class="line">background:-o-linear-gradient(left,#ace,#f96); /*Opera11*/</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fac71iu40fj304c02cglf.jpg" alt="Mou"></p>
+<p>起始点（Starting Point）的工作方式类似于 background position。您可以设置水平和垂直位置为百分比，或以像素为单位，或在水平方向上可以使用left/center/right，在垂直方向上可以使用top/center/bottom。位置起始于左上角。如果你不指定水平或垂直位置，它将默认为center。其工作方式主要包含：Top → Bottom、Left → Right、bottom → top、right → left等，接着我们主要一种一种来看其实现的效果：</p>
+<h3 id="1、开始于center（水平方向）和top（垂直方向）也就是Top-→-Bottom："><a href="#1、开始于center（水平方向）和top（垂直方向）也就是Top-→-Bottom：" class="headerlink" title="1、开始于center（水平方向）和top（垂直方向）也就是Top → Bottom："></a>1、开始于center（水平方向）和top（垂直方向）也就是Top → Bottom：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/* Firefox 3.6+ */</div><div class="line">background: -moz-linear-gradient(top, #ace, #f96);</div><div class="line">/* Safari 4-5, Chrome 1-9 */</div><div class="line">/* -webkit-gradient(,  [, ]?,  [, ]? [, ]*) */</div><div class="line">background: -webkit-gradient(linear,top,from(#ace),to(#f96));</div><div class="line">/* Safari 5.1+, Chrome 10+ */</div><div class="line">background: -webkit-linear-gradient(top, #ace, #f96);</div><div class="line">/* Opera 11.10+ */</div><div class="line">background: -o-linear-gradient(top, #ace, #f96);</div></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><img src="http://ww4.sinaimg.cn/mw1024/005WybULgw1fac71jis54j3048028t8i.jpg" alt="Mou"></p>
+<h3 id="2、始于left（水平方向）和center（垂直方向）也是就Left-→-Right："><a href="#2、始于left（水平方向）和center（垂直方向）也是就Left-→-Right：" class="headerlink" title="2、始于left（水平方向）和center（垂直方向）也是就Left → Right："></a>2、始于left（水平方向）和center（垂直方向）也是就Left → Right：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/* Firefox 3.6+ */</div><div class="line">background: -moz-linear-gradient(left, #ace, #f96);</div><div class="line">/* Safari 5.1+, Chrome 10+ */</div><div class="line">background: -webkit-linear-gradient(left, #ace, #f96);</div><div class="line">/* Opera 11.10+ */</div><div class="line">background: -o-linear-gradient(left, #ace, #f96);</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1fac71l6dkcj3044026742.jpg" alt="Mou"></p>
+<h3 id="3、起始于left（水平方向）和top（垂直方向）"><a href="#3、起始于left（水平方向）和top（垂直方向）" class="headerlink" title="3、起始于left（水平方向）和top（垂直方向）:"></a>3、起始于left（水平方向）和top（垂直方向）:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background: -moz-linear-gradient(left top, #ace, #f96);</div><div class="line">background: -webkit-linear-gradient(left top, #ace, #f96);</div><div class="line">background: -o-linear-gradient(left top, #ace, #f96);</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://ww3.sinaimg.cn/mw1024/005WybULgw1fac729kv7kj3045028a9u.jpg" alt="Mou"></p>
+<h3 id="4、Linear-Gradient-with-Even-Stops"><a href="#4、Linear-Gradient-with-Even-Stops" class="headerlink" title="4、Linear Gradient (with Even Stops):"></a>4、Linear Gradient (with Even Stops):</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/* Firefox 3.6+ */</div><div class="line">background: -moz-linear-gradient(left, #ace, #f96, #ace, #f96, #ace);</div><div class="line">/* Safari 4-5, Chrome 1-9 */</div><div class="line">background: -webkit-gradient(linear, left top, right top, from(#ace), color-stop(0.25, #f96), color-stop(0.5, #ace), color-stop(0.75, #f96), to(#ace));</div><div class="line">/* Safari 5.1+, Chrome 10+ */</div><div class="line">background: -webkit-linear-gradient(left, #ace, #f96, #ace, #f96, #ace);</div><div class="line">/* Opera 11.10+ */</div><div class="line">background: -o-linear-gradient(left, #ace, #f96, #ace, #f96, #ace);</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fac72agl2ej3044027mwy.jpg" alt="Mou"></p>
+<h3 id="5、with-Specified-Arbitrary-Stops："><a href="#5、with-Specified-Arbitrary-Stops：" class="headerlink" title="5、with Specified Arbitrary Stops："></a>5、with Specified Arbitrary Stops：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/* Firefox 3.6+ */</div><div class="line">background: -moz-linear-gradient(left, #ace, #f96 5%, #ace, #f96 95%, #ace);</div><div class="line">/* Safari 4-5, Chrome 1-9 */</div><div class="line">background: -webkit-gradient(linear, left top, right top, from(#ace), color-stop(0.05, #f96), color-stop(0.5, #ace), color-stop(0.95, #f96), to(#ace));</div><div class="line">/* Safari 5.1+, Chrome 10+ */</div><div class="line">background: -webkit-linear-gradient(left, #ace, #f96 5%, #ace, #f96 95%, #ace);</div><div class="line">/* Opera 11.10+ */</div><div class="line">background: -o-linear-gradient(left, #ace, #f96 5%, #ace, #f96 95%, #ace);</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://ww4.sinaimg.cn/mw1024/005WybULgw1fac72b75psj3047027q2q.jpg" alt="Mou"></p>
+<h3 id="6、角度-Angle-："><a href="#6、角度-Angle-：" class="headerlink" title="6、角度(Angle)："></a>6、角度(Angle)：</h3><p>正如上面看到的示例，如果您不指定一个角度，它会根据起始位置自动定义。如果你想更多的控制渐变的方向，您不妨设置角度试试。例如，下面的两个渐变具有相同的起点left center，但是加上一个30度的角度。</p>
+<p>没有角度的示例代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background: -moz-linear-gradient(left, #ace, #f96);</div><div class="line">background: -webkit-linear-gradient(left,#ace,#f96);</div><div class="line">background: -o-linear-gradient(left, #ace, #f96);</div></pre></td></tr></table></figure>
+<p>加上30度的角度代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background: -moz-linear-gradient(left 30deg, #ace, #f96);</div><div class="line">background: -webkit-gradient(linear, 0 0, 100% 100%, from(#ace),to(#f96));</div><div class="line">background: -o-linear-gradient(30deg, #ace, #f96);</div></pre></td></tr></table></figure>
+<p>效果图如下：</p>
+<p><img src="http://ww3.sinaimg.cn/mw1024/005WybULgw1fac72bu6kwj3048026q2s.jpg" alt="Mou"><br><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1fac72c9mt3j3045028glg.jpg" alt="Mou"></p>
+<p>当指定的角度，请记住，它是一个由水平线与渐变线产生的的角度，逆时针方向。因此，使用0deg将产生一个左到右横向梯度，而90度将创建一个从底部到顶部的垂直渐变。我来看看你核心代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">background: -moz-linear-gradient(&lt;angle&gt;, #ace, #f96);</div><div class="line">background: -webkit-gradient(&lt;type&gt;,&lt;angle&gt;, from(#ace), to(#f96));</div><div class="line">background: -webkit-linear-gradient(&lt;angle&gt;, #ace, #f96);</div><div class="line">background: -o-linear-gradient(&lt;angle&gt;, #ace, #f96);</div></pre></td></tr></table></figure>
+<p>我们来看看各角度的区别：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">.deg0 &#123;</div><div class="line">	background: -moz-linear-gradient(0deg, #ace, #f96);</div><div class="line">	background: -webkit-gradient(linear,0 50%,100% 50%,from(#ace),to(#f96));</div><div class="line">	background: -webkit-linear-gradient(0deg, #ace, #f96);</div><div class="line">	background: -o-linear-gradient(0deg, #ace, #f96);</div><div class="line">&#125;     </div><div class="line">.deg45 &#123;</div><div class="line">	background: -moz-linear-gradient(45deg, #ace, #f96);</div><div class="line">	background: -webkit-gradient(linear,0 100%,100% 0%,from(#ace),to(#f96));</div><div class="line">	background: -webkit-linear-gradient(45deg, #ace, #f96);</div><div class="line">	background: -o-linear-gradient(45deg, #ace, #f96);</div><div class="line">&#125;</div><div class="line">.deg90 &#123;</div><div class="line">	background: -moz-linear-gradient(90deg, #ace, #f96);</div><div class="line">	background: -webkit-gradient(linear,50% 100%,50% 0%,from(#ace),to(#f96));</div><div class="line">	background: -webkit-linear-gradient(90deg, #ace, #f96);</div><div class="line">	background: -o-linear-gradient(90deg, #ace, #f96);</div><div class="line">&#125;</div><div class="line">.deg135 &#123;</div><div class="line">	background: -moz-linear-gradient(135deg, #ace, #f96);</div><div class="line">	background: -webkit-gradient(linear,100% 100%,0 0,from(#ace),to(#f96));</div><div class="line">	background: -webkit-linear-gradient(135deg, #ace, #f96);</div><div class="line">	background: -o-linear-gradient(135deg, #ace, #f96);</div><div class="line">&#125;</div><div class="line">.deg180 &#123;</div><div class="line">	background: -moz-linear-gradient(180deg, #ace, #f96);</div><div class="line">	background: -webkit-gradient(linear,100% 50%,0 50%,from(#ace),to(#f96));</div><div class="line">	background: -webkit-linear-gradient(180deg, #ace, #f96);</div><div class="line">	background: -o-linear-gradient(180deg, #ace, #f96);</div><div class="line">&#125;</div><div class="line">.deg225 &#123;</div><div class="line">	background: -moz-linear-gradient(225deg, #ace, #f96);</div><div class="line">	background: -webkit-gradient(linear,100% 0%,0 100%,from(#ace),to(#f96));</div><div class="line">	background: -webkit-linear-gradient(225deg, #ace, #f96);</div><div class="line">	background: -o-linear-gradient(225deg, #ace, #f96);</div><div class="line">&#125;</div><div class="line">.deg270 &#123;</div><div class="line">	background: -moz-linear-gradient(270deg, #ace, #f96);</div><div class="line">	background: -webkit-gradient(linear,50% 0%,50% 100%,from(#ace),to(#f96));</div><div class="line">	background: -webkit-linear-gradient(270deg, #ace, #f96);</div><div class="line">	background: -o-linear-gradient(270deg, #ace, #f96);</div><div class="line">&#125;</div><div class="line">.deg315 &#123;</div><div class="line">	background: -moz-linear-gradient(315deg, #ace, #f96);</div><div class="line">	background: -webkit-gradient(linear,0% 0%,100% 100%,from(#ace),to(#f96));</div><div class="line">	background: -webkit-linear-gradient(315deg, #ace, #f96);</div><div class="line">	background: -o-linear-gradient(315deg, #ace, #f96);</div><div class="line">&#125;</div><div class="line">.deg360 &#123;</div><div class="line">	background: -moz-linear-gradient(360deg, #ace, #f96);</div><div class="line">	background: -webkit-gradient(linear,0 50%,100% 50%,from(#ace),to(#f96));</div><div class="line">	background: -webkit-linear-gradient(360deg, #ace, #f96);</div><div class="line">	background: -o-linear-gradient(360deg, #ace, #f96);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://ww4.sinaimg.cn/mw1024/005WybULgw1fac72da6qoj30dw02pgls.jpg" alt="Mou"></p>
+<p>除了起始位置和角度，你应该指定起止颜色。起止颜色是沿着渐变线，将会在指定位置（以百分比或长度设定）含有指定颜色的点。色彩的起止数是无限的。如果您使用一个百分比位置，0％代表起点和100％是终点，但区域外的值可以被用来达到预期的效果。 这也是通过CSS3 Gradient制作渐变的一个关键所在，其直接影响了你的设计效果，像我们这里的示例都不是完美的效果，只是为了能给大家展示一个渐变的效果，大家就这样先用着吧。我们接着看一下不同的起址色的示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background: -moz-linear-gradient(top, #ace, #f96 80%, #f96);</div><div class="line">background: -webkit-linear-gradient(top,#ace,#f96 80%,#f96);</div><div class="line">background: -o-linear-gradient(top, #ace, #f96 80%, #f96);</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fac72exwcuj3046026742.jpg" alt="Mou"></p>
+<p>如果没有指定位置，颜色会均匀分布。如下面的示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background: -moz-linear-gradient(left, red, #f96, yellow, green, #ace);</div><div class="line">background: -webkit-linear-gradient(left,red,#f96,yellow,green,#ace);</div><div class="line">background: -o-linear-gradient(left, red, #f96, yellow, green, #ace);</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://ww4.sinaimg.cn/mw1024/005WybULgw1fac72epzdxj30450260sj.jpg" alt="Mou"></p>
+<h3 id="7、渐变上应用透明度-Transparency-："><a href="#7、渐变上应用透明度-Transparency-：" class="headerlink" title="7、渐变上应用透明度(Transparency)："></a>7、渐变上应用透明度(Transparency)：</h3><p>透明渐变对于制作一些特殊的效果是相当有用的，例如，当堆叠多个背景时。这里是两个背景的结合：一张图片，一个白色到透明的线性渐变。我们来看一个官网的示例吧：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background: -moz-linear-gradient(right, rgba(255,255,255,0), rgba(255,255,255,1)),url(http://demos.hacks.mozilla.org/openweb/resources/images/patterns/flowers-pattern.jpg);</div><div class="line">background: -webkit-linear-gradient(right, rgba(255,255,255,0), rgba(255,255,255,1)),url(http://demos.hacks.mozilla.org/openweb/resources/images/patterns/flowers-pattern.jpg);</div><div class="line">background: -o-linear-gradient(right, rgba(255,255,255,0), rgba(255,255,255,1)),url(http://demos.hacks.mozilla.org/openweb/resources/images/patterns/flowers-pattern.jpg);</div></pre></td></tr></table></figure>
+<p>接着看看效果吧</p>
+<p><img src="http://ww4.sinaimg.cn/mw1024/005WybULgw1fac8k8k3t3j3044029q2s.jpg" alt="Mou"></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/06/02/linear-gradient/" class="archive-article-date">
+  	<time datetime="2016-06-02T01:37:35.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-06-02</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-linear-gradient" data-title="CSS3 线性渐变（linear-gradient）" data-url="undefined"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-lazyload" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/28/lazyload/">关于图片的懒加载</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa815nyu93j30dw08c0t4.jpg" alt="Mou"></p>
+<p>目前，一些图片类型的网站上，在图片加载时均采用了一种名为懒加载的方式，具体表现为，当页面被请求时，只加载可视区域的图片，其它部分的图片则不加载，只有这些图片出现在可视区域时才会动态加载这些图片，从而节约了网络带宽和提高了初次加载的速度，具体实现的技术并不复杂，下面分别对其说明。首先，在页面中准备一个id为div1的div,在这个div中放一个ul,ul中准备了一些li,然而这些li都有一个data-src的属性，准备着图片的地址，具体结构如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div1&quot;&gt;</div><div class="line">	&lt;ul&gt;</div><div class="line">		&lt;li data-src=&quot;http://4493bz.1985t.com/uploads/allimg/140710/1-140G0161612.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://4493bz.1985t.com/uploads/allimg/140628/1-14062Q33R6.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://4493bz.1985t.com/uploads/allimg/140628/1-14062Q33242.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://img.bizhi.sogou.com/images/2014/12/10/997251.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://dl.bizhi.sogou.com/images/2014/12/02/986640.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170473_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170475_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170477_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">	&lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>图片的动态加载就是通过读取li元素，然后获得li元素的data-src属性的值赋予动态创建的图片的src，从而实现了图片的创建。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function setImg(index)&#123;</div><div class="line">	var oDiv=document.getElementById(&quot;div1&quot;)</div><div class="line">	var oUl=oDiv.children[0];</div><div class="line">	var aLi=oUl.children;</div><div class="line">	if (aLi[index].dataset) &#123;</div><div class="line">		var src=aLi[index].dataset.src;</div><div class="line">	&#125; else&#123;</div><div class="line">		var src=aLi[index].getAttribute(&apos;data-src&apos;);</div><div class="line">	&#125;</div><div class="line">	var oImg=document.createElement(&apos;img&apos;);</div><div class="line">	oImg.src=src;</div><div class="line">	if (aLi[index].children.length==0) &#123;</div><div class="line">		aLi[index].appendChild(oImg); </div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>那么怎么识别是否在可视区域呢？这里需要一个函数，能够实现获得当前元素距离网页顶部的距离！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//获得对象距离页面顶端的距离  </div><div class="line">function getH(obj) &#123;  </div><div class="line">	var h = 0;  </div><div class="line">	while (obj) &#123;  </div><div class="line">		h += obj.offsetTop;  </div><div class="line">		obj = obj.offsetParent;  </div><div class="line">	&#125;  </div><div class="line">	return h;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当网页的滚动条滚动时要时时判断当前li的位置！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">	window.onscroll = function () &#123;</div><div class="line">	var oDiv = document.getElementById(&apos;div1&apos;);</div><div class="line">	var oUl = oDiv.children[0];</div><div class="line">	var aLi = oUl.children;</div><div class="line">	for (var i = 0, l = aLi.length; i &lt; l; i++) &#123;</div><div class="line">		var oLi = aLi[i];</div><div class="line">		//检查oLi是否在可视区域</div><div class="line">		var t = document.documentElement.clientHeight + (document.documentElement.scrollTop || document.body.scrollTop);</div><div class="line">		var h = getH(oLi);</div><div class="line">		if (h &lt; t) &#123;</div><div class="line">			setTimeout(&quot;setImg(&quot; + i + &quot;)&quot;, 500);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>当页面加载完成以后要主动运行一下window.onscroll，从而获得当前可视范围内的图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">window.onload = function () &#123;</div><div class="line">	window.onscroll();</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>另外，像这样的页面，障眼法和美化都是必须的，比如给每个li一个loading的图片作为背景，从而实现了当前图片正在加载的效果，美化工作就是做好合理的布局。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">* &#123;</div><div class="line">	margin: 0;</div><div class="line">	padding: 0;</div><div class="line">&#125;</div><div class="line">#div1 &#123;</div><div class="line">	width: 520px;</div><div class="line">	margin: 30px auto;</div><div class="line">	border: 1px solid red;</div><div class="line">	overflow: hidden;</div><div class="line">&#125;</div><div class="line">li &#123;</div><div class="line">	width: 160px;</div><div class="line">	height: 160px;</div><div class="line">	float: left;</div><div class="line">	list-style: none;</div><div class="line">	margin: 5px;</div><div class="line">	background: url(loading.gif) center center no-repeat;</div><div class="line">	border: 1px dashed green;</div><div class="line">&#125;</div><div class="line">img&#123;</div><div class="line">	width:100%</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/05/28/lazyload/" class="archive-article-date">
+  	<time datetime="2016-05-28T11:06:53.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lazyload/">lazyload</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-lazyload" data-title="关于图片的懒加载" data-url="undefined"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-image-center" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/23/image-center/">line-height，vertical-align及图片居中对齐</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="line-height，vertical-align及图片居中对齐问题根源解析"><a href="#line-height，vertical-align及图片居中对齐问题根源解析" class="headerlink" title="line-height，vertical-align及图片居中对齐问题根源解析"></a>line-height，vertical-align及图片居中对齐问题根源解析</h4><h4 id="主要的问题如下："><a href="#主要的问题如下：" class="headerlink" title="主要的问题如下："></a>主要的问题如下：</h4><ul>
+<li><p>1.line-height是个什么东西，范围在哪里，具体应用于什么元素？</p>
+</li>
+<li><p>2.vertiacal-align和line-height有什么关系，元素对齐到底是一个什么样的过程。</p>
+</li>
+<li><p>3.图片对齐和文本对齐有什么区别？</p>
+</li>
+<li><p>4.浮动元素为什么对齐会出现问题？</p>
+</li>
+</ul>
+<h4 id="解答这些问题，牵涉的碎片化知识："><a href="#解答这些问题，牵涉的碎片化知识：" class="headerlink" title="解答这些问题，牵涉的碎片化知识："></a>解答这些问题，牵涉的碎片化知识：</h4><ul>
+<li>基线，底端，行内框，行框，行间距，替换元素及非替换元素，对齐</li>
+</ul>
+<h4 id="下面围绕着上面的几个问题，以及相应的碎片化知识点来进行解析问题。"><a href="#下面围绕着上面的几个问题，以及相应的碎片化知识点来进行解析问题。" class="headerlink" title="下面围绕着上面的几个问题，以及相应的碎片化知识点来进行解析问题。"></a>下面围绕着上面的几个问题，以及相应的碎片化知识点来进行解析问题。</h4><p>一般来说，之所以不了解vertical-align，是因为不清楚对齐后面的这些碎片化知识，而这些也是很多博客在解析的时候常常忽略的地方。</p>
+<h5 id="先说结论："><a href="#先说结论：" class="headerlink" title="先说结论："></a>先说结论：</h5><p>1.line-height是行高，主要作用是在文本上下行间距，基于文本产生影响文本元素位置的作用，对于行内元素的位置影响显著，但是对于块元素的影响甚微。</p>
+<p>2.vertical-align和line-height的关系是：line-height是vertical-align的对齐依据。vertical-align主要是影响行内元素的对齐，不影响块元素布局。</p>
+<p>而决定行内元素对齐的有两个因素:</p>
+<ul>
+<li>1.元素本身的height（类似于图片和按钮等替换元素）</li>
+<li>2.还有其他span、em非替换元素的line-height。行框通过计算height，line-height，来将各个行内元素与行内的基线进行对齐。</li>
+</ul>
+<p>但是当产生浮动的时候，浮动会对行内元素的布局产生特殊影响，因此不会按照原先的方式来进行对齐，此时设置了vertical-align往往没有效果。</p>
+<p>3.图片的对齐是将自己的底端，也就是图片的最下端与行框的默认基线进行对齐，对齐依据是底端。影响图片对齐的依据是图片的height、padding、border大小。</p>
+<p>而文本元素，例如</p>
+<pre><code>&lt;span&gt;文本内容&lt;/span&gt;
+</code></pre><p>，则是将自身的行内框基线与行框基线进行对齐，对齐依据是基线。影响行内文本元素的依据是line-height，以及元素自身的font属性。</p>
+<p>4.元素浮动之后实际上是从正常的文档流中除去了（因此会出现高度塌陷，父容器收缩的问题），但是同时又对文档产生着影响（最经典的就是环绕效果）。元素浮动类似于一个被除名的黑户，虽然不在土地登记簿上，但是的的确确占用一块地方，因此别的元素也不能因此占据浮动元素的空间，但是因为是黑户，所以别的元素会环绕它，好像它不存在一样。</p>
+<p>因此此时行内元素浮动之后，浮动的规则会覆盖vertical-align的规则，这个时候设置vertical-align往往会出现问题，最典型的就是对一个段落中的图片进行浮动，然后设置vertical-align，但是发现往往不起作用。</p>
+<p>但是文本元素浮动之后往往不会受到影响，因为line-height实际上还是作用于文本元素的，虽然文本元素的容器位置“漂”到其他位置，但是里面的文本因为line-height，仍然有行高，可以影响到行内元素的布局。</p>
+<h5 id="结论如何推导出来"><a href="#结论如何推导出来" class="headerlink" title="结论如何推导出来"></a>结论如何推导出来</h5><p>看完这些结论，想必很多人也是一时之间有些不明白所以然，因为不同的人掌握的背景知识是不同的，而这些结论的关键恰恰是这些关键性的碎片化知识，它们起到了穿针引线的作用。下面来梳理一下，到底是怎么得出结论的。</p>
+<p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa2ahwtwq6j30tq09kgnd.jpg" alt="Mou icon"></p>
+<h4 id="1-核心问题：关于对齐"><a href="#1-核心问题：关于对齐" class="headerlink" title="1.核心问题：关于对齐"></a>1.核心问题：关于对齐</h4><p>对齐涉及到两个对象，要对齐元素及对齐对象，一个对象是不可能对齐。比如平常在战队，从高往低对齐，每个人都要有一个参考系，对着参考系进行对齐。</p>
+<p>而行内元素的对齐，除了行内元素本身，还有一个参考系，这个参考系就是行框的基线，而行框的基线依据于行内框元素的基线位置。</p>
+<h5 id="1-1对齐延伸问题：什么是基线？"><a href="#1-1对齐延伸问题：什么是基线？" class="headerlink" title="1.1对齐延伸问题：什么是基线？"></a>1.1对齐延伸问题：什么是基线？</h5><p>每一个文本元素自身都会有四条线，顶线，中线，基线，底线。而基线一般是指文本元素中以x字母为准，x字母的下边缘为该文本元素的基线。</p>
+<p>而行高则是两个文本行基线之间的距离，往往使段落产生间距。</p>
+<p>但是也可以这样理解，行高 = 字体大小 + 上半行距 + 下半行距（其中上下半行距相等，这个等式可以从图中推导出来）</p>
+<p><img src="http://ww3.sinaimg.cn/mw1024/005WybULgw1fa2ahw2w9oj30kj09qwge.jpg" alt="Mou icon"></p>
+<p>每一个文本元素和文本行元素，都会有一条基线，基线的位置受到文本的字体格式以及line-height的影响。</p>
+<h5 id="1-2对齐延伸问题：什么是行框和行内框？"><a href="#1-2对齐延伸问题：什么是行框和行内框？" class="headerlink" title="1.2对齐延伸问题：什么是行框和行内框？"></a>1.2对齐延伸问题：什么是行框和行内框？</h5><p> <img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1fa2ahxfk37j30lp0240t7.jpg" alt="Mou icon"></p>
+<p>在每一个段落行内，不同的行内元素除了包裹自身内容的内容框之外，还会自动生成一个行内框，其中没有标签包裹的文本会生成匿名行内框，不同的行内框会根据各自不同的line-height产生行间距，而行框则会刚好包括最高的顶端和最低的底端，从而来生成行框。</p>
+<p><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1fa2ahy75iyj30is04rmxw.jpg" alt="Mou icon"> </p>
+<h5 id="行内框的基线很好计算，但是行框的基线如何计算呢？"><a href="#行内框的基线很好计算，但是行框的基线如何计算呢？" class="headerlink" title="行内框的基线很好计算，但是行框的基线如何计算呢？"></a>行内框的基线很好计算，但是行框的基线如何计算呢？</h5><p>行框的基线是立足于行内框中基线最低的元素，也就是line-height最大的文本元素。</p>
+<p> 下面的例子，可以测试出来，当设置其中一个行内文本元素的line-height超过其他行内元素的line-height的时候，整个容器会自动扩展，位置也会往下移动。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;zh-cn&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;</div><div class="line">	&lt;title&gt;测试行框基线&lt;/title&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	p&#123;</div><div class="line">		border:1px solid red;line-height:20px;</div><div class="line">	&#125;</div><div class="line">	span&#123;</div><div class="line">		line-height:40px;/*可以在浏览器中取消一下，观察一下位置变动*/</div><div class="line">	&#125; </div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;p&gt;</div><div class="line">		&lt;span&gt;文本内容1&lt;/span&gt;匿名文本内容&lt;em&gt;文本内容2&lt;/em&gt;</div><div class="line">		&lt;img&gt;</div><div class="line">	&lt;/p&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h5 id="1-3对齐延伸问题：什么是替换元素。"><a href="#1-3对齐延伸问题：什么是替换元素。" class="headerlink" title="1.3对齐延伸问题：什么是替换元素。"></a>1.3对齐延伸问题：什么是替换元素。</h5><p>替换元素是指元素的内容本身并非文档直接表现的，换句话说，就是不同的页面中，浏览器不能确定其具体内容的元素，比如图片，按钮，因为图片的内容取决于图片引用的src属性源，按钮的类型则依据于其input类型，因此浏览器是不能确定今天img元素里面是一张美女图片，那么明天加载的页面里面img是不是一张美女图片。</p>
+<p>除了替换元素，其他的元素就是非替换元素。非替换元素和替换元素在行框中的影响，主要是其高度计算方式，替换元素在行框中的位置是由其height，padding和border来决定，而非替换元素在行框中的位置则是其line-height和字体样式。</p>
+<h5 id="1-4对齐延伸问题：图片等替换元素在行框中有什么影响。"><a href="#1-4对齐延伸问题：图片等替换元素在行框中有什么影响。" class="headerlink" title="1.4对齐延伸问题：图片等替换元素在行框中有什么影响。"></a>1.4对齐延伸问题：图片等替换元素在行框中有什么影响。</h5><p>如果只有文本元素的话，那么行框是很好计算基线位置的，但是如果有图片按钮等替换元素的话，那么计算方式就会变的稍微复杂一些。</p>
+<p>在css中，有两种高度方式，一种是height，一种是line-height，这两种会决定元素的高度和位置，对于图片等行内替换元素来说，height是行框计算的依据，line-height对图片、按钮不会产生影响。</p>
+<p>因此，如果有图片在行内的话，那么图片的底端会对齐文本的基线。</p>
+<p>那么，如果图片的高度高于其他行内框的整体高度，这个时候会发生什么呢?</p>
+<p>图片会在对齐原来的行框文本基线的基础上，撑开高度，使行框最高点刚好包括图片的顶端。</p>
+<p>因此，当p段落里面的line-height都是40px的时候，加入图片之后，行框的高度就会比没有加入图片之前多50px - 40px=10px高度，因此基线就会下移10px的高度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;p style=”line-height:40px;”&gt;</div><div class="line">	&lt;span&gt;文本内容1&lt;/span&gt; &lt;em&gt;文本内容2&lt;/em&gt; &lt;img src=&quot;img/img2.png&quot; height=&quot;50px&quot; width=&quot;50px&quot; alt=&quot;高度图片&quot;&gt;</div><div class="line">&lt;/p&gt;</div></pre></td></tr></table></figure>
+<h5 id="1-5对齐延伸问题：浮动对行内元素产生了什么样的影响。"><a href="#1-5对齐延伸问题：浮动对行内元素产生了什么样的影响。" class="headerlink" title="1.5对齐延伸问题：浮动对行内元素产生了什么样的影响。"></a>1.5对齐延伸问题：浮动对行内元素产生了什么样的影响。</h5><p>设置一个元素的浮动之后，元素会从正常的文档流中去除，但是同时也会对原来的文档流产生一些影响。</p>
+<p>可以设想一下，在长方形区域的水面上，有很多人都想要有一个固定位置的水床（浏览器盒模型布局），但是固定水床需要登记（告诉浏览器的如何布局计算）。突然有一天，有一个人想要在长方形区域的最左侧建一个水床（设置元素左浮动），它悄悄地从水底移动到最左侧，把原先的水床挤走（浮动元素会尽可能移动在到容器最高处，及最左处或最右处），在最左侧那里建了一所水床，没有登记（没有告知父容器高度，因此产生高度塌陷）。其他的人不知道，在去最左端的固定水床的时候，发现已经有人固定了，因此只能固定在它旁边（浮动会产生环绕效果，而这一点就是因为浮动元素从正常文档流中去除掉的原因）。</p>
+<p>图片是属于替换元素，在行框中的计算中，是依据于图片的高度，如果图片进行浮动的话，对于行框来说，图片不存在了，因此，行框还是依据原来的文本行基线来计算基线，进行对齐。</p>
+<p>因此，效果如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;p style=”line-height:40px;”&gt;</div><div class="line">	&lt;span&gt;文本内容1&lt;/span&gt; &lt;em&gt;文本内容2&lt;/em&gt; &lt;img src=&quot;img/img2.png&quot; height=&quot;100px&quot; width=&quot;100px&quot; alt=&quot;高度图片&quot;&gt;</div><div class="line">&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>图片没有浮动：</p>
+<p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa2ahysz6uj30ey040t91.jpg" alt="Mou icon"></p>
+<p>图片左浮动：</p>
+<p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa2ahz5bprj30el03et8y.jpg" alt="Mou icon"></p>
+<p>没有图片:<br><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1fa2ai0dnz4j30eu022q37.jpg" alt="Mou icon"></p>
+<h4 id="2-对齐的过程"><a href="#2-对齐的过程" class="headerlink" title="2.对齐的过程"></a>2.对齐的过程</h4><p>行内元素是默认设置的vertical-align为baseline，也就是基线对齐。当一个文本行开始渲染的时候，</p>
+<ul>
+<li><p>1.首先浏览器会找出每一个元素的类型，是替换元素还是非替换元素</p>
+</li>
+<li><p>2.然后根据它们的height或者line-height以及字体大小来生成每个元素行内框</p>
+</li>
+<li><p>3.确定行内框基线位置，确定行框基线位置</p>
+</li>
+<li><p>4.根据每个元素是否设置vertical-align来进行对齐。</p>
+</li>
+</ul>
+<h4 id="3-关于居中对齐"><a href="#3-关于居中对齐" class="headerlink" title="3.关于居中对齐"></a>3.关于居中对齐</h4><p>vertical-align：middle是将元素行内框的中点与父元素基线上方0.5ex处的一个点对齐，这里的1ex相对于元素的font-size来计算x字母的高度，1ex等于该字体下x的字母高度。</p>
+<p>多数浏览器会将1ex处理为0.5em，也就是0.5倍字体大小font-size。<br><img src="http://ww3.sinaimg.cn/mw1024/005WybULgw1fa2ai16u0fj30be032mxd.jpg" alt="Mou icon"></p>
+<p><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1fa2ai1lm0dj30uk09q775.jpg" alt="Mou icon"></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/05/23/image-center/" class="archive-article-date">
+  	<time datetime="2016-05-23T11:41:12.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-23</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/line-height/">line-height</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vertical-align/">vertical-align</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-image-center" data-title="line-height，vertical-align及图片居中对齐" data-url="undefined"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-JsArr" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/20/JsArr/">js数组的基本用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="js数组的用法包括创建、取值赋值、添加以及根据下标-数值或字符-移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下"><a href="#js数组的用法包括创建、取值赋值、添加以及根据下标-数值或字符-移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下" class="headerlink" title="js数组的用法包括创建、取值赋值、添加以及根据下标(数值或字符)移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下"></a>js数组的用法包括创建、取值赋值、添加以及根据下标(数值或字符)移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下</h5><h5 id="1、创建数组"><a href="#1、创建数组" class="headerlink" title="1、创建数组"></a>1、创建数组</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var array = new Array(); </div><div class="line">var array = new Array(size);//指定数组的长度 </div><div class="line">var array = new Array(item1,item2……itemN);//创建数组并赋值</div></pre></td></tr></table></figure>
+<h5 id="2、取值、赋值"><a href="#2、取值、赋值" class="headerlink" title="2、取值、赋值"></a>2、取值、赋值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var item = array[index];//获取指定元素的值 </div><div class="line">array[index] = value;//为指定元素赋值</div></pre></td></tr></table></figure>
+<h5 id="3、添加新元素"><a href="#3、添加新元素" class="headerlink" title="3、添加新元素"></a>3、添加新元素</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">array.push(item1,item2……itemN);//将一个或多个元素加入数组，返回新数组的长度 </div><div class="line">array.unshift(item1,item2……itemN);//将一个或多个元素加入到数组的开始位置，原有元素位置自动后移，返回 新数组的长度 </div><div class="line">array.splice(start,delCount,item1,item2……itemN);//从start的位置开始向后删除delCount个元素，然后从start的位置开始插入一个或多个新元素</div></pre></td></tr></table></figure>
+<h5 id="4、删除元素"><a href="#4、删除元素" class="headerlink" title="4、删除元素"></a>4、删除元素</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">array.pop();//删除最后一个元素，并返回该元素 </div><div class="line">array.shift();//删除第一个元素，数组元素位置自动前移，返回被删除的元素 </div><div class="line">array.splice(start,delCount);//从start的位置开始向后删除delCount个元素</div></pre></td></tr></table></figure>
+<h5 id="5、数组的合并、截取"><a href="#5、数组的合并、截取" class="headerlink" title="5、数组的合并、截取"></a>5、数组的合并、截取</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">array.slice(start,end);//以数组的形式返回数组的一部分，注意不包括 end 对应的元素，如果省略 end 将复制 start 之后的所有元素 </div><div class="line">array.concat(array1,array2);//将多个数组拼接成一个数组</div></pre></td></tr></table></figure>
+<h5 id="6、数组的排序"><a href="#6、数组的排序" class="headerlink" title="6、数组的排序"></a>6、数组的排序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">array.reverse();//数组反转 </div><div class="line">array.sort();//数组排序，返回数组地址</div></pre></td></tr></table></figure>
+<h5 id="7、数组转字符串"><a href="#7、数组转字符串" class="headerlink" title="7、数组转字符串"></a>7、数组转字符串</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">array.join(separator);//将数组原因用separator连接起来</div></pre></td></tr></table></figure>
+<p>其次，数值型的直接传递数值的参数即可。例如var arr = [“aa”,”bb”];arr.del(0);<br>下面说一下字符型的下标 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = []. </div><div class="line">arr[&quot;aa&quot;] = 1;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/05/20/JsArr/" class="archive-article-date">
+  	<time datetime="2016-05-20T08:22:04.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-20</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arr/">Arr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-JsArr" data-title="js数组的基本用法" data-url="undefined"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-react-native-icons" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/18/react-native-icons/">react-native-icons的简单使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="react-native-vector-icons的简单使用-图片-按钮-标签视图-导航条"><a href="#react-native-vector-icons的简单使用-图片-按钮-标签视图-导航条" class="headerlink" title="react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条"></a>react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条</h3><p>icons是可以直接使用图片名, 就能加载图片的三方,使用很方便, 你不需要在工程文件夹里塞各种图片, 节省很多空间,下面就来看看怎么使用吧!</p>
+<h4 id="1-首先打开终端进入到我们的工程文件夹下输入"><a href="#1-首先打开终端进入到我们的工程文件夹下输入" class="headerlink" title="1.首先打开终端进入到我们的工程文件夹下输入"></a>1.首先打开终端进入到我们的工程文件夹下输入</h4><pre><code>npm install react-native-vector-icons --save (回车)
+
+npm install rnpm -g
+
+rnpm link (回车)  
+</code></pre><h4 id="2-在Finder中用Xcode打开工程-…-Demo-ios-Demo-xcodeproj"><a href="#2-在Finder中用Xcode打开工程-…-Demo-ios-Demo-xcodeproj" class="headerlink" title="2. 在Finder中用Xcode打开工程: …/Demo/ios/Demo.xcodeproj"></a>2. 在Finder中用Xcode打开工程: …/Demo/ios/Demo.xcodeproj</h4><h6 id="1-右键工程文件Add-Files-to-“-你工程名-”"><a href="#1-右键工程文件Add-Files-to-“-你工程名-”" class="headerlink" title="(1).右键工程文件Add Files to “(你工程名)”"></a>(1).右键工程文件Add Files to “(你工程名)”</h6><h6 id="2-选择node-modules-react-native-vector-icons-Fonts文件"><a href="#2-选择node-modules-react-native-vector-icons-Fonts文件" class="headerlink" title="(2).选择node_modules/react-native-vector-icons/Fonts文件"></a>(2).选择node_modules/react-native-vector-icons/Fonts文件</h6><h6 id="3-点击”完成”"><a href="#3-点击”完成”" class="headerlink" title="(3).点击”完成”."></a>(3).点击”完成”.</h6><p><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1f9v7wjz9tpj308s071wfc.jpg" alt="Mou icon"></p>
+<p><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1f9v7wk418vj30n708mgoi.jpg" alt="Mou icon"></p>
+<h4 id="3-在xcode的Info-plist文件中-加入-Fonts-provided-by-application数组-并加入以下9项"><a href="#3-在xcode的Info-plist文件中-加入-Fonts-provided-by-application数组-并加入以下9项" class="headerlink" title="3. 在xcode的Info.plist文件中,加入: Fonts provided by application数组,并加入以下9项:"></a>3. 在xcode的Info.plist文件中,加入: Fonts provided by application数组,并加入以下9项:</h4><p><img src="http://ww3.sinaimg.cn/mw1024/005WybULgw1f9v7wlnezfj30d605m75c.jpg" alt="Mou icon"></p>
+<p>到此环境就算设置好了, 接下来就是使用ICONS了.</p>
+<h4 id="4-在Finder中右键用Atom打开工程"><a href="#4-在Finder中右键用Atom打开工程" class="headerlink" title="4. 在Finder中右键用Atom打开工程:"></a>4. 在Finder中右键用Atom打开工程:</h4><p><img src="http://ww4.sinaimg.cn/mw1024/005WybULgw1f9v7wm9x7hj30g2046jsm.jpg" alt="Mou icon"></p>
+<h4 id="5-然后就开始编辑我们的程序了"><a href="#5-然后就开始编辑我们的程序了" class="headerlink" title="5.然后就开始编辑我们的程序了:"></a>5.然后就开始编辑我们的程序了:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">import React, &#123;</div><div class="line">	AppRegistry,</div><div class="line">	Component,</div><div class="line">	View,</div><div class="line">	StyleSheet,</div><div class="line">	AlertIOS,</div><div class="line">	Text,</div><div class="line">	TabBarIOS,</div><div class="line">	NavigatorIOS,</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line"></div><div class="line">var Icon = require(&apos;react-native-vector-icons/FontAwesome&apos;);</div><div class="line">import FindComponent from &apos;./FindComponent&apos;;</div><div class="line">import SearchComponent from &apos;./SearchComponent&apos;;</div><div class="line"></div><div class="line">class Demo extends Component &#123;</div><div class="line">	state = &#123;</div><div class="line">		selectedTab: &apos;find&apos;,</div><div class="line">	&#125;;</div><div class="line">	loginWithFacebook = () =&gt; &#123;</div><div class="line">		//点击&quot;Login with Facebook&quot;按钮后触发的方法</div><div class="line">		AlertIOS.alert(&quot;facebook&quot;);</div><div class="line">	&#125;</div><div class="line">	render() &#123;</div><div class="line">		return (</div><div class="line">			&lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">				&lt;Icon</div><div class="line">					name=&quot;rocket&quot;   //图片名连接,可以到这个网址搜索:http://ionicons.com/, 使用时:去掉前面的 &quot;icon-&quot; !!!!</div><div class="line">					size=&#123;30&#125;   //图片大小</div><div class="line">					color=&quot;red&quot;  //图片颜色</div><div class="line">				/&gt;</div><div class="line">				&lt;Icon.Button    //在图片后加文字</div><div class="line">					name=&quot;facebook&quot;</div><div class="line">					backgroundColor=&quot;#3b5998&quot;</div><div class="line">					onPress=&#123;this.loginWithFacebook&#125; //点击该按钮后触发的方法</div><div class="line">				&gt;</div><div class="line">					Login with Facebook</div><div class="line">				&lt;/Icon.Button&gt;</div><div class="line">				&lt;Icon.Button  //在图片后加, 自定义样式的文字</div><div class="line">					name=&quot;facebook&quot;</div><div class="line">					backgroundColor=&quot;#3b5998&quot;&gt;</div><div class="line">					&lt;Text style=&#123;&#123;fontFamily: &apos;Arial&apos;, fontSize: 15&#125;&#125;&gt;Login with Facebook&lt;/Text&gt;</div><div class="line">				&lt;/Icon.Button&gt;</div><div class="line">				&lt;TabBarIOS    //和标签视图一起使用</div><div class="line">					tintColor=&quot;#4977f0&quot;</div><div class="line">					barTintColor=&quot;#E6E6E6&quot;&gt;</div><div class="line"> 					&lt;Icon.TabBarItem  //用 Icon.TabBarItem 代替 TabBarIOS.Item</div><div class="line">						title=&quot;发现&quot;</div><div class="line">						iconName=&quot;home&quot;</div><div class="line">						selectedIconName=&quot;home&quot;</div><div class="line">						selected = &#123;this.state.selectedTab === &apos;find&apos;&#125;</div><div class="line">						onPress=&#123;() =&gt; &#123;</div><div class="line">							this.setState(&#123;</div><div class="line">								selectedTab: &apos;find&apos;,</div><div class="line">							&#125;);</div><div class="line">						&#125;&#125;</div><div class="line">					&gt;</div><div class="line">						&lt;NavigatorIOS    //导航栏</div><div class="line">							style=&#123;styles.container&#125;</div><div class="line">							tintColor=&apos;#FFFFFF&apos;</div><div class="line">							barTintColor=&apos;#4977f0&apos;</div><div class="line">							initialRoute=&#123;&#123;</div><div class="line">								title: &quot;发现&quot;,</div><div class="line">								titleTextColor: &apos;white&apos;,</div><div class="line">								component: FindComponent</div><div class="line">							&#125;&#125;</div><div class="line">						/&gt;</div><div class="line">					&lt;/Icon.TabBarItem&gt;</div><div class="line">					&lt;Icon.TabBarItem  //用 Icon.TabBarItem 代替 TabBarIOS.Item</div><div class="line">						title=&quot;搜索&quot;</div><div class="line">						iconName=&quot;search&quot;</div><div class="line">						selectedIconName=&quot;search&quot;</div><div class="line">						selected = &#123;this.state.selectedTab === &apos;search&apos;&#125;</div><div class="line">						onPress=&#123;() =&gt; &#123;</div><div class="line">							this.setState(&#123;</div><div class="line">						selectedTab: &apos;search&apos;,</div><div class="line">							&#125;);</div><div class="line">						&#125;&#125;</div><div class="line">					&gt;</div><div class="line">						&lt;NavigatorIOS</div><div class="line">							style=&#123;styles.container&#125;</div><div class="line">							tintColor=&apos;#FFFFFF&apos;</div><div class="line">							barTintColor=&apos;#4977f0&apos;</div><div class="line">							initialRoute=&#123;&#123;</div><div class="line">								title: &quot;搜索&quot;,</div><div class="line">								titleTextColor: &apos;white&apos;,</div><div class="line">								component: SearchComponent</div><div class="line">							&#125;&#125;</div><div class="line">						/&gt;</div><div class="line">					&lt;/Icon.TabBarItem&gt;</div><div class="line">				&lt;/TabBarIOS&gt;</div><div class="line">			&lt;/View&gt;</div><div class="line">		);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">const styles = StyleSheet.create(&#123;</div><div class="line">	container: &#123;</div><div class="line">		flex: 1,</div><div class="line">		justifyContent: &apos;center&apos;,</div><div class="line">	&#125;,</div><div class="line">&#125;);</div><div class="line"></div><div class="line">AppRegistry.registerComponent(&apos;Demo&apos;, () =&gt; Demo);</div></pre></td></tr></table></figure>
+<p>在terminal中的工程文件夹下,输入react-native run-ios(回车)等待程序运行起来就能看到效果啦.</p>
+<p>主要代码下载地址: <a href="http://download.csdn.net/detail/margaret_mo/9512769" target="_blank" rel="external">http://download.csdn.net/detail/margaret_mo/9512769</a></p>
+<p>参考网站: <a href="https://github.com/oblador/react-native-vector-icons" target="_blank" rel="external">https://github.com/oblador/react-native-vector-icons</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/05/18/react-native-icons/" class="archive-article-date">
+  	<time datetime="2016-05-18T09:49:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-18</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/icons/">icons</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reactNative/">reactNative</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-react-native-icons" data-title="react-native-icons的简单使用" data-url="undefined"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-react-native" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/17/react-native/">ReactNative准备:环境的创建和应用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="配置相关环境-点击下面两个网址-打开终端-按要求安装要下面4个环境"><a href="#配置相关环境-点击下面两个网址-打开终端-按要求安装要下面4个环境" class="headerlink" title="配置相关环境,点击下面两个网址,打开终端,按要求安装要下面4个环境:"></a>配置相关环境,点击下面两个网址,打开终端,按要求安装要下面4个环境:</h4><p>官网:<a href="https://facebook.github.io/react-native/docs/getting-started.html#content" target="_blank" rel="external">https://facebook.github.io/react-native/docs/getting-started.html#content</a></p>
+<p>中文网:<a href="http://reactnative.cn/docs/0.24/getting-started.html#content" target="_blank" rel="external">http://reactnative.cn/docs/0.24/getting-started.html#content</a></p>
+<p>这里仅列出了OS X操作系统的环境安装, window的可以自己查看上面给出网址里有.</p>
+<p><img src="http://a1.qpic.cn/psb?/V13KO45Y1oBmjd/AnkhRkWwQwE.V3o06YL3az7*HxNoxYpQ.rWyVt93ih0!/b/dOEAAAAAAAAA&amp;bo=xQJwAcUCcAEDCSw!&amp;rf=viewer_4" alt="Mon icon"></p>
+<p>重要安装命令如下:</p>
+<h4 id="1-安装homebrew，在终端输入："><a href="#1-安装homebrew，在终端输入：" class="headerlink" title="1.安装homebrew，在终端输入："></a>1.安装homebrew，在终端输入：</h4><pre><code>/usr/bin/ruby -e &quot;$(curl -fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre><h5 id="2-安装watchman：-监测文件变化的工具"><a href="#2-安装watchman：-监测文件变化的工具" class="headerlink" title="2.安装watchman：(监测文件变化的工具)"></a>2.安装watchman：(监测文件变化的工具)</h5><pre><code>brew install --HEAD watchman
+</code></pre><h5 id="3-安装node："><a href="#3-安装node：" class="headerlink" title="3.安装node："></a>3.安装node：</h5><pre><code>brew install node
+</code></pre><h5 id="4-安装flow：（监测CSS语法的工具）"><a href="#4-安装flow：（监测CSS语法的工具）" class="headerlink" title="4.安装flow：（监测CSS语法的工具）"></a>4.安装flow：（监测CSS语法的工具）</h5><pre><code>brew install flow
+</code></pre><p>之后是安装ReactNative:</p>
+<h5 id="5-安装ReactNative："><a href="#5-安装ReactNative：" class="headerlink" title="5.安装ReactNative："></a>5.安装ReactNative：</h5><pre><code>npm install -g react-native-cli
+</code></pre><h5 id="6-初始化应用："><a href="#6-初始化应用：" class="headerlink" title="6.初始化应用："></a>6.初始化应用：</h5><pre><code>react-native init ReactNative_1 (你需要的工程名)
+</code></pre><h5 id="7-运行应用：-这里假设你已安装了Xcode-有simulator虚拟机"><a href="#7-运行应用：-这里假设你已安装了Xcode-有simulator虚拟机" class="headerlink" title="7.运行应用：(这里假设你已安装了Xcode,有simulator虚拟机)"></a>7.运行应用：(这里假设你已安装了Xcode,有simulator虚拟机)</h5><pre><code>react-native run-ios
+</code></pre><p>到此环境已经搭建完毕,可以运行ReactNative程序了</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/05/17/react-native/" class="archive-article-date">
+  	<time datetime="2016-05-17T09:50:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-17</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/install/">install</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reactNative/">reactNative</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-react-native" data-title="ReactNative准备:环境的创建和应用" data-url="undefined"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+  
     <article id="post-vue-js" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -485,2205 +1451,10 @@ var duoshuoQuery = {short_name:"wzj1996"};
 <!-- 多说公共JS代码 end -->
 
   
-    <article id="post-PHP连接sql" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/02/PHP连接sql/">PHP连接sql</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="PHP连接数据库"><a href="#PHP连接数据库" class="headerlink" title="PHP连接数据库"></a>PHP连接数据库</h3><p>连接数据库有俩种方式</p>
-<p>1、面向过程:</p>
-<pre><code>$link = mysqli_connect(&quot;localhost(本地地址)&quot;,&quot;数据库的账户&quot;,&quot;&quot;,&quot;数据库的名字&quot;);
-if(mysqli_errno($link)){
-echo mysqli_error($link);
-}
-//sql语句
-$sql = &quot;INSERT INTO users (username,age,pwd) VALUES (&apos;王五&apos;,20,654321)&quot;;
-//设置编码格式
-//方式一：
-//mysqli_query($link,&quot;set names utf8&quot;);
-//方式二
-mysqli_set_charset($link, &quot;utf8&quot;);
-//执行sql
-$res = mysqli_query($link, $sql);
-if($res){
-echo &quot;添加成功&quot;;
-}else{
-echo &quot;添加失败&quot;;
-}
-</code></pre><p>2、面向对象</p>
-<pre><code>$mysqli = new mysqli(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
-if($mysqli-&gt;errno){
-echo $mysqli-&gt;error;
-}else{
-echo &quot;连接数据库成功&quot;;
-}
-$name = &quot;马云&quot;;
-$age  = 38;
-$pwd = 123654;
-$sql = &quot;INSERT INTO users (username,age,pwd) VALUES (&apos;&quot;.$name.&quot;&apos;,$age,$pwd)&quot;;
-//echo $sql;die;
-$reslut = add($sql);
-if($reslut){
-echo &quot;添加成功&quot;;
-}else{
-echo &quot;添加失败&quot;;
-}
-</code></pre><h3 id="数据库的增删改查"><a href="#数据库的增删改查" class="headerlink" title="数据库的增删改查"></a>数据库的增删改查</h3><p>下面都是我封装的函数…</p>
-<p>1、添加<br>sql语句<br>举例:<br>$sql = “INSERT INTO users(username,pwd,age) VALUES (‘王林’,123123,45)”;</p>
-<p>users在你数据库表的名字 username,pwd,age,在你数据库的字段,VALEUS 括号里是你要添加的内容;</p>
-<pre><code>function add($sql){
-//连接数据库
-$link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
-//设置编码格式
-mysqli_query($link, &quot;set names utf8&quot;);
-$res = mysqli_query($link, $sql);
-
-//    $reslut = mysqli_insert_id($link);
-//    echo $reslut;die;
-if($res){
-    return true;    
-}else{
-    return false;
-}
-}
-</code></pre><p>2、删除</p>
-<p>$sql = “DELETE FROM users WHERE id=18”;</p>
-<p>WHERE后面是你添加的条件为了更准确的去删除;</p>
-<pre><code>function delete($sql){
-//连接数据库
-$link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
-mysqli_query($link, &quot;set names utf8&quot;);
-$res = mysqli_query($link, $sql);
-if($res){
-    return true;    
-}else{
-    return false;
-}
-}    
-</code></pre><p>3、更改<br>    $sql = “UPDATE users SET username=’王’ WHERE id=18”;</p>
-<pre><code>function update($sql){
-//连接数据库
-$link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
-mysqli_query($link, &quot;set names utf8&quot;);
-$res = mysqli_query($link, $sql);
-if($res){
-    return true;    
-}else{
-    return false;
-}
-}
-</code></pre><p>4、查询<br>$sql = “SELECT * FROM users”;</p>
-<pre><code>function getlist($sql){
-//连接数据库
-$link = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;house&quot;);
-//设置编码格式
-mysqli_query($link, &quot;set names utf8&quot;);
-//执行sql
-$res = mysqli_query($link, $sql);
-//取所有数据
-//    $list = mysqli_fetch_all($res);//常用
-//    $arr = array();
-//    while($list = mysqli_fetch_row($res)){
-//        $arr[] = $list;
-//    }
-//常用
-while($list = mysqli_fetch_assoc($res)){
-    $arr[] = $list;
-}
-
-    return $arr;
-}
-</code></pre>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/03/02/PHP连接sql/" class="archive-article-date">
-  	<time datetime="2016-03-02T01:27:22.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-03-02</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-<!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-PHP连接sql" data-title="PHP连接sql" data-url="undefined"></div>
-
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"wzj1996"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
-
-  
-    <article id="post-CSS的垂直居中和水平居中总结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/26/CSS的垂直居中和水平居中总结/">CSS的垂直居中和水平居中总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><pre><code>CSS居中一直是一个比较敏感的话题，为了以后开发的方便，楼主觉得确实需要总结一下了，总的来说，居中问题分为垂直居中和水平居中，实际上水平居中是很简单的，但垂直居中的方式和方法就千奇百怪了
-</code></pre><h3 id="内联元素居中方案"><a href="#内联元素居中方案" class="headerlink" title="内联元素居中方案"></a>内联元素居中方案</h3><p>水平居中设置：</p>
-<pre><code>1、行内元素 设置 text-align:center；
-2、Flex布局 设置display:flex;justify-content:center;(灵活运用)
-</code></pre><p>垂直居中设置：</p>
-<pre><code>1、父元素高度确定的单行文本（内联元素） 设置 height = line-height；
-2、父元素高度确定的多行文本（内联元素） a:插入 table （插入方法和水平居中一样），然后设置 vertical-align:middle； b:先设置 display:table-cell 再设置 vertical-align:middle；
-</code></pre><p>块级元素居中方案</p>
-<p>水平居中设置：</p>
-<pre><code>1、定宽块状元素 设置 左右 margin 值为 auto；
-
-2、不定宽块状元素 a:在元素外加入 table 标签（完整的，包括 table、tbody、tr、td），该元素写在 td 内，然后设置 margin 的值为 auto； b:给该元素设置 display:inine 方法； c:父元素设置 position:relative 和 left:50%，子元素设 position:relative 和 left:50%；
-</code></pre><p>垂直居中设置：</p>
-<p>1.使用position:absolute（fixed）,设置left、top、margin-left、margin-top的属性;</p>
-<pre><code>.box{
-position:absolute;/*或fixed*/
-top:50%;
-left:50%;
-margin-top:-100px;
-margin-left:-200px;
-}
-</code></pre><p>3.利用display:table-cell属性使内容垂直居中;</p>
-<pre><code>.box{
-display:table-cell;
-vertical-align:middle;
-text-align:center;
-width:120px;
-height:120px;
-background:purple;
-}
-</code></pre><p>4.使用css3的新属性transform:translate(x,y)属性;</p>
-<pre><code>.box{
-position: absolute;
-transform: translate(50%,50%);
--webkit-transform:translate(50%,50%);
--moz-transform:translate(50%,50%);
--ms-transform:translate(50%,50%);
-}
-</code></pre><p>5.最高大上的一种，使用:before元素;</p>
-<pre><code>.box{
-position:fixed;
-display:block;
-background:rgba(0,0,0,.5);
-}
-.box:before{
-content:&apos;&apos;;
-display:inline-block;
-vertical-align:middle;
-height:100%;
-}
-.box.content{
-width:60px;
-height:60px;
-line-height:60px;
-color:red;
-</code></pre><p>6.Flex布局;</p>
-<pre><code>.box{
-display: -webkit-box;
-display: -webkit-flex;
-display: -moz-box;
-display: -moz-flex;
-display: -ms-flexbox;
-display: flex;
-水平居中
--webkit-box-align: center;
--moz-box-align: center;
--ms-flex-pack:center;
--webkit-justify-content: center;
--moz-justify-content: center;
-justify-content: center;
- 垂直居中
--webkit-box-pack: center;
--moz-box-pack: center;
--ms-flex-align:center;
--webkit-align-items: center;
--moz-align-items: center;
-align-items: center;
-}    
-</code></pre><p>over!    </p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/02/26/CSS的垂直居中和水平居中总结/" class="archive-article-date">
-  	<time datetime="2016-02-26T03:25:15.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-02-26</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-<!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-CSS的垂直居中和水平居中总结" data-title="CSS的垂直居中和水平居中总结" data-url="undefined"></div>
-
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"wzj1996"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
-
-  
-    <article id="post-前端面试中常见的算术问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/25/前端面试中常见的算术问题/">前端面试中常见的算术问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前端面试中的常见的算法问题"><a href="#前端面试中的常见的算法问题" class="headerlink" title="前端面试中的常见的算法问题"></a>前端面试中的常见的算法问题</h2><pre><code>虽说我们很多时候前端很少有机会接触到算法。大多都交互性的操作，然而从各大公司面试来看，算法依旧是考察的一方面。实际上学习数据结构与算法对于工程师去理解和分析问题都是有帮助的。如果将来当我们面对较为复杂的问题，这些基础知识的积累可以帮助我们更好的优化解决思路。下面罗列在前端面试中经常撞见的几个问题吧
-</code></pre><h3 id="Q1-判断一个单词是否是回文？"><a href="#Q1-判断一个单词是否是回文？" class="headerlink" title="Q1 判断一个单词是否是回文？"></a>Q1 判断一个单词是否是回文？</h3><pre><code>回文是指把相同的词汇或句子，在下文中调换位置或颠倒过来，产生首尾回环的情趣，叫做回文，也叫回环。比如 mamam redivider .
-</code></pre><p>很多人拿到这样的题目非常容易想到用for 将字符串颠倒字母顺序然后匹配就行了。其实重要的考察的就是对于reverse的实现。其实我们可以利用现成的函数，将字符串转换成数组，这个思路很重要，我们可以拥有更多的自由度去进行字符串的一些操作。</p>
-<pre><code>function checkPalindrom(str) {  
-return str == str.split(&apos;&apos;).reverse().join(&apos;&apos;);
-}    
-</code></pre><h3 id="Q2-去掉一组整型数组重复的值"><a href="#Q2-去掉一组整型数组重复的值" class="headerlink" title="Q2 去掉一组整型数组重复的值"></a>Q2 去掉一组整型数组重复的值</h3><pre><code>比如输入: [1,13,24,11,11,14,1,2] 
-输出: [1,13,24,11,14,2]
-需要去掉重复的11 和 1 这两个元素。
-</code></pre><p>这道问题出现在诸多的前端面试题中，主要考察个人对Object的使用，利用key来进行筛选。</p>
-<pre><code>/**
-* unique an array 
-**/
-let unique = function(arr) {  
-let hashTable = {};
-let data = [];
-for(let i=0,l=arr.length;i&lt;l;i++) {
-if(!hashTable[arr[i]]) {
-  hashTable[arr[i]] = true;
-  data.push(arr[i]);
-}
-}
-return data
-}
-module.exports = unique;  
-</code></pre><h3 id="Q3-统计一个字符串出现最多的字母"><a href="#Q3-统计一个字符串出现最多的字母" class="headerlink" title="Q3 统计一个字符串出现最多的字母"></a>Q3 统计一个字符串出现最多的字母</h3><p>给出一段英文连续的英文字符窜，找出重复出现次数最多的字母</p>
-<pre><code>输入 ： afjghdfraaaasdenas 
-输出 ： a
-</code></pre><p>前面出现过去重的算法，这里需要是统计重复次数。</p>
-<pre><code>function findMaxDuplicateChar(str) {  
-if(str.length == 1) {
-return str;
-}
-let charObj = {};
-for(let i=0;i&lt;str.length;i++) {
-if(!charObj[str.charAt(i)]) {
-  charObj[str.charAt(i)] = 1;
-}else{
-  charObj[str.charAt(i)] += 1;
-}
-}
-let maxChar = &apos;&apos;,
-  maxValue = 1;
-  for(var k in charObj) {
-if(charObj[k] &gt;= maxValue) {
-  maxChar = k;
-  maxValue = charObj[k];
-}
-}
-return maxChar;
-}
-module.exports = findMaxDuplicateChar;
-</code></pre><h3 id="Q4-排序算法"><a href="#Q4-排序算法" class="headerlink" title="Q4 排序算法"></a>Q4 排序算法</h3><p>如果抽到算法题目的话，应该大多都是比较开放的题目，不限定算法的实现，但是一定要求掌握其中的几种，所以冒泡排序，这种较为基础并且便于理解记忆的算法一定需要熟记于心。冒泡排序算法就是依次比较大小，小的的大的进行位置上的交换。</p>
-<pre><code>function bubbleSort(arr) {  
-for(let i = 0,l=arr.length;i&lt;l-1;i++) {
-    for(let j = i+1;j&lt;l;j++) { 
-      if(arr[i]&gt;arr[j]) {
-            let tem = arr[i];
-            arr[i] = arr[j];
-            arr[j] = tem;
-        }
-    }
-}
-return arr;
-}
-module.exports = bubbleSort;
-</code></pre><p>除了冒泡排序外，其实还有很多诸如 插入排序,快速排序，希尔排序等。每一种排序算法都有各自的特点。全部掌握也不需要，但是心底一定要熟悉几种算法。 比如快速排序，其效率很高，而其基本原理如图(来自wiki)：</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif" alt="Mou"></p>
-<p>算法参考某个元素值，将小于它的值，放到左数组中，大于它的值的元素就放到右数组中，然后递归进行上一次左右数组的操作，返回合并的数组就是已经排好顺序的数组了</p>
-<pre><code>function quickSort(arr) {
-
-if(arr.length&lt;=1) {
-    return arr;
-}
-
-let leftArr = [];
-let rightArr = [];
-let q = arr[0];
-for(let i = 1,l=arr.length; i&lt;l; i++) {
-    if(arr[i]&gt;q) {
-        rightArr.push(arr[i]);
-    }else{
-        leftArr.push(arr[i]);
-    }
-}
-
-return [].concat(quickSort(leftArr),[q],quickSort(rightArr));
-}
-module.exports = quickSort;
-</code></pre><p>安利大家一个学习的地址，通过动画演示算法的实现。</p>
-<p><a href=" ">HTML5 Canvas Demo: Sorting Algorithms</a></p>
-<h3 id="Q5-不借助临时变量，进行两个整数的交换"><a href="#Q5-不借助临时变量，进行两个整数的交换" class="headerlink" title="Q5 不借助临时变量，进行两个整数的交换"></a>Q5 不借助临时变量，进行两个整数的交换</h3><pre><code>输入 a = 2, b = 4 输出 a = 4, b =2
-</code></pre><p>这种问题非常巧妙，需要大家跳出惯有的思维，利用 a , b进行置换。</p>
-<p>主要是利用 + - 去进行运算，类似 a = a + ( b - a) 实际上等同于最后 的 a = b;</p>
-<pre><code>function swap(a , b) {  
-b = b - a;
-a = a + b;
-b = a - b;
-return [a,b];
-}
-module.exports = swap;    
-</code></pre><h3 id="Q6-使用canvas-绘制一个有限度的斐波那契数列的曲线"><a href="#Q6-使用canvas-绘制一个有限度的斐波那契数列的曲线" class="headerlink" title="Q6 使用canvas 绘制一个有限度的斐波那契数列的曲线"></a>Q6 使用canvas 绘制一个有限度的斐波那契数列的曲线</h3><p><img src="http://img1.vued.vanthink.cn/vued90edf7b944ec479ee8b4203cf56e158d.png" alt="Mou"></p>
-<p>数列长度限定在9.</p>
-<p>斐波那契数列，又称黄金分割数列，指的是这样一个数列：0、1、1、2、3、5、8、13、21、34、……在数学上，斐波纳契数列主要考察递归的调用。我们一般都知道定义</p>
-<pre><code>fibo[i] = fibo[i-1]+fibo[i-2];  
-</code></pre><p>生成斐波那契数组的方法</p>
-<pre><code>function getFibonacci(n) {  
-var fibarr = [];
-var i = 0;
-while(i&lt;n) {
-if(i&lt;=1) {
-  fibarr.push(i);
-}else{
-  fibarr.push(fibarr[i-1] + fibarr[i-2])
-}
-i++;
-}
-return fibarr;
-}
-</code></pre><p>剩余的工作就是利用canvas arc方法进行曲线绘制了</p>
-<h3 id="Q7-找出下列正数组的最大差值比如"><a href="#Q7-找出下列正数组的最大差值比如" class="headerlink" title="Q7 找出下列正数组的最大差值比如:"></a>Q7 找出下列正数组的最大差值比如:</h3><pre><code>输入 [10,5,11,7,8,9]
-输出 6
-</code></pre><p>这是通过一道题目去测试对于基本的数组的最大值的查找，很明显我们知道，最大差值肯定是一个数组中最大值与最小值的差。</p>
-<pre><code>function getMaxProfit(arr) {
-var minPrice = arr[0];
-var maxProfit = 0;
-
-for (var i = 0; i &lt; arr.length; i++) {
-    var currentPrice = arr[i];
-
-    minPrice = Math.min(minPrice, currentPrice);
-
-    var potentialProfit = currentPrice - minPrice;
-
-    maxProfit = Math.max(maxProfit, potentialProfit);
-}
-
-return maxProfit;
-}    
-</code></pre><h3 id="Q8-随机生成指定长度的字符串"><a href="#Q8-随机生成指定长度的字符串" class="headerlink" title="Q8 随机生成指定长度的字符串"></a>Q8 随机生成指定长度的字符串</h3><p>实现一个算法，随机生成指制定长度的字符窜。</p>
-<pre><code>比如给定 长度 8  输出 4ldkfg9j
-
-
-function randomString(n) {  
-let str = &apos;abcdefghijklmnopqrstuvwxyz9876543210&apos;;
-let tmp = &apos;&apos;,
-  i = 0,
-  l = str.length;
-  for (i = 0; i &lt; n; i++) {
-tmp += str.charAt(Math.floor(Math.random() * l));
-}
-return tmp;
-}
-module.exports = randomString;
-</code></pre><h3 id="Q9-实现类似getElementsByClassName-的功能"><a href="#Q9-实现类似getElementsByClassName-的功能" class="headerlink" title="Q9 实现类似getElementsByClassName 的功能"></a>Q9 实现类似getElementsByClassName 的功能</h3><p>自己实现一个函数，查找某个DOM节点下面的包含某个class的所有DOM节点？不允许使用原生提供的 getElementsByClassName querySelectorAll 等原生提供DOM查找函数。</p>
-<pre><code>function queryClassName(node, name) {  
-var starts = &apos;(^|[ \n\r\t\f])&apos;,
-   ends = &apos;([ \n\r\t\f]|$)&apos;;
-   var array = [],
-    regex = new RegExp(starts + name + ends),
-    elements = node.getElementsByTagName(&quot;*&quot;),
-    length = elements.length,
-    i = 0,
-    element;
-
-while (i &lt; length) {
-    element = elements[i];
-    if (regex.test(element.className)) {
-        array.push(element);
-    }
-
-    i += 1;
-}
-
-return array;
-}
-</code></pre><h3 id="Q10-使用JS-实现二叉查找树-Binary-Search-Tree"><a href="#Q10-使用JS-实现二叉查找树-Binary-Search-Tree" class="headerlink" title="Q10 使用JS 实现二叉查找树(Binary Search Tree)"></a>Q10 使用JS 实现二叉查找树(Binary Search Tree)</h3><p>一般叫全部写完的概率比较少，但是重点考察你对它的理解和一些基本特点的实现。 二叉查找树，也称二叉搜索树、有序二叉树（英语：ordered binary tree）是指一棵空树或者具有下列性质的二叉树：</p>
-<pre><code>任意节点的左子树不空，则左子树上所有结点的值均小于它的根结点的值；
-
-任意节点的右子树不空，则右子树上所有结点的值均大于它的根结点的值；
-
-任意节点的左、右子树也分别为二叉查找树；
-
-没有键值相等的节点。二叉查找树相比于其他数据结构的优势在于查找、插入的时间复杂度较低。为O(log n)。二叉查找树是基础性数据结构，用于构建更为抽象的数据结构，如集合、multiset、关联数组等。
-</code></pre><p><img src="http://img1.vued.vanthink.cn/vued95685e8f89199babd6273a93651ecd8b.png" alt="Mou">    </p>
-<p>在写的时候需要足够理解二叉搜素树的特点，需要先设定好每个节点的数据结构</p>
-<pre><code>class Node {  
-constructor(data, left, right) {
-this.data = data;
-this.left = left;
-this.right = right;
-}
-}
-</code></pre><p>树是有节点构成，由根节点逐渐延生到各个子节点，因此它具备基本的结构就是具备一个根节点，具备添加，查找和删除节点的方法.</p>
-<pre><code>    class BinarySearchTree {
-    constructor() {
-this.root = null;
-}
-insert(data) {
-let n = new Node(data, null, null);
-if (!this.root) {
-  return this.root = n;
-}
-let currentNode = this.root;
-let parent = null;
-while (1) {
-  parent = currentNode;
-  if (data &lt; currentNode.data) {
-    currentNode = currentNode.left;
-    if (currentNode === null) {
-      parent.left = n;
-      break;
-    }
-  } else {
-    currentNode = currentNode.right;
-    if (currentNode === null) {
-      parent.right = n;
-      break;
-    }
-  }
-}
-}
-
-remove(data) {
-this.root = this.removeNode(this.root, data)
-}
-
-removeNode(node, data) {
-if (node == null) {
-  return null;
-}
-
-if (data == node.data) {
-  // no children node
-  if (node.left == null &amp;&amp; node.right == null) {
-    return null;
-  }
-  if (node.left == null) {
-    return node.right;
-  }
-  if (node.right == null) {
-    return node.left;
-  }
-
-  let getSmallest = function(node) {
-    if(node.left === null &amp;&amp; node.right == null) {
-      return node;
-    }
-    if(node.left != null) {
-      return node.left;
-    }
-    if(node.right !== null) {
-      return getSmallest(node.right);
-    }
-
-  }
-  let temNode = getSmallest(node.right);
-  node.data = temNode.data;
-  node.right = this.removeNode(temNode.right,temNode.data);
-  return node;
-
-} else if (data &lt; node.data) {
-  node.left = this.removeNode(node.left,data);
-  return node;
-} else {
-  node.right = this.removeNode(node.right,data);
-  return node;
-}
-}
-
-find(data) {
-var current = this.root;
-while (current != null) {
-  if (data == current.data) {
-    break;
-  }
-  if (data &lt; current.data) {
-    current = current.left;
-  } else {
-    current = current.right
-  }
-}
-return current.data;
-}
-}
-module.exports = BinarySearchTree;    
-</code></pre>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/02/25/前端面试中常见的算术问题/" class="archive-article-date">
-  	<time datetime="2016-02-25T13:25:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-02-25</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-<!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-前端面试中常见的算术问题" data-title="前端面试中常见的算术问题" data-url="undefined"></div>
-
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"wzj1996"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
-
-  
-    <article id="post-正则" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/21/正则/">正则</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="1、什么是正则表达式"><a href="#1、什么是正则表达式" class="headerlink" title="1、什么是正则表达式"></a>1、什么是正则表达式</h3><pre><code>正则表达式，又称正规表示式、正规表示法、正规表达式、规则表达式、常规表示法（英语：Regular Expression，在代码中常简写为regex、regexp或RE），计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些匹配某个模式的文本。
-</code></pre><h3 id="2、利用图形化工具理解正则表达式"><a href="#2、利用图形化工具理解正则表达式" class="headerlink" title="2、利用图形化工具理解正则表达式"></a>2、利用图形化工具理解正则表达式</h3><pre><code>辅助理解正则表达的在线工具 https://regexper.com/ 我们利用这个工具辅助理解，正则表达式。语法没懂表着急，后面会有，这里只是学会用工具帮助我们学习。
-</code></pre><p>手机号正则</p>
-<p>/^1[34578][0-9]{9}$/</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/1ce345adabe2cc8b2b96.jpg" alt="Mou">    </p>
-<p>注释：以1开头，第二位为3 4 5 7 9 其中一个，以9位（本身1次加重复8次）0-9数字结尾</p>
-<h5 id="单词边界"><a href="#单词边界" class="headerlink" title="单词边界"></a>单词边界</h5><p>/\bis\b/</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/3fd0c8d1c0e6614ddffc.jpg" alt="Mou"></p>
-<p>注释： is前后都是单词的边界，比较晦涩难懂？感受下两者的区别，\b 会方道语法部分讲解</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/a774384e61752ce942a0.jpg" alt="Mou"></p>
-<p>URL分组替换</p>
-<p>/http:(\/\/.+.jpg)/</p>
-<p>看不懂的不要慌语法部分后面会有介绍，这里只是展示利用可视化的图形帮助我们理解正则表达式，可以回来再看木有关系</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/72a64c0f5f5ba4e7eaee.jpg" alt="Mou"></p>
-<p>正则表达式中括号用来分组，这个时候我们可以通过用$1来获取 group#1的内容</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/5c2dbd0ca13e9f444f69.jpg" alt="Mou"></p>
-<p>说下这个正则的意义，如果网站用了https，网站引用静态资源也必须是https，否则报错。如果写成 // 会自动识别 http 或者 https</p>
-<p>日期匹配与分组替换</p>
-<p>/^\d{4}[/-]\d{2}[/-]\d{2}$/</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/eeb1d71e254fde06090e.jpg" alt="Mou"></p>
-<p>轻松的可以拿到 group#1 #2 #3 的内容，对应 $1 $2 $3</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/1a40fca9e0e3e2f2f50d.jpg" alt="Mou"></p>
-<p>到现在已经能结合图形化工具看懂正则表达式表达式了，如果想自己写，还要在正则语法上下点功夫</p>
-<h2 id="正则表达式语法"><a href="#正则表达式语法" class="headerlink" title="正则表达式语法"></a>正则表达式语法</h2><p>1 修饰符 （三个 g i m）</p>
-<p>修饰符与其他语法特殊，字面量方法声名的时候放到//后，构造函数声明的时候，作为第二个参数传入。整个正则表达式可以理解为正则表达式规则字符串+修饰符</p>
-<pre><code>g：global 执行一个全局匹配
-i：ignore case执行一个不区分大小写的匹配
-m: multiple lines多行匹配
-</code></pre><p>修饰符可以一起用 const reg =/\bis\b/gim<br>来说说他们有什么作用<br>有g和没有g的区别</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/d7f51998f922e51426cb.jpg" alt="Mou"></p>
-<p>没有g只替换了第一个，有g 所有的都换了</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/152cde1cd3cd1c4cb63e.jpg" alt="Mou"></p>
-<p>有i和没有i的区别</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/9048c3bafe0914a065cc.jpg" alt="Mou"></p>
-<p>有i忽略大小写，没有i严格区分大小写<br><img src="http://ac-myg6wstv.clouddn.com/bb10c84bef012f611b82.jpg" alt="Mou"></p>
-<p>元字符</p>
-<p>正则表达式由两种基本字符组成：</p>
-<pre><code>原义字符
-非打印字符
-元字符 (* + ? $ ^ . | \ ( ) { } [ ])
-</code></pre><p> 原义字符</p>
-<p> 这个没什么好解释的，我们一直在举例的 /is/ 匹配字符串’is’</p>
-<p> \将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，n”匹配字符“n”。“\n”匹配一个换行符。序列“\”匹配“\”而“(”则匹配“(”</p>
-<p>字符类取反 [^]</p>
-<h4 id="表示不属于此类"><a href="#表示不属于此类" class="headerlink" title="表示不属于此类"></a>表示不属于此类</h4><p><img src="http://ac-myg6wstv.clouddn.com/2388def90c799b216e5f.jpg" alt="Mou"><br>空格也不属于，好多狗🐶</p>
-<p>范围类[-]</p>
-<p>正则表达式支持一定范围规则比如 [a-z] [A-Z] [0-9] 可以连写[a-z0-9] 如果你只是想匹配-在 范围类最后加-即可。请看实例。</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/546fdd8b997bb4bc88a9.jpg" alt="Mou"></p>
-<p> 预定义类</p>
-<p>常用为了方便书写</p>
-<pre><code>字符        等价类                    含义
-.        [^\n\r]                除了回车符和换行符之外的所有字符
-\d        [0-9]                数字字符
-\D        [^0-9]                非数字字符
-\s        [\t\n\x0B\f\r]        空白符
-\S        [^\t\n\x0B\f\r]        非空白符
-\w        [a-zA-Z_0-9]        单词字符（字母、数字、下划线）
-\W        [^a-zA-Z_0-9]        非单词字符
-</code></pre><p>有了这些预定义类，写一些正则就很方便了，比如我们希望匹配一个 ab+数字+任意字符 的字符串，就可以这样写了 /ab\d./<br><img src="http://ac-myg6wstv.clouddn.com/13f9df65830c8ab8777a.jpg" alt="Mou"></p>
-<p>边界</p>
-<pre><code>字符        含义
-
-^        以xx开头
-$        以xx结尾
-\b        单词边界，指[a-zA-Z_0-9]之外的字符
-\B        非单词边界
-</code></pre><p>边界顾名思义即定义匹配的边界条件，上面基本都在前面的例子碰到了，这里演示下\b与\B 的区别</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/4a401fa730bc568015b7.jpg" alt="Mou"></p>
-<p>量词</p>
-<pre><code>字符            含义
-
-?        出现零次或一次
-*        出现零次或多次(任意次)
-+        出现一次或多次（至道一次）
-{n}        对应零次或者n次
-{n,m}    至少出现n次但不超过m次
-{n,}    至少出现n次(+的升级版)
-{0,n}    至多出现n次(其实就是{n,m} 方便记忆而已)
-</code></pre><p>如果没有量词，要匹配4位数字这样写就可以/\d\d\d\d/, 如果匹配50位100位呢？那不是要疯掉了？<br>有了量词，就可以这样写/\d{100}/, 量词的使用我们在手机号中使用过，表现在可视化中就是循环多少次。</p>
-<p>凑一个上面都包含的实例/\d?@\d*@\d+@\d{10}@\d{10,20}@\d{10,}@\d{0,10}/</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/92296621793c1e9b289e.jpg" alt="Mou"></p>
-<p>贪婪与懒惰（非贪婪）</p>
-<p>正则表达式默认会匹配贪婪模式，什么是贪婪模式呢？如其名尽可能多的匹配。我们看个例子🌰。</p>
-<p>/\d{3,6}/</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/54f23af7ec7334fdf56b.jpg" alt="Mou"></p>
-<p><img src="http://ac-myg6wstv.clouddn.com/00f41398667e7d54b4c6.jpg" alt="Mou"></p>
-<p>贪婪模式下，匹配的了最多的情况。</p>
-<p>与贪婪对应就是懒惰模式，懒惰对应的就是匹配的尽可能少的情况。如何开启懒惰模式？ 在量词后面加?。继续上面的例子</p>
-<p>/\d{3,6}?/</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/0232a2388ba315d4b197.jpg" alt="Mou"></p>
-<p>如果想知道，正则表达式是如何匹配量词的，请看 进阶正则表达式 文中有介绍，正则是如何回溯的。</p>
-<p>分组与反向引用</p>
-<p>分组，又称为子表达式。把正则表达式拆分成小表达式。概念枯燥，说个例子为嘛用分组：</p>
-<p>不分组 /abc{2}/</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/20a5e736228756898ec0.jpg" alt="Mou"></p>
-<p>量词仅作用到最后的c</p>
-<p>分组 /(abc){2}/</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/903fec7cc8e8f27b81e6.jpg" alt="Mou"></p>
-<p>注意这里 group #1</p>
-<p>分组虽然和运算符() 很像，但是分组在正则表达式中，注意理解组的含义。经常有人滥用分组</p>
-<p>/^(http|https)/ 真的需要这样么？其实 /^https?/就可以了，你正则写的特别长的时候，会出现一堆没用的结果，看着都头疼吧。</p>
-<p>分组往往和反向引用一起使用，别被概念吓到：当一个正则表达式被分组后，每个分组自动被赋予一个组号，一左到右分别是 $1 $2…</p>
-<p>再把之前的例子拿出来</p>
-<p>/^(\d{4})<a href="\d{2}">/-</a><a href="\d{2}">/-</a>$/</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/126a6de5f1367f9f4c5e.jpg" alt="Mou"></p>
-<p>轻松的可以拿到 group#1 #2 #3 的内容，对应 $1 $2 $3</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/1a40fca9e0e3e2f2f50d.jpg" alt="Mou"></p>
-<p>如果在反向引用中不想捕获年该如何操作? 加上 ?:即可</p>
-<p>/^(?:\d{4})<a href="\d{2}">/-</a><a href="\d{2}">/-</a>$/</p>
-<p><img src="http://ac-myg6wstv.clouddn.com/23ff76b527b991c29faf.jpg" alt="Mou"></p>
-<h3 id="over"><a href="#over" class="headerlink" title="over"></a>over</h3>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/01/21/正则/" class="archive-article-date">
-  	<time datetime="2016-01-21T11:11:28.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-01-21</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-<!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-正则" data-title="正则" data-url="undefined"></div>
-
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"wzj1996"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
-
-  
-    <article id="post-JavaScript创建对象的7种方法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/17/JavaScript创建对象的7种方法/">JavaScript创建对象的7种方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>首先解释几个概念：</p>
-<pre><code>1、对象 下面例子中所有的Person函数
-2、实例/对象实例 通过new Person() or Person()返回的对象，如var person1 = new Person()中的person1
-3、原型对象Person.prototype
-</code></pre><h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><pre><code>function Person() {
-var o = new Object();
-o.name = &apos;hanmeimei&apos;;
-o.say = function() {
-alert(this.name);
-}
-return o;
-}
-var person1 = Person();
-</code></pre><p>优点：完成了返回一个对象的要求。    </p>
-<p>缺点：</p>
-<pre><code>1、无法通过constructor识别对象，以为都是来自Object，无法得知来自Person
-2、每次通过Person创建对象的时候，所有的say方法都是一样的，但是却存储了多次，浪费资源。
-</code></pre><h3 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h3><pre><code>function Person() {
-this.name = &apos;hanmeimei&apos;;
-this.say = function() {
-alert(this.name)
-}
-}
-var person1 = new Person();    
-</code></pre><p>优点：</p>
-<pre><code>1、通过constructor或者instanceof可以识别对象实例的类别
-2、可以通过new 关键字来创建对象实例，更像OO语言中创建对象实例
-</code></pre><p>缺点：</p>
-<pre><code>多个实例的say方法都是实现一样的效果，但是却存储了很多次（两个对象实例的say方法是不同的，因为存放的地址不同）
-</code></pre><p>注意：</p>
-<pre><code>1、构造函数模式隐试的在最后返回return this 所以在缺少new的情况下，会将属性和方法添加给全局对象，浏览器端就会添加给window对象。
-2、也可以根据return this 的特性调用call或者apply指定this。这一点在后面的继承有很大帮助。        
-</code></pre><h3 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h3><pre><code>function Person() {}
-Person.prototype.name = &apos;hanmeimei&apos;;
-Person.prototype.say = function() {
-alert(this.name);
-}
-Person.prototype.friends = [&apos;lilei&apos;];
-var person1 = new Person();
-</code></pre><p>优点：</p>
-<pre><code>1、say方法是共享的了，所有的实例的say方法都指向同一个。
-
-2、可以动态的添加原型对象的方法和属性，并直接反映在对象实例上。    
-
-var person1 = new Person()
-Person.prototype.showFriends = function() {
-console.log(this.friends)
-}
-person1.showFriends()  //[&apos;lilei&apos;]    
-</code></pre><p>缺点：</p>
-<pre><code>1、出现引用的情况下会出现问题具体见下面代码：
-
-    var person1 = new Person();
-    var person2 = new Person();
-    person1.friends.push(&apos;xiaoming&apos;);
-    console.log(person2.friends)  //[&apos;lilei&apos;, &apos;xiaoming&apos;]
-
-因为js对引用类型的赋值都是将地址存储在变量中，所以person1和person2的friends属性指向的是同一块存储区域。
-
-2、第一次调用say方法或者name属性的时候会搜索两次，第一次是在实例上寻找say方法，没有找到就去原型对象(Person.prototype)上找say方法，找到后就会在实力上添加这些方法or属性。
-
-3、所有的方法都是共享的，没有办法创建实例自己的属性和方法，也没有办法像构造函数那样传递参数。
-</code></pre><p>注意：</p>
-<pre><code>1、优点②中存在一个问题就是直接通过对象字面量给Person.prototype进行赋值的时候会导致constructor改变，所以需要手动设置，其次就是通过对象字面量给Person.prototype进行赋值，会无法作用在之前创建的对象实例上
-var person1 = new Person()
-Person.prototype = {
-name: &apos;hanmeimei2&apos;,
-setName: function(name){
-  this.name = name
-  }
-  }
-  person1.setName()   //Uncaught TypeError: person1.set is not a function(…)
-
-  这是因为对象实例和对象原型直接是通过一个指针链接的，这个指针是一个内部属性[[Prototype]]，可以通过__proto__访问。我们通过对象字面量修改了Person.prototype指向的地址，然而对象实例的__proto__，并没有跟着一起更新，所以这就导致，实例还访问着原来的Person.prototype，所以建议不要通过这种方式去改变Person.prototype属性
-</code></pre><h3 id="构造函数和原型组合模式"><a href="#构造函数和原型组合模式" class="headerlink" title="构造函数和原型组合模式"></a>构造函数和原型组合模式</h3><pre><code>function Person(name) {
-this.name = name
-this.friends = [&apos;lilei&apos;]
-}
-Person.prototype.say = function() {
-console.log(this.name)
-}
-var person1 = new Person(&apos;hanmeimei&apos;)
-person1.say() //hanmeimei
-</code></pre><p>优点：</p>
-<pre><code>1、解决了原型模式对于引用对象的缺点
-2、解决了原型模式没有办法传递参数的缺点
-3、解决了构造函数模式不能共享方法的缺点
-</code></pre><p>缺点：</p>
-<pre><code>1、和原型模式中注意①一样
-</code></pre><h3 id="动态原型模式"><a href="#动态原型模式" class="headerlink" title="动态原型模式"></a>动态原型模式</h3><pre><code>function Person(name) {
-this.name = name
-if(typeof this.say != &apos;function&apos;) {
-Person.prototype.say = function(
-alert(this.name)
-}
-}
-</code></pre><p>优点：</p>
-<pre><code>1、可以在初次调用构造函数的时候就完成原型对象的修改
-2、修改能体现在所有的实例中
-3、缺点：红宝书都说这个方案完美了。。。。
-</code></pre><p>注意：</p>
-<pre><code>1、只用检查一个在执行后应该存在的方法或者属性就行了
-2、不能用对象字面量修改原型对象
-</code></pre><h3 id="寄生构造函数模式"><a href="#寄生构造函数模式" class="headerlink" title="寄生构造函数模式"></a>寄生构造函数模式</h3><pre><code>function Person(name) {
-var o = new Object()
-o.name = name
-o.say = function() {
-alert(this.name)
-}
-return o
-}
-var peron1 = new Person(&apos;hanmeimei&apos;)
-</code></pre><p>优点：</p>
-<pre><code>1、和工厂模式基本一样，除了多了个new操作符
-</code></pre><p>缺点：</p>
-<pre><code>2、和工厂模式一样，不能区分实例的类别
-</code></pre><h3 id="稳妥构造模式"><a href="#稳妥构造模式" class="headerlink" title="稳妥构造模式"></a>稳妥构造模式</h3><pre><code>function Person(name) {
-var o = new Object()
-o.say = function() {
-alert(name)
-}
-}
-var person1 = new Person(&apos;hanmeimei&apos;);
-person1.name  // undefined
-person1.say() //hanmeimei
-</code></pre><p>优点：</p>
-<pre><code>1、安全，那么好像成为了私有变量，只能通过say方法去访问
-</code></pre><p>缺点：</p>
-<pre><code>1、不能区分实例的类别
-</code></pre><p>over!!~~~</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/01/17/JavaScript创建对象的7种方法/" class="archive-article-date">
-  	<time datetime="2016-01-17T03:42:32.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-01-17</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-<!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-JavaScript创建对象的7种方法" data-title="JavaScript创建对象的7种方法" data-url="undefined"></div>
-
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"wzj1996"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
-
-  
-    <article id="post-javascript数据结构-链表" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/17/javascript数据结构-链表/">javascript数据结构--链表</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>链表就要来的随性的多，简单的理解可以是这样：在内存中，栈和队列（数组）的存在就是一个整体，如果想要对她内部某一个元素进行移除或是添加一个新元素就要动她内部所有的元素，所谓牵一发而动全身；而链表则不一样，每一个元素都是由元素本身数据和指向下一个元素的指针构成，所以添加或是移除某一个元素不需要对链表整体进行操作，只需要改变相关元素的指针指向就可以了
-
-链表在实际生活中的例子也有很多，比如自行车的链条，环环相扣，但添加或是移除某一个环节只需要对症下药，对相关环节进行操作就OK。再比如：火车，火车就是一个链表，每一节车厢就是元素，想要移除或是添加某一节车厢，只需要把连接车厢的链条改变一下就好了。那么，在javascript中又该怎么去实现链表结构呢？
-</code></pre><h2 id="链表的创建"><a href="#链表的创建" class="headerlink" title="链表的创建"></a>链表的创建</h2><p>首先我们要创建一个链表类：</p>
-<pre><code>function LinkedList(){
-//各种属性和方法的声明
-}
-</code></pre><p>然后我们需要一种数据结构来保存链表里面的数据：</p>
-<pre><code>var Node=function(element){
-this.element=element;
-this.next=null;}
-//Node类表示要添加的元素，他有两个属性，一个是element，表示添加到链表中的具体的值；另一个是next,表示要指向链表中下一个元素的指针。
-</code></pre><p>接下来，我们需要给链表声明一些方法：</p>
-<pre><code>·append(element):向链表尾部添加一个新的元素；
-·insert(position,element):向链表特定位置插入元素；
-·remove(element):从链表移除一项；
-·indexOf(element):返回链表中某元素的索引，如果没有返回-1；
-·removeAt(position):从特定位置移除一项；
-·isEmpty():判断链表是否为空，如果为空返回true,否则返回false;
-·size():返回链表包含的元素个数；
-·toString():重写继承自Object类的toString()方法，因为我们使用了Node类；
-</code></pre><p>链表的完整代码：</p>
-<pre><code>function LinkedList() {
-//Node类声明
-let Node = function(element){
-    this.element = element;
-    this.next = null;
-};
-//初始化链表长度
-let length = 0;
-//初始化第一个元素
-let head = null;
-this.append = function(element){
-    //初始化添加的Node实例
-    let node = new Node(element),
-        current;
-    if (head === null){
-        //第一个Node实例进入链表，之后在这个LinkedList实例中head就不再是null了
-        head = node;
-    } else {
-        current = head;
-        //循环链表知道找到最后一项，循环结束current指向链表最后一项元素
-        while(current.next){
-            current = current.next;
-        }
-        //找到最后一项元素后，将他的next属性指向新元素node,j建立链接
-        current.next = node;
-    }
-    //更新链表长度
-    length++;
-};
-this.insert = function(position, element){
-    //检查是否越界，超过链表长度或是小于0肯定不符合逻辑的
-    if (position &gt;= 0 &amp;&amp; position &lt;= length){
-        let node = new Node(element),
-            current = head,
-            previous,
-            index = 0;
-        if (position === 0){
-            //在第一个位置添加
-            node.next = current;
-            head = node;
-        } else {
-            //循环链表，找到正确位置，循环完毕，previous，current分别是被添加元素的前一个和后一个元素
-            while (index++ &lt; position){
-                previous = current;
-                current = current.next;
-            }
-            node.next = current;
-            previous.next = node;
-        }
-        //更新链表长度
-        length++;
-        return true;
-    } else {
-        return false;
-    }
-};
-this.removeAt = function(position){
-    //检查是否越界，超过链表长度或是小于0肯定不符合逻辑的
-    if (position &gt; -1 &amp;&amp; position &lt; length){
-        let current = head,
-            previous,
-            index = 0;
-        //移除第一个元素
-        if (position === 0){
-            //移除第一项，相当于head=null;
-            head = current.next;
-        } else {
-            //循环链表，找到正确位置，循环完毕，previous，current分别是被添加元素的前一个和后一个元素
-            while (index++ &lt; position){
-                previous = current;
-                current = current.next;
-            }
-            //链接previous和current的下一个元素，也就是把current移除了
-            previous.next = current.next;
-        }
-        length--;
-        return current.element;
-    } else {
-        return null;
-    }
-};
-this.indexOf = function(element){
-    let current = head,
-        index = 0;
-    //循环链表找到元素位置
-    while (current) {
-        if (element === current.element) {
-            return index;
-        }
-        index++;
-        current = current.next;
-    }
-    return -1;
-};
-this.remove = function(element){
-    //调用已经声明过的indexOf和removeAt方法
-    let index = this.indexOf(element);
-    return this.removeAt(index);
-};
-this.isEmpty = function() {
-    return length === 0;
-};
-this.size = function() {
-    return length;
-};
-this.getHead = function(){
-    return head;
-};
-this.toString = function(){
-    let current = head,
-        string = &apos;&apos;;
-    while (current) {
-        string += current.element + (current.next ? &apos;, &apos; : &apos;&apos;);
-        current = current.next;
-    }
-    return string;
-};
-this.print = function(){
-    console.log(this.toString());
-};
-}
-
-//一个实例化后的链表，里面是添加的数个Node类的实例
-</code></pre><p>ES6版本:</p>
-<pre><code>let LinkedList2 = (function () {
-class Node {
-    constructor(element){
-        this.element = element;
-        this.next = null;
-    }
-}
-//这里我们使用WeakMap对象来记录长度状态
-const length = new WeakMap();
-const head = new WeakMap();
-class LinkedList2 {
-    constructor () {
-        length.set(this, 0);
-        head.set(this, null);
-    }
-    append(element) {
-        let node = new Node(element),
-            current;
-        if (this.getHead() === null) {
-            head.set(this, node);
-        } else {
-            current = this.getHead();
-            while (current.next) {
-                current = current.next;
-            }
-            current.next = node;
-        }
-        let l = this.size();
-        l++;
-        length.set(this, l);
-    }
-    insert(position, element) {
-        if (position &gt;= 0 &amp;&amp; position &lt;= this.size()) {
-
-            let node = new Node(element),
-                current = this.getHead(),
-                previous,
-                index = 0;
-            if (position === 0) {
-                node.next = current;
-                head.set(this, node);
-            } else {
-                while (index++ &lt; position) {
-                    previous = current;
-                    current = current.next;
-                }
-                node.next = current;
-                previous.next = node;
-            }
-            let l = this.size();
-            l++;
-            length.set(this, l);
-            return true;
-        } else {
-            return false;
-        }
-    }
-    removeAt(position) {
-        if (position &gt; -1 &amp;&amp; position &lt; this.size()) {
-            let current = this.getHead(),
-                previous,
-                index = 0;
-            if (position === 0) {
-                head.set(this, current.next);
-            } else {
-                while (index++ &lt; position) {
-                    previous = current;
-                    current = current.next;
-                }
-                previous.next = current.next;
-            }
-            let l = this.size();
-            l--;
-            length.set(this, l);
-            return current.element;
-        } else {
-            return null;
-        }
-    }
-    remove(element) {
-        let index = this.indexOf(element);
-        return this.removeAt(index);
-    }
-    indexOf(element) {
-        let current = this.getHead(),
-            index = 0;
-        while (current) {
-            if (element === current.element) {
-                return index;
-            }
-            index++;
-            current = current.next;
-        }
-        return -1;
-    }
-    isEmpty() {
-        return this.size() === 0;
-    }
-    size() {
-        return length.get(this);
-    }
-    getHead() {
-        return head.get(this);
-    }
-    toString() {
-        let current = this.getHead(),
-            string = &apos;&apos;;
-        while (current) {
-            string += current.element + (current.next ? &apos;, &apos; : &apos;&apos;);
-            current = current.next;
-        }
-        return string;
-
-    }
-    print() {
-        console.log(this.toString());
-    }
-}
-return LinkedList2;
-})();
-双向链表
-function DoublyLinkedList() {
-let Node = function(element){
-    this.element = element;
-    this.next = null;
-    this.prev = null; //NEW
-};
-let length = 0;
-let head = null;
-let tail = null; //NEW
-this.append = function(element){
-    let node = new Node(element),
-        current;
-    if (head === null){
-        head = node;
-        tail = node; //NEW
-    } else {
-        //NEW
-        tail.next = node;
-        node.prev = tail;
-        tail = node;
-    }
-    length++;
-};
-this.insert = function(position, element){
-    if (position &gt;= 0 &amp;&amp; position &lt;= length){
-        let node = new Node(element),
-            current = head,
-            previous,
-            index = 0;
-        if (position === 0){
-            if (!head){       //NEW
-                head = node;
-                tail = node;
-            } else {
-                node.next = current;
-                current.prev = node; //NEW
-                head = node;
-            }
-        } else  if (position === length) { ////NEW
-            current = tail;   
-            current.next = node;
-            node.prev = current;
-            tail = node;
-        } else {
-            while (index++ &lt; position){
-                previous = current;
-                current = current.next;
-            }
-            node.next = current;
-            previous.next = node;
-            current.prev = node; //NEW
-            node.prev = previous; //NEW
-        }
-        length++;
-        return true;
-    } else {
-        return false;
-    }
-};
-this.removeAt = function(position){
-    if (position &gt; -1 &amp;&amp; position &lt; length){
-        let current = head,
-            previous,
-            index = 0;
-        if (position === 0){ //NEW
-            if (length === 1){ //
-                tail = null;
-            } else {
-                head.prev = null;
-            }
-        } else if (position === length-1){  //NEW
-            current = tail;
-            tail = current.prev;
-            tail.next = null;
-        } else {
-            while (index++ &lt; position){
-                previous = current;
-                current = current.next;
-            }
-            previous.next = current.next;
-            current.next.prev = previous; //NEW
-        }
-        length--;
-        return current.element;
-    } else {
-        return null;
-    }
-};
-this.remove = function(element){
-    let index = this.indexOf(element);
-    return this.removeAt(index);
-};
-this.indexOf = function(element){
-    let current = head,
-        index = -1;
-    if (element == current.element){
-        return 0;
-    }
-    index++;
-    while(current.next){
-        if (element == current.element){
-            return index;
-        }
-        current = current.next;
-        index++;
-    }
-    //check last item
-    if (element == current.element){
-        return index;
-    }
-    return -1;
-};
-this.isEmpty = function() {
-    return length === 0;
-};
-this. size = function() {
-    return length;
-};
-this.toString = function(){
-    let current = head,
-        s = current ? current.element : &apos;&apos;;
-    while(current &amp;&amp; current.next){
-        current = current.next;
-        s += &apos;, &apos; + current.element;
-    }
-    return s;
-};
-this.inverseToString = function() {
-    let current = tail,
-        s = current ? current.element : &apos;&apos;;
-    while(current &amp;&amp; current.prev){
-        current = current.prev;
-        s += &apos;, &apos; + current.element;
-    }
-    return s;
-};
-this.print = function(){
-    console.log(this.toString());
-};
-this.printInverse = function(){
-    console.log(this.inverseToString());
-};
-this.getHead = function(){
-    return head;
-};
-this.getTail = function(){
-    return tail;
-}
-}    
-</code></pre><p>  双向链表和单项比起来就是Node类多了一个prev属性，也就是每一个node不仅仅有一个指向它后面元素的指针也有一个指向它前面的指针。</p>
-<h2 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h2><pre><code>明白了前面的基础链表和双向链表之后这个肯定不在话下了，循环，其实就是整个链表实例变成了一个圈，在单项链表中最后一个元素的next属性为null,现在让它指向第一个元素也就是head，那么他就成了单向循环链表。在双向链表中最后一个元素的next属性为null,现在让它指向第一个元素也就是head，那么他就成了双向循环链表。就那么回事..
-</code></pre>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/01/17/javascript数据结构-链表/" class="archive-article-date">
-  	<time datetime="2016-01-17T03:05:32.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-01-17</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-<!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-javascript数据结构-链表" data-title="javascript数据结构--链表" data-url="undefined"></div>
-
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"wzj1996"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
-
-  
-    <article id="post-this" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/12/this/">this</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="global-this"><a href="#global-this" class="headerlink" title="global this"></a>global this</h1><p>· 在浏览器，在全局范围内,this等价于window对象.</p>
-<pre><code>1 &lt;script type=&quot;text/javascript&quot;&gt;
-2 console.log(this === window); //true
-3&lt;/script&gt;
-</code></pre><p>· 在浏览器里，在全局范围内，用var声明一个变量和给this或者window添加属性是等价的</p>
-<pre><code>1 &lt;script type=&quot;text/javascript&quot;&gt;
-2     var foo = &quot;bar&quot;;
-3     console.log(this.foo); //logs &quot;bar&quot;
-4     console.log(window.foo); //logs &quot;bar&quot;
-5 &lt;/script&gt;
-</code></pre><p>· 如果你在声明一个变量的时候没有使用var或者let(ECMAScript 6),你就是在给全局的this添加或者改变属性值。</p>
-<pre><code>1 &lt;script type=&quot;text/javascript&quot;&gt;
-2     foo = &quot;bar&quot;;
-3
-4     function testThis() {
-5       foo = &quot;foo&quot;;
-6     }
-7
-8     console.log(this.foo); //logs &quot;bar&quot;
-9     testThis();
-10     console.log(this.foo); //logs &quot;foo&quot;
-11 &lt;/script&gt;
-</code></pre><p>· 在node环境里，如果使用REPL(Read-Eval-Print Loop，简称REPL:读取-求值-输出,是一个简单的，交互式的编程环境)来执行程序,this并不是最高级的命名空间，最高级的是global.</p>
-<pre><code>&gt; this
-{ ArrayBuffer: [Function: ArrayBuffer],
-Int8Array: { [Function: Int8Array] BYTES_PER_ELEMENT: 1 },
-...
-&gt; global === this
-true
-</code></pre><p>· 在node环境里，如果执行一个js脚本，在全局范围内，this以一个空对象开始作为最高级的命名空间，这个时候，它和global不是等价的。</p>
-<pre><code>1 test.js脚本内容：
-2
-3 console.log(this);
-4 console.log(this === global);
-5 
-6 REPL运行脚本：
-7 
-8 $ node test.js
-9 {}
-10 false
-</code></pre><p>· 在node环境里，在全局范围内，如果你用REPL执行一个脚本文件，用var声明一个变量并不会和在浏览器里面一样将这个变量添加给this。</p>
-<pre><code>1 test.js:
-2 
-3 var foo = &quot;bar&quot;;
-4 console.log(this.foo);
-5 
-6 $ node test.js
-7 undefined    
-</code></pre><p>· 但是如果你不是用REPL执行脚本文件，而是直接执行代码，结果和在浏览器里面是一样的(神坑)</p>
-<pre><code>1 &gt; var foo = &quot;bar&quot;;
-2 &gt; this.foo
-3 bar
-4 &gt; global.foo
-5 bar
-</code></pre><p>· 在node环境里，用REPL运行脚本文件的时候，如果在声明变量的时候没有使用var或者let，这个变量会自动添加到global对象，但是不会自动添加给this对象。如果是直接执行代码，则会同时添加给global和this</p>
-<pre><code>1 test.js
-2 
-3 foo = &quot;bar&quot;;
-4 console.log(this.foo);
-5 console.log(global.foo);
-6 
-7 $ node test.js
-8 undefined
-9 bar
-
-
-上面的八种情况可能大家已经绕晕了，总结起来就是：在浏览器里面this是老大，它等价于window对象，如果你声明一些全局变量(不管在任何地方)，这些变量都会作为this的属性。在node里面，有两种执行JavaScript代码的方式，一种是直接执行写好的JavaScript文件，另外一种是直接在里面执行一行行代码。对于直接运行一行行JavaScript代码的方式，global才是老大，this和它是等价的。在这种情况下，和浏览器比较相似，也就是声明一些全局变量会自动添加给老大global，顺带也会添加给this。但是在node里面直接脚本文件就不一样了，你声明的全局变量不会自动添加到this，但是会添加到global对象。所以相同点是，在全局范围内，全局变量终究是属于老大的。
-</code></pre><h1 id="function-this"><a href="#function-this" class="headerlink" title="function this"></a>function this</h1><p>· 无论是在浏览器环境还是node环境， 除了在DOM事件处理程序里或者给出了thisArg(接下来会讲到)外，如果不是用new调用，在函数里面使用this都是指代全局范围的this。</p>
-<pre><code>1 &lt;script type=&quot;text/javascript&quot;&gt;
-2     foo = &quot;bar&quot;;
-3 
-4     function testThis() {
-5       this.foo = &quot;foo&quot;;
-6     }
-7 
-8     console.log(this.foo); //logs &quot;bar&quot;
-9     testThis();
-10     console.log(this.foo); //logs &quot;foo&quot;
-11 &lt;/script&gt;
-
-test.js
-
-foo = &quot;bar&quot;;
-
-function testThis () {
-this.foo = &quot;foo&quot;;
-}
-console.log(global.foo);
-testThis();console.log(global.foo);
-$ node test.js
-bar
-foo    
-</code></pre><p>· 除非你使用严格模式，这时候this就会变成undefined。</p>
-<pre><code>1 &lt;script type=&quot;text/javascript&quot;&gt;
-2     foo = &quot;bar&quot;;
-3 
-4     function testThis() {
-5       &quot;use strict&quot;;
-6       this.foo = &quot;foo&quot;;
-7     }
-8 
-9     console.log(this.foo); //logs &quot;bar&quot;
-10     testThis();  //Uncaught TypeError: Cannot set property &apos;foo&apos; of undefined 
-11 &lt;/script&gt;
-</code></pre><p>· 如果你在调用函数的时候在前面使用了new，this就会变成一个新的值，和global的this脱离干系.</p>
-<pre><code>1 &lt;script type=&quot;text/javascript&quot;&gt;
-2     foo = &quot;bar&quot;;
-3 
-4     function testThis() {
-5       this.foo = &quot;foo&quot;;
-6     }
-7 
-8     console.log(this.foo); //logs &quot;bar&quot;
-9     new testThis();
-10     console.log(this.foo); //logs &quot;bar&quot;
-11 
-12     console.log(new testThis().foo); //logs &quot;foo&quot;
-13 &lt;/script&gt;
-</code></pre><p>我更喜欢把新的值称作一个实例。</p>
-<pre><code>函数里面的this其实相对比较好理解，如果我们在一个函数里面使用this，需要注意的就是我们调用函数的方式，如果是正常的方式调用函数，this指代全局的this，如果我们加一个new，这个函数就变成了一个构造函数，我们就创建了一个实例，this指代这个实例，这个和其他面向对象的语言很像。另外，写JavaScript很常做的一件事就是绑定事件处理程序，也就是诸如button.addEventListener(‘click’, fn, false)之类的，如果在fn里面需要使用this，this指代事件处理程序对应的对象，也就是button。
-</code></pre><h1 id="Protoype-this"><a href="#Protoype-this" class="headerlink" title="Protoype this"></a>Protoype this</h1><p>你创建的每一个函数都是函数对象。它们会自动获得一个特殊的属性prototype，你可以给这个属性赋值。当你用new的方式调用一个函数的时候，你就能通过this访问你给prototype赋的值了。</p>
-<pre><code>1 function Thing() {
-2       console.log(this.foo);
-3 }
-4 
-5 Thing.prototype.foo = &quot;bar&quot;;
-6 
-7 var thing = new Thing(); //logs &quot;bar&quot;
-8 console.log(thing.foo);  //logs &quot;bar&quot;
-</code></pre><p>当你使用new为你的函数创建多个实例的时候，这些实例会共享你给prototype设定的值。对于下面的例子，当你调用this.foo的时候，都会返回相同的值，除非你在某个实例里面重写了自己的this.foo</p>
-<pre><code>1 function Thing() {
-2 }
-3 Thing.prototype.foo = &quot;bar&quot;;
-4 Thing.prototype.logFoo = function () {
-5     console.log(this.foo);
-6 }
-7 Thing.prototype.setFoo = function (newFoo) {
-8     this.foo = newFoo;
-9 }
-10 
-11 var thing1 = new Thing();
-12 var thing2 = new Thing();
-13 
-14 thing1.logFoo(); //logs &quot;bar&quot;
-15 thing2.logFoo(); //logs &quot;bar&quot;
-16 
-17 thing1.setFoo(&quot;foo&quot;);
-18 thing1.logFoo(); //logs &quot;foo&quot;;
-19 thing2.logFoo(); //logs &quot;bar&quot;;
-20 
-21 thing2.foo = &quot;foobar&quot;;
-22 thing1.logFoo(); //logs &quot;foo&quot;;
-23 thing2.logFoo(); //logs &quot;foobar&quot;;
-</code></pre><p>实例里面的this是一个特殊的对象。你可以把this想成一种获取prototype的值的一种方式。当你在一个实例里面直接给this添加属性的时候，会隐藏prototype中与之同名的属性。如果你想访问prototype中的这个属性值而不是你自己设定的属性值，你可以通过在实例里面删除你自己添加的属性的方式来实现</p>
-<pre><code>1 function Thing() {
-2 }
-3 Thing.prototype.foo = &quot;bar&quot;;
-4 Thing.prototype.logFoo = function () {
-5     console.log(this.foo);
-6 }
-7 Thing.prototype.setFoo = function (newFoo) {
-8     this.foo = newFoo;
-9 }
-10 Thing.prototype.deleteFoo = function () {
-11     delete this.foo;
-12 }
-13 var thing = new Thing();
-14 thing.setFoo(&quot;foo&quot;);
-15 thing.logFoo(); //logs &quot;foo&quot;;
-16 thing.deleteFoo();
-17 thing.logFoo(); //logs &quot;bar&quot;;
-18 thing.foo = &quot;foobar&quot;;
-19 thing.logFoo(); //logs &quot;foobar&quot;;
-20 delete thing.foo;
-21 thing.logFoo(); //logs &quot;bar&quot;;
-</code></pre><p>或者你也能直接通过引用函数对象的prototype 来获得你需要的值</p>
-<pre><code>1 function Thing() {
-2 }
-3 Thing.prototype.foo = &quot;bar&quot;;
-4 Thing.prototype.logFoo = function () {
-5     console.log(this.foo, Thing.prototype.foo);
-6 }
-7 
-8 var thing = new Thing();
-9 thing.foo = &quot;foo&quot;;
-10 thing.logFoo(); //logs &quot;foo bar&quot;;
-</code></pre><p>给一个函数的prototype赋值一个Array通常是一个错误的做法。如果你想每一个实例有他们专属的Array，你应该在函数里面创建而不是在prototype里面创建。</p>
-<pre><code>1 function Thing() {
-2     this.things = [];
-3 }
-4 
-5 
-6 var thing1 = new Thing();
-7 var thing2 = new Thing();
-8 thing1.things.push(&quot;foo&quot;);
-9 console.log(thing1.things); //logs [&quot;foo&quot;]
-10 console.log(thing2.things); //logs []
-</code></pre><p>实际上你可以通过把多个函数的prototype链接起来的从而形成一个原型链，因此this就会魔法般地沿着这条原型链往上查找直到找你你需要引用的值。</p>
-<pre><code>1 function Thing1() {
-2 }
-3 Thing1.prototype.foo = &quot;bar&quot;;
-4 
-5 function Thing2() {
-6 }
-7 Thing2.prototype = new Thing1();
-8 
-9 
-10 var thing = new Thing2();
-11 console.log(thing.foo); //logs &quot;bar&quot;          
-</code></pre><p>一些人利用原型链的特性来在JavaScript模仿经典的面向对象的继承方式。任何给用于构建原型链的函数的this的赋值的语句都会隐藏原型链上游的相同的属性</p>
-<pre><code>1 function Thing1() {
-2 }
-3 Thing1.prototype.foo = &quot;bar&quot;;
-4 
-5 function Thing2() {
-6     this.foo = &quot;foo&quot;;
-7 }
-8 Thing2.prototype = new Thing1();
-9 
-10 function Thing3() {
-11 }
-12 Thing3.prototype = new Thing2();
-13 
-14 
-15 var thing = new Thing3();
-16 console.log(thing.foo); //logs &quot;foo&quot;
-</code></pre><p>我喜欢把被赋值给prototype的函数叫做方法。在上面的例子中，我已经使用过方法了，如logFoo。这些方法有着相同的prototype，即创建这些实力的原始函数。我通常把这些原始函数叫做构造函数。在prototype里面定义的方法里面使用this会影响到当前实例的原型链的上游的this。这意味着你直接给this赋值的时候，隐藏了原型链上游的相同的属性值。这个实例的任何方法都会使用这个最新的值而不是原型里面定义的这个相同的值。</p>
-<pre><code>1 function Thing1() {
-2 }
-3 Thing1.prototype.foo = &quot;bar&quot;;
-4 Thing1.prototype.logFoo = function () {
-5     console.log(this.foo);
-6 }
-7 
-8 function Thing2() {
-9     this.foo = &quot;foo&quot;;
-10 }
-11 Thing2.prototype = new Thing1();
-12 
-13 
-14 var thing = new Thing2();
-15 thing.logFoo(); //logs &quot;foo&quot;;
-</code></pre><p>在JavaScript里面你可以嵌套函数，也就是你可以在函数里面定义函数。嵌套函数可以通过闭包捕获父函数的变量，但是这个函数没有继承this</p>
-<pre><code>1 function Thing() {
-2 }
-3 Thing.prototype.foo = &quot;bar&quot;;
-4 Thing.prototype.logFoo = function () {
-5     var info = &quot;attempting to log this.foo:&quot;;
-6     function doIt() {
-7         console.log(info, this.foo);
-8     }
-9     doIt();
-10 }
-11 
-12 
-13 var thing = new Thing();
-14 thing.logFoo();  //logs &quot;attempting to log this.foo: undefined&quot;
-</code></pre><p>在doIt里面的this是global对象或者在严格模式下面是undefined。这是造成很多不熟悉JavaScript的人深陷 this陷阱的根源。在这种情况下事情变得非常糟糕，就像你把一个实例的方法当作一个值，把这个值当作函数参数传递给另外一个函数但是却不把这个实例传递给这个函数一样。在这种情况下，一个方法里面的环境变成了全局范围，或者在严格模式下面的undefined。</p>
-<pre><code>1 function Thing() {
-2 }
-3 Thing.prototype.foo = &quot;bar&quot;;
-4 Thing.prototype.logFoo = function () {  
-5     console.log(this.foo);   
-6 }
-7 
-8 function doIt(method) {
-9     method();
-10 }
-11 
-12 
-13 var thing = new Thing();
-14 thing.logFoo(); //logs &quot;bar&quot;
-15 doIt(thing.logFoo); //logs undefined
-</code></pre><p>你可以通过bind将实例和方法一切传递给函数来解决这个问题，bind是一个函数定义在所有函数和方法的函数对象上面</p>
-<pre><code>1 function Thing() {
-2 }
-3 Thing.prototype.foo = &quot;bar&quot;;
-4 Thing.prototype.logFoo = function () { 
-5     console.log(this.foo);
-6 }
-7 
-8 function doIt(method) {
-9     method();
-10 }
-11 
-12 
-13 var thing = new Thing();
-14 doIt(thing.logFoo.bind(thing)); //logs bar
-</code></pre><p>你同样可以使用apply和call来在新的上下文中调用方法或函数。</p>
-<pre><code>1 function Thing() {
-2 }
-3 Thing.prototype.foo = &quot;bar&quot;;
-4 Thing.prototype.logFoo = function () { 
-5     function doIt() {
-6         console.log(this.foo)
-7     }
-8     doIt.apply(this);
-9 }
-10 
-11 function doItIndirectly(method) {
-12     method();
-13 }
-14 
-15 
-16 var thing = new Thing();
-17 doItIndirectly(thing.logFoo.bind(thing)); //logs bar
-</code></pre><p>你可以用bind来代替任何一个函数或者方法的this，即便它没有赋值给实例的初始prototype。</p>
-<pre><code>1 function Thing() {
-2 }
-3 Thing.prototype.foo = &quot;bar&quot;;
-4 
-5 
-6 function logFoo(aStr) {
-7     console.log(aStr, this.foo);
-8 }
-9 
-10 
-11 var thing = new Thing();
-12 logFoo.bind(thing)(&quot;using bind&quot;); //logs &quot;using bind bar&quot;
-13 logFoo.apply(thing, [&quot;using apply&quot;]); //logs &quot;using apply bar&quot;
-14 logFoo.call(thing, &quot;using call&quot;); //logs &quot;using call bar&quot;
-15 logFoo(&quot;using nothing&quot;); //logs &quot;using nothing undefined&quot;    
-</code></pre><p>你应该避免在构造函数里面返回任何东西，因为这可能代替本来应该返回的实例.</p>
-<pre><code>1 function Thing() {
-2     return {};
-3 }
-4 Thing.prototype.foo = &quot;bar&quot;;
-5 
-6 
-7 Thing.prototype.logFoo = function () {
-8     console.log(this.foo);
-9 }
-10 
-11 
-12 var thing = new Thing();
-13 thing.logFoo(); //Uncaught TypeError: undefined is not a function
-</code></pre><p>奇怪的是，如果你在构造函数里面返回了一个原始值，上面所述的情况并不会发生并且返回语句被忽略了。最好不要在你将通过new调用的构造函数里面返回任何类型的数据，即便你知道自己正在做什么。如果你想创建一个工厂模式，通过一个函数来创建一个实例，这个时候不要使用new来调用函数。当然这个建议是可选的。<br>    你可以通过使用Object.create来避免使用new，这样同样能够创建一个实例。</p>
-<pre><code>1 function Thing() {
-2 }
-3 Thing.prototype.foo = &quot;bar&quot;;
-4 
-5 
-6 Thing.prototype.logFoo = function () {
-7     console.log(this.foo);
-8 }
-9 
-10 
-11 var thing =  Object.create(Thing.prototype);
-12 thing.logFoo(); //logs &quot;bar&quot;     
-</code></pre><p>在这种情况下并不会调用构造函数</p>
-<pre><code>1 function Thing() {
-2     this.foo = &quot;foo&quot;;
-3 }
-4 Thing.prototype.foo = &quot;bar&quot;;
-5 
-6 
-7 Thing.prototype.logFoo = function () {
-8     console.log(this.foo);
-9 }
-10 
-11 
-12 var thing =  Object.create(Thing.prototype);
-13 thing.logFoo(); //logs &quot;bar&quot;    
-</code></pre><p>因为Object.create不会调用构造函数的特性在你继承模式下你想通过原型链重写构造函数的时候非常有用。</p>
-<pre><code>1 function Thing1() {
-2     this.foo = &quot;foo&quot;;
-3 }
-4 Thing1.prototype.foo = &quot;bar&quot;;
-5 
-6 function Thing2() {
-7     this.logFoo(); //logs &quot;bar&quot;
-8     Thing1.apply(this);
-9     this.logFoo(); //logs &quot;foo&quot;
-10 }
-11 Thing2.prototype = Object.create(Thing1.prototype);
-12 Thing2.prototype.logFoo = function () {
-13     console.log(this.foo);
-14 }
-15 
-16 var thing = new Thing2();
-</code></pre><h1 id="DOM-event-this"><a href="#DOM-event-this" class="headerlink" title="DOM event this"></a>DOM event this</h1><p>在一个HTML DOM事件处理程序里面，this始终指向这个处理程序被所绑定到的HTML DOM节点</p>
-<pre><code>1 function Listener()     {
-2 document.getElementById(&quot;foo&quot;).addEventListener(&quot;click&quot;,
-3        this.handleClick);
-4 }
-5 Listener.prototype.handleClick = function (event) {
-6     console.log(this); //logs &quot;&lt;div id=&quot;foo&quot;&gt;&lt;/div&gt;&quot;
-7 }
-8 
-9 var listener = new Listener();
-10 document.getElementById(&quot;foo&quot;).click();
-</code></pre><p>除非你自己通过bind切换了上下文</p>
-<pre><code>1 function Listener() {
-2     document.getElementById(&quot;foo&quot;).addEventListener(&quot;click&quot;, 
-3         this.handleClick.bind(this));
-4 }
-5 Listener.prototype.handleClick = function (event) {
-6     console.log(this); //logs Listener {handleClick: function}
-7 }
-8 
-9 var listener = new Listener();
-10 document.getElementById(&quot;foo&quot;).click();
-</code></pre><h1 id="HTML-this"><a href="#HTML-this" class="headerlink" title="HTML this"></a>HTML this</h1><p>在HTML节点的属性里面，你可以放置JavaScript代码，this指向了这个元素</p>
-<pre><code>1 &lt;div id=&quot;foo&quot; onclick=&quot;console.log(this);&quot;&gt;&lt;/div&gt;
-2 &lt;script type=&quot;text/javascript&quot;&gt;
-3 document.getElementById(&quot;foo&quot;).click(); //logs &lt;div id=&quot;foo&quot;...
-4 &lt;/script&gt;
-</code></pre><h1 id="override-this"><a href="#override-this" class="headerlink" title="override this"></a>override this</h1><p>你不能重写this，因为它是保留字。</p>
-<pre><code>function Thing () {
-}
-Thing.prototype.foo = &quot;bar&quot;;
-Thing.prototype.logFoo = function () {
-eval(&quot;console.log(this.foo)&quot;); //logs &quot;bar&quot;
-}
-var thing = new Thing();
-thing.logFoo();    
-</code></pre><h1 id="with-this"><a href="#with-this" class="headerlink" title="with this"></a>with this</h1><p>你可以通过with来将this添加到当前的执行环境，并且读写this的属性的时候不需要通过this</p>
-<pre><code>1 function Thing () {
-2 }
-3 Thing.prototype.foo = &quot;bar&quot;;
-4 Thing.prototype.logFoo = function () {
-5     with (this) {
-6         console.log(foo);
-7         foo = &quot;foo&quot;;
-8     }
-9 }
-10 
-11 var thing = new Thing();
-12 thing.logFoo(); // logs &quot;bar&quot;
-13 console.log(thing.foo); // logs &quot;foo&quot;    
-</code></pre><h1 id="jQuery-this"><a href="#jQuery-this" class="headerlink" title="jQuery this"></a>jQuery this</h1><p>和HTML DOM元素节点的事件处理程序一样，在许多情况下JQuery的this都指向HTML元素节点。这在事件处理程序和一些方便的方法中都是管用的，比如$.each</p>
-<pre><code>1 &lt;div class=&quot;foo bar1&quot;&gt;&lt;/div&gt;
-2 &lt;div class=&quot;foo bar2&quot;&gt;&lt;/div&gt;
-3 &lt;script type=&quot;text/javascript&quot;&gt;
-4 $(&quot;.foo&quot;).each(function () {
-5     console.log(this); //logs &lt;div class=&quot;foo...
-6 });
-7 $(&quot;.foo&quot;).on(&quot;click&quot;, function () {
-8     console.log(this); //logs &lt;div class=&quot;foo...
-9 });
-10 $(&quot;.foo&quot;).each(function () {
-11     this.click();
-12 });
-13 &lt;/script&gt;
-</code></pre><h1 id="thisArg-this"><a href="#thisArg-this" class="headerlink" title="thisArg this"></a>thisArg this</h1><p>如果你用过underscore.js 或者 lo-dash 你可能知道许多类库的方法可以通过一个叫做thisArg 的函数参数来传递实例，这个函数参数会作为this的上下文。举个例子，这适用于_.each。原生的JavaScript在ECMAScript 5的时候也允许函数传递一个thisArg参数了，比如forEach。事实上，之前阐述的bind，apply和call的使用已经给你创造了传递thisArg参数给函数的机会。这个参数将this绑定为你所传递的对象。</p>
-<pre><code>1 function Thing(type) {
-2     this.type = type;
-3 }
-4 Thing.prototype.log = function (thing) {
-5     console.log(this.type, thing);
-6 }
-7 Thing.prototype.logThings = function (arr) {
-8    arr.forEach(this.log, this); // logs &quot;fruit apples...&quot;
-9    _.each(arr, this.log, this); //logs &quot;fruit apples...&quot;
-10 }
-11 
-12 var thing = new Thing(&quot;fruit&quot;);
-13 thing.logThings([&quot;apples&quot;, &quot;oranges&quot;,
-&quot;strawberries&quot;, &quot;bananas&quot;]);         
-</code></pre>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/01/12/this/" class="archive-article-date">
-  	<time datetime="2016-01-12T06:32:26.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-01-12</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-<!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-this" data-title="this" data-url="undefined"></div>
-
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"wzj1996"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
-
-  
-    <article id="post-boke" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/11/boke/">boke</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="gulp详细入门教程"><a href="#gulp详细入门教程" class="headerlink" title="gulp详细入门教程"></a>gulp详细入门教程</h1><p>最近使用gulp自动化构建工具来开发网站，在此给大家分享下使用gulp的一些使用教程。</p>
-<p>一 gulp安装</p>
-<p>1、安装Nodejs</p>
-<pre><code>1.1、说明:gulp是基于nodejs，理所当然需要安装Nodejs
-1.2、安装:打开nodejs官网,点击绿色下载按钮，它会根据系统信息选择对应(.msi文件).
-</code></pre><p>2、全局安装gulp</p>
-<pre><code>2、1    说明:说明全局安装gulp目的是为了通过她只想gulp任务;
-2、2安装:命令提示符执行npm install gulp-g;
-2、3查看是否正确安装:命令提示符执行gulp-v,出现版本号为安装成功
-</code></pre><p>3、新建package.json文件</p>
-<pre><code>3、1 说明:package.json是基于nodejs项目必不可少的配置文件，它是存放在项目根目录的普通json文件;
-3、2 执行命令提示符执行npm init进行手动安装
-3.3 安装完成后回在当前文件夹下看到如下package.json
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/3164024-76d2e9fa62a00632.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Mou"><br>    文件说明：</p>
-<pre><code>&quot;name&quot;:&quot;test&quot;,//项目名称（必须）
-&quot;version&quot;:1.0.0,//项目版本（必须）
-&quot;description&quot;:&quot;This is for study gulp             “project !&quot;,//项目描述（必须）
-&quot;devDependencies&quot;:{//项目依赖的插件
-3.4、查看package.json帮助文档，命令提示符执行npm help package.json
-</code></pre><p>4、安装本地gulp及其常用插件</p>
-<pre><code>4.1、执行命令行npm install gulo 安装本地gulp
-4.2、安装gulo插件:以gulp-sass为例:
-    执行名npm install gulp-sass即可安装gulp-sass插件，安装完成后即可在node_modules文件夹下查看到新安装的插件
-</code></pre><p>5、新建gulpfile.js文件（必须）</p>
-<pre><code>5.1、说明:gulpfile.js是gulp项目目的配置文件,是位于项目根目录的普通js文件（其实将gulp.js放入其他文件夹下也是可以的）
-5.2、gulpfile.js文件用法（以gulp-sass为例）
-    5.2.1    导入工具包require(&apos;node_modules里对应模块&apos;)
-        var gulp=require(&apos;gulp&apos;)
-        var less=require(&apos;gulp-less);
-    5.2、定义一个testLess任务（自定义任务名称）
-        gulp.task(&apos;testLess&apos;,function(){
-        gulp.src(&apos;src/less/index.less&apos;)//该任务针对的文件
-        .pipe(less())//该任务调用的模块
-        .pipe(gulp.dest(&apos;src/css&apos;));/将会在src/css下生成index.css
-        })
-        gulp.task(&apos;default&apos;,[&apos;watch&apos;],function(){
-        //定义默认任务 并让gulp监视文件变化自动执行
-        gulp.watch(&apos;sass/*.scss&apos;,[&apos;sass&apos;])
-        })
-</code></pre><h1 id="二、gulp常用插件"><a href="#二、gulp常用插件" class="headerlink" title="二、gulp常用插件"></a>二、gulp常用插件</h1><p>  1、gulp-uglify(js压缩)<br>安装：npm install –save-dev gulp-uglify</p>
-<pre><code>gulpfile.js代码如下:
-
-var gulp = require(&apos;gulp&apos;),
-var rename= require(&apos;gulp-rename&apos;)
-var uglify= require(&quot;gulp-uglify&quot;);
-gulp.task(&apos;rename&apos;,function() {
-gulp.src(&apos;src/**/*.js&apos;)
-.pipe(uglify())//压缩
-.pipe(rename(&apos;index.min.js&apos;))    
-.pipe(gulp.dest(&apos;build/js&apos;));});
-gulp.task(&apos;default&apos;,[&apos;rename&apos;]);    
-uglify= require(&quot;gulp-uglify&quot;);
-</code></pre><p>2、gulp-minify-html（html压缩）<br>安装：npm install –save-dev gulp-minify-html</p>
-<p>代码如下：    </p>
-<pre><code>var gulp = require(&apos;gulp&apos;),
-var minifyHtml= require(&quot;gulp-minify-html&quot;);
-gulp.task(&apos;minify-html&apos;,function() {
-gulp.src(&apos;src/**/*.html&apos;)//要压缩的html文件
- .pipe(minifyHtml())//压缩
- .pipe(gulp.dest(&apos;build&apos;));});
- gulp.task(&apos;default&apos;,[&apos;minify-html&apos;]);
-</code></pre><p>3、 gulp-concat (js文件合并)</p>
-<p>安装：npm install –save-dev gulp-concat</p>
-<p>代码如下：</p>
-<pre><code>var gulp = require(&apos;gulp&apos;),
-concat= require(&quot;gulp-concat&quot;);
-gulp.task(&apos;concat&apos;,function() {
-gulp.src(&apos;src/**/*.js&apos;)  //要合并的文件
-.pipe(concat(&apos;index.js&apos;))  //合并匹配到的js文件并命名为 &quot;index.js&quot;
- .pipe(gulp.dest(&apos;build/js&apos;));});
- gulp.task(&apos;default&apos;,[&apos;concat&apos;]);
-</code></pre><p>4、gulp-jada</p>
-<p>安装：npm install –save-dev  gulp-jada</p>
-<p>Gulpfile.js代码如下：</p>
-<pre><code>var gulp= require(&apos;gulp&apos;);
-var jade= require(&apos;gulp-jade&apos;);
-gulp.task(&quot;jade&quot;,function(){
-gulp.src(&quot;./jade/*.jade&quot;)
- .pipe(jade({
- pretty:true
- }))
-  .pipe(gulp.dest(&quot;html/&quot;))
-  })
-   gulp.task(&quot;default&quot;,[&quot;watch&quot;],function(){
-    gulp.watch(&quot;jade/*.jade&quot;,[&quot;jade&quot;]);
-    })
-</code></pre><p>5、gulp-less        </p>
-<p>安装：npm install –save-dev  gulp-less</p>
-<p>Gulpfile.js代码如下：</p>
-<pre><code>var gulp = require(&apos;gulp&apos;),
-var less= require(&quot;gulp-less&quot;);
-gulp.task(&apos;compile-less&apos;,function() {
- gulp.src(&apos;src/less/*.less&apos;)
-  .pipe(less())
-   .pipe(gulp.dest(&apos;build/css&apos;));
-   });
-   gulp.task(&apos;default&apos;,[&apos;compile-less&apos;]);
-</code></pre><p>6、gulp-sass</p>
-<p>安装：npm install –save-dev  gulp-sass</p>
-<p>代码如下：</p>
-<pre><code>var gulp = require(&apos;gulp&apos;),
-var sass= require(&quot;gulp-sass&quot;);
-gulp.task(&apos;compile-sass&apos;,function() {
- gulp.src(&apos;src/sass/*.sass&apos;)
- .pipe(sass())
-  .pipe(gulp.dest(&apos;build/css&apos;));
-  });
-  gulp.task(&apos;default&apos;,[&apos;compile-sass&apos;]);
-</code></pre><p>7、gulp-imagemin（图片压缩</p>
-<p>安装：npm install –save-dev  gulp-imagemin</p>
-<p>代码如下：</p>
-<pre><code>var gulp = require(&apos;gulp&apos;);
-var imagemin = require(&apos;gulp-imagemin&apos;);
-gulp.task(&apos;uglify-imagemin&apos;,function()    {returngulp.src(&apos;src/images/*&apos;)
-.pipe(imagemin())
- .pipe(gulp.dest(&apos;build/images&apos;));
- });
- gulp.task(&apos;default&apos;,[&apos;uglify-imagemin&apos;]);
-</code></pre><p>8、理解Browserify</p>
-<p>browserify是一个使用node支持的CommonJS模块标准 来为浏览器编译模块的，可以解决模块及依赖管理；</p>
-<p>先来看看使用gulp常见的问题：</p>
-<p>1、 使用 gulp 过程中，偶尔会遇到 Streaming not supported 这样的错误。这通常是因为常规流与 vinyl 文件对象流有差异、<br>gulp 插件默认使用了只支持 buffer （不支持 stream）的库。比如，不能把 Node 常规流直接传递给 gulp 及其插件。</p>
-<p>比如如下代码：会抛出异常的；</p>
-<pre><code>vargulp = require(&apos;gulp&apos;);
-varuglify = require(&apos;gulp-uglify&apos;);
-varconcat = require(&apos;gulp-concat&apos;);
-varrename = require(&apos;gulp-rename&apos;);varfs = require(&apos;fs&apos;);
-gulp.task(&apos;bundle&apos;,function() {returnfs.createReadStream(&apos;./test.txt&apos;)
-.pipe(uglify())
-.pipe(rename(&apos;bundle.min.js&apos;))
- .pipe(gulp.dest(&apos;dist/&apos;));
- });
- gulp.task(&apos;default&apos;,[&apos;bundle&apos;]);
-</code></pre><p>希望能帮助到你们~~            </p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/01/11/boke/" class="archive-article-date">
-  	<time datetime="2016-01-11T13:26:36.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-01-11</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-<!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-boke" data-title="boke" data-url="undefined"></div>
-
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"wzj1996"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -2745,7 +1516,7 @@ var duoshuoQuery = {short_name:"wzj1996"};
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				
+    				<a href="/tags/Arr/" style="font-size: 10px;">Arr</a> <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/icons/" style="font-size: 10px;">icons</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/lazyload/" style="font-size: 10px;">lazyload</a> <a href="/tags/line-height/" style="font-size: 10px;">line-height</a> <a href="/tags/mou/" style="font-size: 10px;">mou</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/reactNative/" style="font-size: 20px;">reactNative</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/vertical-align/" style="font-size: 10px;">vertical-align</a>
     			</div>
     	</section>
     

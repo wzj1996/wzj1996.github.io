@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>关于图片的懒加载 | 高乐高</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="目前，一些图片类型的网站上，在图片加载时均采用了一种名为懒加载的方式，具体表现为，当页面被请求时，只加载可视区域的图片，其它部分的图片则不加载，只有这些图片出现在可视区域时才会动态加载这些图片，从而节约了网络带宽和提高了初次加载的速度，具体实现的技术并不复杂，下面分别对其说明。首先，在页面中准备一个id为div1的div,在这个div中放一个ul,ul中准备了一些li,然而这些li都有一个dat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于图片的懒加载">
+<meta property="og:url" content="http://yoursite.com/2016/05/28/lazyload/index.html">
+<meta property="og:site_name" content="高乐高">
+<meta property="og:description" content="目前，一些图片类型的网站上，在图片加载时均采用了一种名为懒加载的方式，具体表现为，当页面被请求时，只加载可视区域的图片，其它部分的图片则不加载，只有这些图片出现在可视区域时才会动态加载这些图片，从而节约了网络带宽和提高了初次加载的速度，具体实现的技术并不复杂，下面分别对其说明。首先，在页面中准备一个id为div1的div,在这个div中放一个ul,ul中准备了一些li,然而这些li都有一个dat">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa815nyu93j30dw08c0t4.jpg">
+<meta property="og:updated_time" content="2016-12-09T11:14:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于图片的懒加载">
+<meta name="twitter:description" content="目前，一些图片类型的网站上，在图片加载时均采用了一种名为懒加载的方式，具体表现为，当页面被请求时，只加载可视区域的图片，其它部分的图片则不加载，只有这些图片出现在可视区域时才会动态加载这些图片，从而节约了网络带宽和提高了初次加载的速度，具体实现的技术并不复杂，下面分别对其说明。首先，在页面中准备一个id为div1的div,在这个div中放一个ul,ul中准备了一些li,然而这些li都有一个dat">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa815nyu93j30dw08c0t4.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="高乐高" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">特仑苏</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">特仑苏</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">特仑苏</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-lazyload" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于图片的懒加载
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa815nyu93j30dw08c0t4.jpg" alt="Mou"></p>
+<p>目前，一些图片类型的网站上，在图片加载时均采用了一种名为懒加载的方式，具体表现为，当页面被请求时，只加载可视区域的图片，其它部分的图片则不加载，只有这些图片出现在可视区域时才会动态加载这些图片，从而节约了网络带宽和提高了初次加载的速度，具体实现的技术并不复杂，下面分别对其说明。首先，在页面中准备一个id为div1的div,在这个div中放一个ul,ul中准备了一些li,然而这些li都有一个data-src的属性，准备着图片的地址，具体结构如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div1&quot;&gt;</div><div class="line">	&lt;ul&gt;</div><div class="line">		&lt;li data-src=&quot;http://4493bz.1985t.com/uploads/allimg/140710/1-140G0161612.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://4493bz.1985t.com/uploads/allimg/140628/1-14062Q33R6.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://4493bz.1985t.com/uploads/allimg/140628/1-14062Q33242.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://img.bizhi.sogou.com/images/2014/12/10/997251.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://dl.bizhi.sogou.com/images/2014/12/02/986640.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170473_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170475_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170477_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">		&lt;li data-src=&quot;http://imgstore.cdn.sogou.com/app/a/100540002/1170479_s_90_2_219x160.jpg&quot;&gt;&lt;/li&gt;</div><div class="line">	&lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>图片的动态加载就是通过读取li元素，然后获得li元素的data-src属性的值赋予动态创建的图片的src，从而实现了图片的创建。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function setImg(index)&#123;</div><div class="line">	var oDiv=document.getElementById(&quot;div1&quot;)</div><div class="line">	var oUl=oDiv.children[0];</div><div class="line">	var aLi=oUl.children;</div><div class="line">	if (aLi[index].dataset) &#123;</div><div class="line">		var src=aLi[index].dataset.src;</div><div class="line">	&#125; else&#123;</div><div class="line">		var src=aLi[index].getAttribute(&apos;data-src&apos;);</div><div class="line">	&#125;</div><div class="line">	var oImg=document.createElement(&apos;img&apos;);</div><div class="line">	oImg.src=src;</div><div class="line">	if (aLi[index].children.length==0) &#123;</div><div class="line">		aLi[index].appendChild(oImg); </div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>那么怎么识别是否在可视区域呢？这里需要一个函数，能够实现获得当前元素距离网页顶部的距离！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//获得对象距离页面顶端的距离  </div><div class="line">function getH(obj) &#123;  </div><div class="line">	var h = 0;  </div><div class="line">	while (obj) &#123;  </div><div class="line">		h += obj.offsetTop;  </div><div class="line">		obj = obj.offsetParent;  </div><div class="line">	&#125;  </div><div class="line">	return h;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当网页的滚动条滚动时要时时判断当前li的位置！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">	window.onscroll = function () &#123;</div><div class="line">	var oDiv = document.getElementById(&apos;div1&apos;);</div><div class="line">	var oUl = oDiv.children[0];</div><div class="line">	var aLi = oUl.children;</div><div class="line">	for (var i = 0, l = aLi.length; i &lt; l; i++) &#123;</div><div class="line">		var oLi = aLi[i];</div><div class="line">		//检查oLi是否在可视区域</div><div class="line">		var t = document.documentElement.clientHeight + (document.documentElement.scrollTop || document.body.scrollTop);</div><div class="line">		var h = getH(oLi);</div><div class="line">		if (h &lt; t) &#123;</div><div class="line">			setTimeout(&quot;setImg(&quot; + i + &quot;)&quot;, 500);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>当页面加载完成以后要主动运行一下window.onscroll，从而获得当前可视范围内的图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">window.onload = function () &#123;</div><div class="line">	window.onscroll();</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>另外，像这样的页面，障眼法和美化都是必须的，比如给每个li一个loading的图片作为背景，从而实现了当前图片正在加载的效果，美化工作就是做好合理的布局。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">* &#123;</div><div class="line">	margin: 0;</div><div class="line">	padding: 0;</div><div class="line">&#125;</div><div class="line">#div1 &#123;</div><div class="line">	width: 520px;</div><div class="line">	margin: 30px auto;</div><div class="line">	border: 1px solid red;</div><div class="line">	overflow: hidden;</div><div class="line">&#125;</div><div class="line">li &#123;</div><div class="line">	width: 160px;</div><div class="line">	height: 160px;</div><div class="line">	float: left;</div><div class="line">	list-style: none;</div><div class="line">	margin: 5px;</div><div class="line">	background: url(loading.gif) center center no-repeat;</div><div class="line">	border: 1px dashed green;</div><div class="line">&#125;</div><div class="line">img&#123;</div><div class="line">	width:100%</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/05/28/lazyload/" class="archive-article-date">
+  	<time datetime="2016-05-28T11:06:53.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lazyload/">lazyload</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/06/02/linear-gradient/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS3 线性渐变（linear-gradient）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/23/image-center/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">line-height，vertical-align及图片居中对齐</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-lazyload" data-title="关于图片的懒加载" data-url="http://yoursite.com/2016/05/28/lazyload/"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 特仑苏
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Arr/" style="font-size: 10px;">Arr</a> <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/icons/" style="font-size: 10px;">icons</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/lazyload/" style="font-size: 10px;">lazyload</a> <a href="/tags/line-height/" style="font-size: 10px;">line-height</a> <a href="/tags/mou/" style="font-size: 10px;">mou</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/reactNative/" style="font-size: 20px;">reactNative</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/vertical-align/" style="font-size: 10px;">vertical-align</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

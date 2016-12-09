@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>react-native-icons的简单使用 | 高乐高</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条icons是可以直接使用图片名, 就能加载图片的三方,使用很方便, 你不需要在工程文件夹里塞各种图片, 节省很多空间,下面就来看看怎么使用吧!
+1.首先打开终端进入到我们的工程文件夹下输入npm install react-native-vector-icons --save (回车)
+
+npm instal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-native-icons的简单使用">
+<meta property="og:url" content="http://yoursite.com/2016/05/18/react-native-icons/index.html">
+<meta property="og:site_name" content="高乐高">
+<meta property="og:description" content="react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条icons是可以直接使用图片名, 就能加载图片的三方,使用很方便, 你不需要在工程文件夹里塞各种图片, 节省很多空间,下面就来看看怎么使用吧!
+1.首先打开终端进入到我们的工程文件夹下输入npm install react-native-vector-icons --save (回车)
+
+npm instal">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw1024/005WybULgw1f9v7wjz9tpj308s071wfc.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw1024/005WybULgw1f9v7wk418vj30n708mgoi.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw1024/005WybULgw1f9v7wlnezfj30d605m75c.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/mw1024/005WybULgw1f9v7wm9x7hj30g2046jsm.jpg">
+<meta property="og:updated_time" content="2016-12-09T11:14:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react-native-icons的简单使用">
+<meta name="twitter:description" content="react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条icons是可以直接使用图片名, 就能加载图片的三方,使用很方便, 你不需要在工程文件夹里塞各种图片, 节省很多空间,下面就来看看怎么使用吧!
+1.首先打开终端进入到我们的工程文件夹下输入npm install react-native-vector-icons --save (回车)
+
+npm instal">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/mw1024/005WybULgw1f9v7wjz9tpj308s071wfc.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="高乐高" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">特仑苏</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">特仑苏</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">特仑苏</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-react-native-icons" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react-native-icons的简单使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="react-native-vector-icons的简单使用-图片-按钮-标签视图-导航条"><a href="#react-native-vector-icons的简单使用-图片-按钮-标签视图-导航条" class="headerlink" title="react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条"></a>react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条</h3><p>icons是可以直接使用图片名, 就能加载图片的三方,使用很方便, 你不需要在工程文件夹里塞各种图片, 节省很多空间,下面就来看看怎么使用吧!</p>
+<h4 id="1-首先打开终端进入到我们的工程文件夹下输入"><a href="#1-首先打开终端进入到我们的工程文件夹下输入" class="headerlink" title="1.首先打开终端进入到我们的工程文件夹下输入"></a>1.首先打开终端进入到我们的工程文件夹下输入</h4><pre><code>npm install react-native-vector-icons --save (回车)
+
+npm install rnpm -g
+
+rnpm link (回车)  
+</code></pre><h4 id="2-在Finder中用Xcode打开工程-…-Demo-ios-Demo-xcodeproj"><a href="#2-在Finder中用Xcode打开工程-…-Demo-ios-Demo-xcodeproj" class="headerlink" title="2. 在Finder中用Xcode打开工程: …/Demo/ios/Demo.xcodeproj"></a>2. 在Finder中用Xcode打开工程: …/Demo/ios/Demo.xcodeproj</h4><h6 id="1-右键工程文件Add-Files-to-“-你工程名-”"><a href="#1-右键工程文件Add-Files-to-“-你工程名-”" class="headerlink" title="(1).右键工程文件Add Files to “(你工程名)”"></a>(1).右键工程文件Add Files to “(你工程名)”</h6><h6 id="2-选择node-modules-react-native-vector-icons-Fonts文件"><a href="#2-选择node-modules-react-native-vector-icons-Fonts文件" class="headerlink" title="(2).选择node_modules/react-native-vector-icons/Fonts文件"></a>(2).选择node_modules/react-native-vector-icons/Fonts文件</h6><h6 id="3-点击”完成”"><a href="#3-点击”完成”" class="headerlink" title="(3).点击”完成”."></a>(3).点击”完成”.</h6><p><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1f9v7wjz9tpj308s071wfc.jpg" alt="Mou icon"></p>
+<p><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1f9v7wk418vj30n708mgoi.jpg" alt="Mou icon"></p>
+<h4 id="3-在xcode的Info-plist文件中-加入-Fonts-provided-by-application数组-并加入以下9项"><a href="#3-在xcode的Info-plist文件中-加入-Fonts-provided-by-application数组-并加入以下9项" class="headerlink" title="3. 在xcode的Info.plist文件中,加入: Fonts provided by application数组,并加入以下9项:"></a>3. 在xcode的Info.plist文件中,加入: Fonts provided by application数组,并加入以下9项:</h4><p><img src="http://ww3.sinaimg.cn/mw1024/005WybULgw1f9v7wlnezfj30d605m75c.jpg" alt="Mou icon"></p>
+<p>到此环境就算设置好了, 接下来就是使用ICONS了.</p>
+<h4 id="4-在Finder中右键用Atom打开工程"><a href="#4-在Finder中右键用Atom打开工程" class="headerlink" title="4. 在Finder中右键用Atom打开工程:"></a>4. 在Finder中右键用Atom打开工程:</h4><p><img src="http://ww4.sinaimg.cn/mw1024/005WybULgw1f9v7wm9x7hj30g2046jsm.jpg" alt="Mou icon"></p>
+<h4 id="5-然后就开始编辑我们的程序了"><a href="#5-然后就开始编辑我们的程序了" class="headerlink" title="5.然后就开始编辑我们的程序了:"></a>5.然后就开始编辑我们的程序了:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">import React, &#123;</div><div class="line">	AppRegistry,</div><div class="line">	Component,</div><div class="line">	View,</div><div class="line">	StyleSheet,</div><div class="line">	AlertIOS,</div><div class="line">	Text,</div><div class="line">	TabBarIOS,</div><div class="line">	NavigatorIOS,</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line"></div><div class="line">var Icon = require(&apos;react-native-vector-icons/FontAwesome&apos;);</div><div class="line">import FindComponent from &apos;./FindComponent&apos;;</div><div class="line">import SearchComponent from &apos;./SearchComponent&apos;;</div><div class="line"></div><div class="line">class Demo extends Component &#123;</div><div class="line">	state = &#123;</div><div class="line">		selectedTab: &apos;find&apos;,</div><div class="line">	&#125;;</div><div class="line">	loginWithFacebook = () =&gt; &#123;</div><div class="line">		//点击&quot;Login with Facebook&quot;按钮后触发的方法</div><div class="line">		AlertIOS.alert(&quot;facebook&quot;);</div><div class="line">	&#125;</div><div class="line">	render() &#123;</div><div class="line">		return (</div><div class="line">			&lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">				&lt;Icon</div><div class="line">					name=&quot;rocket&quot;   //图片名连接,可以到这个网址搜索:http://ionicons.com/, 使用时:去掉前面的 &quot;icon-&quot; !!!!</div><div class="line">					size=&#123;30&#125;   //图片大小</div><div class="line">					color=&quot;red&quot;  //图片颜色</div><div class="line">				/&gt;</div><div class="line">				&lt;Icon.Button    //在图片后加文字</div><div class="line">					name=&quot;facebook&quot;</div><div class="line">					backgroundColor=&quot;#3b5998&quot;</div><div class="line">					onPress=&#123;this.loginWithFacebook&#125; //点击该按钮后触发的方法</div><div class="line">				&gt;</div><div class="line">					Login with Facebook</div><div class="line">				&lt;/Icon.Button&gt;</div><div class="line">				&lt;Icon.Button  //在图片后加, 自定义样式的文字</div><div class="line">					name=&quot;facebook&quot;</div><div class="line">					backgroundColor=&quot;#3b5998&quot;&gt;</div><div class="line">					&lt;Text style=&#123;&#123;fontFamily: &apos;Arial&apos;, fontSize: 15&#125;&#125;&gt;Login with Facebook&lt;/Text&gt;</div><div class="line">				&lt;/Icon.Button&gt;</div><div class="line">				&lt;TabBarIOS    //和标签视图一起使用</div><div class="line">					tintColor=&quot;#4977f0&quot;</div><div class="line">					barTintColor=&quot;#E6E6E6&quot;&gt;</div><div class="line"> 					&lt;Icon.TabBarItem  //用 Icon.TabBarItem 代替 TabBarIOS.Item</div><div class="line">						title=&quot;发现&quot;</div><div class="line">						iconName=&quot;home&quot;</div><div class="line">						selectedIconName=&quot;home&quot;</div><div class="line">						selected = &#123;this.state.selectedTab === &apos;find&apos;&#125;</div><div class="line">						onPress=&#123;() =&gt; &#123;</div><div class="line">							this.setState(&#123;</div><div class="line">								selectedTab: &apos;find&apos;,</div><div class="line">							&#125;);</div><div class="line">						&#125;&#125;</div><div class="line">					&gt;</div><div class="line">						&lt;NavigatorIOS    //导航栏</div><div class="line">							style=&#123;styles.container&#125;</div><div class="line">							tintColor=&apos;#FFFFFF&apos;</div><div class="line">							barTintColor=&apos;#4977f0&apos;</div><div class="line">							initialRoute=&#123;&#123;</div><div class="line">								title: &quot;发现&quot;,</div><div class="line">								titleTextColor: &apos;white&apos;,</div><div class="line">								component: FindComponent</div><div class="line">							&#125;&#125;</div><div class="line">						/&gt;</div><div class="line">					&lt;/Icon.TabBarItem&gt;</div><div class="line">					&lt;Icon.TabBarItem  //用 Icon.TabBarItem 代替 TabBarIOS.Item</div><div class="line">						title=&quot;搜索&quot;</div><div class="line">						iconName=&quot;search&quot;</div><div class="line">						selectedIconName=&quot;search&quot;</div><div class="line">						selected = &#123;this.state.selectedTab === &apos;search&apos;&#125;</div><div class="line">						onPress=&#123;() =&gt; &#123;</div><div class="line">							this.setState(&#123;</div><div class="line">						selectedTab: &apos;search&apos;,</div><div class="line">							&#125;);</div><div class="line">						&#125;&#125;</div><div class="line">					&gt;</div><div class="line">						&lt;NavigatorIOS</div><div class="line">							style=&#123;styles.container&#125;</div><div class="line">							tintColor=&apos;#FFFFFF&apos;</div><div class="line">							barTintColor=&apos;#4977f0&apos;</div><div class="line">							initialRoute=&#123;&#123;</div><div class="line">								title: &quot;搜索&quot;,</div><div class="line">								titleTextColor: &apos;white&apos;,</div><div class="line">								component: SearchComponent</div><div class="line">							&#125;&#125;</div><div class="line">						/&gt;</div><div class="line">					&lt;/Icon.TabBarItem&gt;</div><div class="line">				&lt;/TabBarIOS&gt;</div><div class="line">			&lt;/View&gt;</div><div class="line">		);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">const styles = StyleSheet.create(&#123;</div><div class="line">	container: &#123;</div><div class="line">		flex: 1,</div><div class="line">		justifyContent: &apos;center&apos;,</div><div class="line">	&#125;,</div><div class="line">&#125;);</div><div class="line"></div><div class="line">AppRegistry.registerComponent(&apos;Demo&apos;, () =&gt; Demo);</div></pre></td></tr></table></figure>
+<p>在terminal中的工程文件夹下,输入react-native run-ios(回车)等待程序运行起来就能看到效果啦.</p>
+<p>主要代码下载地址: <a href="http://download.csdn.net/detail/margaret_mo/9512769" target="_blank" rel="external">http://download.csdn.net/detail/margaret_mo/9512769</a></p>
+<p>参考网站: <a href="https://github.com/oblador/react-native-vector-icons" target="_blank" rel="external">https://github.com/oblador/react-native-vector-icons</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/05/18/react-native-icons/" class="archive-article-date">
+  	<time datetime="2016-05-18T09:49:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-18</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/icons/">icons</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reactNative/">reactNative</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/05/20/JsArr/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          js数组的基本用法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/17/react-native/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ReactNative准备:环境的创建和应用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-react-native-icons" data-title="react-native-icons的简单使用" data-url="http://yoursite.com/2016/05/18/react-native-icons/"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 特仑苏
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Arr/" style="font-size: 10px;">Arr</a> <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/icons/" style="font-size: 10px;">icons</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/lazyload/" style="font-size: 10px;">lazyload</a> <a href="/tags/line-height/" style="font-size: 10px;">line-height</a> <a href="/tags/mou/" style="font-size: 10px;">mou</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/reactNative/" style="font-size: 20px;">reactNative</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/vertical-align/" style="font-size: 10px;">vertical-align</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

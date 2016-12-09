@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>js数组的基本用法 | 高乐高</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="js数组的用法包括创建、取值赋值、添加以及根据下标(数值或字符)移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下1、创建数组123var array = new Array(); var array = new Array(size);//指定数组的长度 var array = new Array(item1,item2……itemN);//创建数组并赋值
+2、取值、赋值12var">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js数组的基本用法">
+<meta property="og:url" content="http://yoursite.com/2016/05/20/JsArr/index.html">
+<meta property="og:site_name" content="高乐高">
+<meta property="og:description" content="js数组的用法包括创建、取值赋值、添加以及根据下标(数值或字符)移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下1、创建数组123var array = new Array(); var array = new Array(size);//指定数组的长度 var array = new Array(item1,item2……itemN);//创建数组并赋值
+2、取值、赋值12var">
+<meta property="og:updated_time" content="2016-12-09T11:14:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js数组的基本用法">
+<meta name="twitter:description" content="js数组的用法包括创建、取值赋值、添加以及根据下标(数值或字符)移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下1、创建数组123var array = new Array(); var array = new Array(size);//指定数组的长度 var array = new Array(item1,item2……itemN);//创建数组并赋值
+2、取值、赋值12var">
+  
+    <link rel="alternative" href="/atom.xml" title="高乐高" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">特仑苏</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">特仑苏</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">特仑苏</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-JsArr" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js数组的基本用法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="js数组的用法包括创建、取值赋值、添加以及根据下标-数值或字符-移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下"><a href="#js数组的用法包括创建、取值赋值、添加以及根据下标-数值或字符-移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下" class="headerlink" title="js数组的用法包括创建、取值赋值、添加以及根据下标(数值或字符)移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下"></a>js数组的用法包括创建、取值赋值、添加以及根据下标(数值或字符)移除元素等等，在本文将为大家详细介绍下，感兴趣的朋友可以参考下</h5><h5 id="1、创建数组"><a href="#1、创建数组" class="headerlink" title="1、创建数组"></a>1、创建数组</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var array = new Array(); </div><div class="line">var array = new Array(size);//指定数组的长度 </div><div class="line">var array = new Array(item1,item2……itemN);//创建数组并赋值</div></pre></td></tr></table></figure>
+<h5 id="2、取值、赋值"><a href="#2、取值、赋值" class="headerlink" title="2、取值、赋值"></a>2、取值、赋值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var item = array[index];//获取指定元素的值 </div><div class="line">array[index] = value;//为指定元素赋值</div></pre></td></tr></table></figure>
+<h5 id="3、添加新元素"><a href="#3、添加新元素" class="headerlink" title="3、添加新元素"></a>3、添加新元素</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">array.push(item1,item2……itemN);//将一个或多个元素加入数组，返回新数组的长度 </div><div class="line">array.unshift(item1,item2……itemN);//将一个或多个元素加入到数组的开始位置，原有元素位置自动后移，返回 新数组的长度 </div><div class="line">array.splice(start,delCount,item1,item2……itemN);//从start的位置开始向后删除delCount个元素，然后从start的位置开始插入一个或多个新元素</div></pre></td></tr></table></figure>
+<h5 id="4、删除元素"><a href="#4、删除元素" class="headerlink" title="4、删除元素"></a>4、删除元素</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">array.pop();//删除最后一个元素，并返回该元素 </div><div class="line">array.shift();//删除第一个元素，数组元素位置自动前移，返回被删除的元素 </div><div class="line">array.splice(start,delCount);//从start的位置开始向后删除delCount个元素</div></pre></td></tr></table></figure>
+<h5 id="5、数组的合并、截取"><a href="#5、数组的合并、截取" class="headerlink" title="5、数组的合并、截取"></a>5、数组的合并、截取</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">array.slice(start,end);//以数组的形式返回数组的一部分，注意不包括 end 对应的元素，如果省略 end 将复制 start 之后的所有元素 </div><div class="line">array.concat(array1,array2);//将多个数组拼接成一个数组</div></pre></td></tr></table></figure>
+<h5 id="6、数组的排序"><a href="#6、数组的排序" class="headerlink" title="6、数组的排序"></a>6、数组的排序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">array.reverse();//数组反转 </div><div class="line">array.sort();//数组排序，返回数组地址</div></pre></td></tr></table></figure>
+<h5 id="7、数组转字符串"><a href="#7、数组转字符串" class="headerlink" title="7、数组转字符串"></a>7、数组转字符串</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">array.join(separator);//将数组原因用separator连接起来</div></pre></td></tr></table></figure>
+<p>其次，数值型的直接传递数值的参数即可。例如var arr = [“aa”,”bb”];arr.del(0);<br>下面说一下字符型的下标 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = []. </div><div class="line">arr[&quot;aa&quot;] = 1;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/05/20/JsArr/" class="archive-article-date">
+  	<time datetime="2016-05-20T08:22:04.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-20</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arr/">Arr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/05/23/image-center/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          line-height，vertical-align及图片居中对齐
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/18/react-native-icons/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">react-native-icons的简单使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-JsArr" data-title="js数组的基本用法" data-url="http://yoursite.com/2016/05/20/JsArr/"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 特仑苏
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Arr/" style="font-size: 10px;">Arr</a> <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/icons/" style="font-size: 10px;">icons</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/lazyload/" style="font-size: 10px;">lazyload</a> <a href="/tags/line-height/" style="font-size: 10px;">line-height</a> <a href="/tags/mou/" style="font-size: 10px;">mou</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/reactNative/" style="font-size: 20px;">reactNative</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/vertical-align/" style="font-size: 10px;">vertical-align</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

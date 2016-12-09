@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>React开发中关于this的那些事儿 | 高乐高</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="React开发中关于this的那些事儿在React开发，关于this以及es6中方法的书写及其使用出现一些问题
+
+在es5中, 普通用function声明的函数是定义在window对象上的，显而易见其内部的this肯定是默认指向window对象。而直接用函数名来调用得到的函数内this也是window对象。可以这么理解，那个看不见的调用者就是window
+
+在es6中，为了规范function中t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React开发中关于this的那些事儿">
+<meta property="og:url" content="http://yoursite.com/2016/06/05/React-this/index.html">
+<meta property="og:site_name" content="高乐高">
+<meta property="og:description" content="React开发中关于this的那些事儿在React开发，关于this以及es6中方法的书写及其使用出现一些问题
+
+在es5中, 普通用function声明的函数是定义在window对象上的，显而易见其内部的this肯定是默认指向window对象。而直接用函数名来调用得到的函数内this也是window对象。可以这么理解，那个看不见的调用者就是window
+
+在es6中，为了规范function中t">
+<meta property="og:updated_time" content="2016-12-09T11:15:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React开发中关于this的那些事儿">
+<meta name="twitter:description" content="React开发中关于this的那些事儿在React开发，关于this以及es6中方法的书写及其使用出现一些问题
+
+在es5中, 普通用function声明的函数是定义在window对象上的，显而易见其内部的this肯定是默认指向window对象。而直接用函数名来调用得到的函数内this也是window对象。可以这么理解，那个看不见的调用者就是window
+
+在es6中，为了规范function中t">
+  
+    <link rel="alternative" href="/atom.xml" title="高乐高" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">特仑苏</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">特仑苏</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="https://avatars2.githubusercontent.com/u/20942807?v=3&amp;u=29f58348a0cff3578d3647fba8fb54bc86186c1e&amp;s=140" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">特仑苏</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">只有努力才能得到自己想要的东西</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wzj1996/wzj1996.github.io.git" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3137128535" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-React-this" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      React开发中关于this的那些事儿
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="React开发中关于this的那些事儿"><a href="#React开发中关于this的那些事儿" class="headerlink" title="React开发中关于this的那些事儿"></a>React开发中关于this的那些事儿</h2><p>在React开发，关于this以及es6中方法的书写及其使用出现一些问题</p>
+<ul>
+<li><p>在es5中, 普通用function声明的函数是定义在window对象上的，显而易见其内部的this肯定是默认指向window对象。而直接用函数名来调用得到的函数内this也是window对象。可以这么理解，那个看不见的调用者就是window</p>
+</li>
+<li><p>在es6中，为了规范function中this的所属问题，在使用‘use strict’模式下，不显示地用window对象调用函数则其内部的this为undefined，也就是强制你使用window对象严格得去调用。</p>
+</li>
+</ul>
+<h4 id="与this相关的-bind-call-apply-三兄弟"><a href="#与this相关的-bind-call-apply-三兄弟" class="headerlink" title="与this相关的 bind call apply 三兄弟"></a>与this相关的 bind call apply 三兄弟</h4><ol>
+<li>bind通常用来重新绑定函数体中的this并返回一个具有指定this的函数。</li>
+<li><p>call 和 apply 则表示重新指定this并调用返回结果，区别在于call采用多个实参的方式传参，apply则是使用一个数组。</p>
+<p> 共同点: 在于第一个参数指定为this(这里用对象描述比较合理些)，作用都是用来重定向this；从第二个参数起都算作是参数传递。</p>
+<p> 不同点: [1] 是用来返回具有特定this的函数，[2] 是用来调用函数的。而对于函数的获得，则通过其声明宿主(指所在对象，并非es6中的class类。在es6中，class和Java的类似，想要调用需要创建对象)</p>
+</li>
+</ol>
+<h4 id="React中的bind"><a href="#React中的bind" class="headerlink" title="React中的bind"></a>React中的bind</h4><p>准确说，应该是es6中bind的使用，但因为在开发中常用到，就暂且以React开发为背景。<br>因为是返回指定this的函数，因此它的应用场景一定是函数的传递，而非函数的普通调用。在开发中，函数的传递赋值主要有以下几个场景(如有遗漏，欢迎补充)：</p>
+<ul>
+<li>组件属性：组件内部函数的回调，通过把一个函数传递给组件的props，本质上和把函数作为实参传递给被调用函数是一致的。(至于是在Jsx中虚拟Dom中传递还是通过<code>createElement</code>、<code>cloneElement</code>等React API就不多说了)</li>
+<li>高阶函数：本质上也是一种回调，就是在调用的地方提前写好即将被调用的函数并传进去，这里的‘即将’既可以是同步也可以是异步。</li>
+</ul>
+<p>在以上两种情况中，组件的属性对this的依赖还是比较大的</p>
+<p>当我们给组件属性所传递的函数中，需要使用到当前类中非静态函数或字段(这两种成员都归属于this)时就不得不使用this来调用。</p>
+<h4 id="使用场景一"><a href="#使用场景一" class="headerlink" title="使用场景一"></a>使用场景一</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class Foo extends Component&#123;</div><div class="line">	render () &#123;</div><div class="line">		return &lt;CustomView onPress=&#123;this.readBook&#125; /&gt;</div><div class="line">	&#125;</div><div class="line">	readBook () &#123;</div><div class="line">		let bookName = this.getBookName()</div><div class="line">		this.props.ooxx</div><div class="line">		this.state.ooxx</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上代码在运行时，由于<code>this.readBook</code>传递了一个纯函数，而该函数在CustomView类中执行时，this会被指向当前类CustomView的实例this,显而易见此时的foo、props、ooxx显然在另外一个类中是找不到的，<code>undefined</code>这个老朋友的如约而至也成为必然。</p>
+<p>此时我们只需要改写传入方式为<code>this.readBook.bind(this)</code>即可将当前this绑定到readBook中，当然也可以绑定其他你所想要的，只要符合你的需求。</p>
+<h4 id="使用场景二"><a href="#使用场景二" class="headerlink" title="使用场景二"></a>使用场景二</h4><p>由于让函数调用bind会返回一个全新的函数，因此在高阶函数的某些场景下就会因为不是同一个函数(准确说是引用) 而导致出错，如监听器的注册与注销:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class PauseMenu extends Component &#123;</div><div class="line">	constructor (props) &#123;</div><div class="line">		super(props);</div><div class="line">		this._onAppPaused = this.onAppPaused.bind(this); </div><div class="line">	&#125; </div><div class="line">	componentWillMount () &#123;</div><div class="line">		AppStateIOS.addEventListener(&apos;change&apos;, this._onAppPaused); </div><div class="line">	&#125;</div><div class="line">	componentDidUnmount () &#123;</div><div class="line">		AppStateIOS.removeEventListener(</div><div class="line">			&apos;change&apos;, this._onAppPaused</div><div class="line">		)</div><div class="line">	&#125;</div><div class="line">	onAppPaused(event)&#123; </div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看到我们在构造函数里为onAppPaused函数单独绑定了this并存到当前this当中，这样在注册和注销的时候都可以保证拿到的是同一个函数对象。(这里需要注意，_onAppPaused是直接定义在this上的，因此在针对一个class new出实例后，_onAppPaused是属于实例的，而onAppPaused是定义在类里的非静态函数，在类的prototype上，实例的<em>proto</em>原型上的。)</p>
+<h4 id="在bind时传参数"><a href="#在bind时传参数" class="headerlink" title="在bind时传参数"></a>在bind时传参数</h4><p>这个需求，就我个人来讲是一个非常不合理的需求。高阶函数本来就是传入一个方法签名，而你非要利用bind的附加参数功能有点‘乱来’的意思了。不过也不是不可以，只需要注意此时如果在高阶函数内(或组件内) 的方法回调中本身带有参数，则在bind时禁止附加参数，否则会覆盖原有的回调参数。</p>
+<h4 id="Lambda表达式与匿名函数"><a href="#Lambda表达式与匿名函数" class="headerlink" title="Lambda表达式与匿名函数"></a>Lambda表达式与匿名函数</h4><p>Lambda表达式是es6中函数的一种新的声明方式，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">() =&gt; &#123;</div><div class="line">	console.log(...)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上是一个简单的Lambda表达式，在多数的Js教程中都被称作”箭头函数”，它的书面写法上等价于匿名函数，如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function () &#123;</div><div class="line">	console.log(...)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>他们都可以被用来在<code>高阶函数</code>以及<code>组件属性</code>上以及<code>普通方法</code>的定义，然而又有一些差异:</p>
+<ul>
+<li>Lambda表达式中的this指向当前作用域的this，因此这种情况下就没有bind的事情了，因为Lambda已经有自己的this了。同bind一样，Lambda同样会返回一个全新的函数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;() =&gt; this.props...&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>此时呢，Lambda表达式是直接作为回调被赋值了。因此所有的回调参数都可以在此获取到，后续与this相关的逻辑代码都可以在Lambda表达式中书写。</p>
+<ul>
+<li>匿名函数会因为es5、6的情况而指向window或者undefined，此时如果方法体内需要用到当前的组件的this，则可以通过bind来完成，如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;function()&#123;</div><div class="line">	this.props...</div><div class="line">&#125;.bind(this)&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>这样的代码等价于使用函数名bind this一样，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;this.readProps.bind(this)&#125; /&gt;</div><div class="line">...</div><div class="line">readProps () &#123;</div><div class="line">	this.props...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果上边的<code>readProps</code>的回调没有传出一些特别的参数，也可以用Lambda表达式改为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;() =&gt; this.readProps()&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>当然，这只是用箭头函数包裹了一下，我们仍然可以通过在箭头函数的参数列表中声明参数的方式来达到相同的目的。</p>
+<h4 id="使用Lambda表达式优化"><a href="#使用Lambda表达式优化" class="headerlink" title="使用Lambda表达式优化"></a>使用Lambda表达式优化</h4><p>之前提到了用bind在this中存留一份，可以在构造函数里用对象的属性来存储唯一的函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class PauseMenu extends Component &#123;</div><div class="line">	componentWillMount () &#123;</div><div class="line">		AppStateIOS.addEventListener(&apos;change&apos;, this._onAppPaused); </div><div class="line">	&#125;</div><div class="line">	componentDidUnmount () &#123;</div><div class="line">		AppStateIOS.removeEventListener(&apos;change&apos;, this._onAppPaused)</div><div class="line">	&#125;</div><div class="line">	_onAppPaused ＝ (event) =&gt; &#123; </div><div class="line">	&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样做可以将_onAppPaused 作为类属性的一部分，就不用担心拿不到方法的唯一引用啦</p>
+<h4 id="Lambda表达式补充："><a href="#Lambda表达式补充：" class="headerlink" title="Lambda表达式补充："></a>Lambda表达式补充：</h4><ol>
+<li>箭头后的部分即为表达式的返回值</li>
+<li>如果出现多条语句操作运算的，需要使用{…} 以函数体的形式书写并以显示的方式<code>return</code>返回值</li>
+<li>如果需要直接返回一个Object的话，语法上会和函数体冲突，此时就必须使用<code>()</code>保护一下，声明此处是一个对象而非函数体</li>
+<li>参数方面，单参数可以不加<code>()</code>括弧, 但是一个以上就必须要加了。同时没有参数时需要使用<code>()</code>来完成语法上的补位</li>
+</ol>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>在日常开发中，this还是一个让人比较头疼的东西。方法(对象中的函数) 内函数会导致this的重定向，其他的一些对象嵌套也会导致重定向问题，因此大家不要慌，不妨尝试手动获取一下外部this。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/06/05/React-this/" class="archive-article-date">
+  	<time datetime="2016-06-05T09:25:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-06-05</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this/">this</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/06/14/mou/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Mou 书写格式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/02/linear-gradient/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS3 线性渐变（linear-gradient）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-React-this" data-title="React开发中关于this的那些事儿" data-url="http://yoursite.com/2016/06/05/React-this/"></div>
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wzj1996"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 特仑苏
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Arr/" style="font-size: 10px;">Arr</a> <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/icons/" style="font-size: 10px;">icons</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/lazyload/" style="font-size: 10px;">lazyload</a> <a href="/tags/line-height/" style="font-size: 10px;">line-height</a> <a href="/tags/mou/" style="font-size: 10px;">mou</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/reactNative/" style="font-size: 20px;">reactNative</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/vertical-align/" style="font-size: 10px;">vertical-align</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
